@@ -1,6 +1,6 @@
 "use client";
 // Tier cards with a monthly/annual toggle (docs/01 § Tiers). Prices come from config/site.json prices_usd (owner, Nov 18:
-// Pro $11.99/mo or $99.99/yr, Premium $19.99/mo or $169.99/yr; 7-day trial on both). In demo mode every button opens Best bets, since everything is already unlocked.
+// Pro $11.99/mo or $119.99/yr, Premium $19.99/mo or $199.99/yr (yearly = 2 months free, Marc + Q Nov 20); 7-day trial on both). In demo mode every button opens Best bets, since everything is already unlocked.
 // Paid mode: Start trial → /api/stripe/checkout (sign in first); "Coming soon" until Stripe is configured.
 // T-291 #12: the server passes what it knows (`ctx`: billing, accounts, signed in, plan), so the first HTML has the
 // right button; /api/me takes over once it answers. Before T-291 the buttons read "Coming soon" until /api/me came back.

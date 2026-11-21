@@ -36,7 +36,7 @@ price says, after fees, and whether you can actually get that price right now."
 | Chrome extension badges | — | — | Yes |
 | CSV export | — | Yes | Yes |
 
-7-day free trial on Pro and Premium. Prices (owner, Nov 18): Pro $11.99/mo or $99.99/yr, Premium $19.99/mo or $169.99/yr
+7-day free trial on Pro and Premium. Prices (owner, Nov 18): Pro $11.99/mo or $119.99/yr, Premium $19.99/mo or $199.99/yr (yearly = 2 months free, Marc + Q Nov 20)
 (`config/site.json` → `prices_usd`).
 Prices are a starting point (`11-research.md` has competitor pricing).
 

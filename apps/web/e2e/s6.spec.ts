@@ -40,10 +40,10 @@ test("pricing: yearly toggle shows the yearly price", async ({ page }) => {
   await expect(page.getByRole("columnheader", { name: "Pro · $11.99" })).toBeVisible();
   await expect(page.getByRole("columnheader", { name: "Premium · $19.99" })).toBeVisible();
   await page.getByRole("radio", { name: /Yearly/ }).click();
-  await expect(page.getByText("$99.99 billed yearly")).toBeVisible();
-  await expect(page.getByTestId("save-pro")).toContainText("save 30%");   // T-291 #15: per plan, from the prices
-  await expect(page.getByTestId("save-premium")).toContainText("save 29%");
-  await expect(page.getByTestId("price-premium")).toHaveText("$14.17");   // $169.99 / 12
+  await expect(page.getByText("$119.99 billed yearly")).toBeVisible();
+  await expect(page.getByTestId("save-pro")).toContainText("save 16%");   // T-291 #15: per plan, from the prices
+  await expect(page.getByTestId("save-premium")).toContainText("save 16%");
+  await expect(page.getByTestId("price-premium")).toHaveText("$16.67");   // $199.99 / 12
   await expect(page.getByText("Demo: every feature is unlocked", { exact: false })).toBeVisible();
   await expect(page.getByRole("link", { name: "Start trial" }).first()).toHaveAttribute("href", "/");
 });

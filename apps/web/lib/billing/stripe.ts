@@ -70,13 +70,17 @@ export function paymentLinkUrl(k: PriceKey, user: { id: string; email: string })
 }
 
 /** Tier for a price: env price ids first, then price metadata.tier, then the amount (Payment Links have no ids in env). */
+/** Yearly amounts before Nov 20 (Pro $99.99, Premium $169.99): subscriptions bought at them still map to their tier. */
+const LEGACY_CENTS: Record<number, Tier> = { 9999: "pro", 16999: "premium" };
+
 export function tierFromPrice(p: { id: string; unit_amount?: number | null; metadata?: Record<string, string> | null } | null | undefined): Tier | null {
   if (!p) return null;
   for (const k of PRICE_KEYS) if (priceId(k) && priceId(k) === p.id) return k.startsWith("premium") ? "premium" : "pro";
   const meta = p.metadata?.tier;
   if (meta === "pro" || meta === "premium") return meta;
   const hit = PRICE_KEYS.find((k) => Math.round(site.prices_usd[k] * 100) === p.unit_amount);   // in cents, no float equality
-  return hit ? (hit.startsWith("premium") ? "premium" : "pro") : null;
+  if (hit) return hit.startsWith("premium") ? "premium" : "pro";
+  return (p.unit_amount != null && LEGACY_CENTS[p.unit_amount]) || null;
 }
 
 const PAYING = new Set(["trialing", "active", "past_due"]);
