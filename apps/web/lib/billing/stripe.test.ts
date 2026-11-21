@@ -139,7 +139,9 @@ describe("tierFromPrice", () => {
     expect(tierFromPrice({ id: "p", unit_amount: 1199 })).toBe("pro");
     expect(tierFromPrice({ id: "p", unit_amount: 9999 })).toBe("pro");
     expect(tierFromPrice({ id: "p", unit_amount: 1999 })).toBe("premium");
-    expect(tierFromPrice({ id: "p", unit_amount: 16999 })).toBe("premium");
+    expect(tierFromPrice({ id: "p", unit_amount: 16999 })).toBe("premium");   // legacy yearly
+    expect(tierFromPrice({ id: "p", unit_amount: 11999 })).toBe("pro");
+    expect(tierFromPrice({ id: "p", unit_amount: 19999 })).toBe("premium");
     expect(tierFromPrice({ id: "p", unit_amount: 1900 })).toBeNull();   // the old $19 price
     expect(tierFromPrice({ id: "p", unit_amount: 500 })).toBeNull();
     expect(tierFromPrice(null)).toBeNull();

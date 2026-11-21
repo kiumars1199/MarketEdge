@@ -70,7 +70,7 @@ describe("yearly savings follow the prices", () => {
     fireEvent.click(screen.getByRole("radio", { name: /Yearly/ }));
     expect(screen.getByTestId("save-pro").textContent).toBe(` · save ${yearlySavings(SITE.prices).pro}%`);
     expect(screen.getByTestId("save-premium").textContent).toBe(` · save ${yearlySavings(SITE.prices).premium}%`);
-    if (SITE.prices.pro_monthly === 11.99 && SITE.prices.pro_yearly === 99.99) expect(screen.getByTestId("save-pro").textContent).toContain("save 30%");
+    if (SITE.prices.pro_monthly === 11.99 && SITE.prices.pro_yearly === 119.99) expect(screen.getByTestId("save-pro").textContent).toContain("save 16%");
   });
 
   it("changing a price moves the label", () => {
