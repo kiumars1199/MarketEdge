@@ -1,0 +1,342 @@
+{
+ "nba|moneyline": {
+  "n": 1439,
+  "median": 0.049,
+  "p75": 0.174
+ },
+ "nba|spreads": {
+  "n": 317,
+  "median": 0.05,
+  "p75": 0.18
+ },
+ "nba|totals": {
+  "n": 400,
+  "median": 0.07,
+  "p75": 0.425
+ },
+ "nba|props": {
+  "n": 916,
+  "median": 0.35,
+  "p75": 0.72
+ },
+ "nfl|moneyline": {
+  "n": 3205,
+  "median": 0.048,
+  "p75": 0.22
+ },
+ "nfl|spreads": {
+  "n": 1488,
+  "median": 0.245,
+  "p75": 0.98
+ },
+ "nfl|totals": {
+  "n": 1094,
+  "median": 0.15,
+  "p75": 0.54
+ },
+ "nfl|props": {
+  "n": 682,
+  "median": 0.11,
+  "p75": 0.14
+ },
+ "mlb|moneyline": {
+  "n": 30,
+  "median": 0.098,
+  "p75": 0.32
+ },
+ "nhl|moneyline": {
+  "n": 1642,
+  "median": 0.1275,
+  "p75": 0.4575
+ },
+ "nhl|totals": {
+  "n": 604,
+  "median": 0.38,
+  "p75": 0.41
+ },
+ "nhl|spreads": {
+  "n": 84,
+  "median": 0.02,
+  "p75": 0.0825
+ },
+ "cfb|spreads": {
+  "n": 3909,
+  "median": 0.6,
+  "p75": 0.98
+ },
+ "cfb|totals": {
+  "n": 2531,
+  "median": 0.98,
+  "p75": 0.98
+ },
+ "cfb|moneyline": {
+  "n": 854,
+  "median": 0.0505,
+  "p75": 0.37
+ },
+ "cfb|props": {
+  "n": 107,
+  "median": 0.06,
+  "p75": 0.07
+ },
+ "soccer|moneyline": {
+  "n": 2940,
+  "median": 0.04,
+  "p75": 0.15
+ },
+ "soccer|spreads": {
+  "n": 184,
+  "median": 0.01,
+  "p75": 0.03
+ },
+ "soccer|totals": {
+  "n": 746,
+  "median": 0.04,
+  "p75": 0.1727
+ },
+ "soccer|props": {
+  "n": 2615,
+  "median": 0.019,
+  "p75": 0.05
+ },
+ "tennis|moneyline": {
+  "n": 111,
+  "median": 0.03,
+  "p75": 0.05
+ },
+ "tennis|props": {
+  "n": 67,
+  "median": 0.03,
+  "p75": 0.235
+ },
+ "tennis|totals": {
+  "n": 47,
+  "median": 0.02,
+  "p75": 0.03
+ },
+ "esports|moneyline": {
+  "n": 465,
+  "median": 0.046,
+  "p75": 0.36
+ },
+ "esports|totals": {
+  "n": 99,
+  "median": 0.92,
+  "p75": 0.98
+ },
+ "esports|props": {
+  "n": 276,
+  "median": 0.92,
+  "p75": 0.92
+ },
+ "ufc|moneyline": {
+  "n": 175,
+  "median": 0.02,
+  "p75": 0.05
+ },
+ "sports|moneyline": {
+  "n": 204,
+  "median": 0.04,
+  "p75": 0.2318
+ },
+ "ufc|props": {
+  "n": 171,
+  "median": 0.07,
+  "p75": 0.1
+ },
+ "ufc|totals": {
+  "n": 35,
+  "median": 0.09,
+  "p75": 0.1
+ },
+ "ncaab|spreads": {
+  "n": 188,
+  "median": 0.45,
+  "p75": 0.8975
+ },
+ "f1|moneyline": {
+  "n": 49,
+  "median": 0.05,
+  "p75": 0.23
+ },
+ "ncaab|moneyline": {
+  "n": 231,
+  "median": 0.35,
+  "p75": 0.53
+ },
+ "cricket|moneyline": {
+  "n": 47,
+  "median": 0.48,
+  "p75": 0.86
+ },
+ "golf|moneyline": {
+  "n": 56,
+  "median": 0.013,
+  "p75": 0.0517
+ },
+ "cricket|props": {
+  "n": 24,
+  "median": 0.98,
+  "p75": 0.9892
+ },
+ "ncaab|totals": {
+  "n": 518,
+  "median": 0.97,
+  "p75": 0.97
+ },
+ "f1|props": {
+  "n": 205,
+  "median": 0.98,
+  "p75": 0.98
+ },
+ "boxing|moneyline": {
+  "n": 16,
+  "median": 0.94,
+  "p75": 0.94
+ },
+ "boxing|props": {
+  "n": 93,
+  "median": 0.98,
+  "p75": 0.98
+ },
+ "elections|multi-outcome": {
+  "n": 3566,
+  "median": 0.02,
+  "p75": 0.076
+ },
+ "geopolitics|yes/no": {
+  "n": 888,
+  "median": 0.02,
+  "p75": 0.0442
+ },
+ "geopolitics|multi-outcome": {
+  "n": 353,
+  "median": 0.012,
+  "p75": 0.04
+ },
+ "culture|yes/no": {
+  "n": 1236,
+  "median": 0.06,
+  "p75": 0.2392
+ },
+ "politics|yes/no": {
+  "n": 215,
+  "median": 0.016,
+  "p75": 0.0275
+ },
+ "crypto|yes/no": {
+  "n": 1356,
+  "median": 0.04,
+  "p75": 0.22
+ },
+ "economy|yes/no": {
+  "n": 488,
+  "median": 0.035,
+  "p75": 0.08
+ },
+ "elections|yes/no": {
+  "n": 404,
+  "median": 0.02,
+  "p75": 0.04
+ },
+ "fed|multi-outcome": {
+  "n": 52,
+  "median": 0.008,
+  "p75": 0.0122
+ },
+ "tech|yes/no": {
+  "n": 872,
+  "median": 0.03,
+  "p75": 0.11
+ },
+ "bitcoin|yes/no": {
+  "n": 232,
+  "median": 0.0165,
+  "p75": 0.0503
+ },
+ "fed|yes/no": {
+  "n": 40,
+  "median": 0.011,
+  "p75": 0.023
+ },
+ "politics|multi-outcome": {
+  "n": 109,
+  "median": 0.011,
+  "p75": 0.03
+ },
+ "culture|multi-outcome": {
+  "n": 1766,
+  "median": 0.05,
+  "p75": 0.1507
+ },
+ "economy|multi-outcome": {
+  "n": 716,
+  "median": 0.02,
+  "p75": 0.0433
+ },
+ "finance|yes/no": {
+  "n": 1231,
+  "median": 0.22,
+  "p75": 0.8665
+ },
+ "weather|yes/no": {
+  "n": 123,
+  "median": 0.051,
+  "p75": 0.235
+ },
+ "ethereum|yes/no": {
+  "n": 186,
+  "median": 0.02,
+  "p75": 0.04
+ },
+ "solana|yes/no": {
+  "n": 138,
+  "median": 0.0215,
+  "p75": 0.0565
+ },
+ "bitcoin|multi-outcome": {
+  "n": 110,
+  "median": 0.434,
+  "p75": 0.88
+ },
+ "xrp|yes/no": {
+  "n": 545,
+  "median": 0.01,
+  "p75": 0.02
+ },
+ "crypto|multi-outcome": {
+  "n": 14,
+  "median": 0.1825,
+  "p75": 0.5297
+ },
+ "ethereum|multi-outcome": {
+  "n": 71,
+  "median": 0.035,
+  "p75": 0.055
+ },
+ "solana|multi-outcome": {
+  "n": 69,
+  "median": 0.037,
+  "p75": 0.083
+ },
+ "xrp|multi-outcome": {
+  "n": 75,
+  "median": 0.028,
+  "p75": 0.0525
+ },
+ "finance|multi-outcome": {
+  "n": 320,
+  "median": 0.14,
+  "p75": 0.38
+ },
+ "tech|multi-outcome": {
+  "n": 1525,
+  "median": 0.009,
+  "p75": 0.03
+ },
+ "weather|multi-outcome": {
+  "n": 1137,
+  "median": 0.03,
+  "p75": 0.078
+ }
+}
