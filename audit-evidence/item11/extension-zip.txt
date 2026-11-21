@@ -1,0 +1,58 @@
+## pnpm ext:zip (default origin)
+> kismet-extension@0.1.0 ext:zip /tmp/claude-0/-home-user-MarketEdge/2e8d356b-d1b5-5401-91e6-9f451833b42c/scratchpad/clean6/apps/extension
+[ext:zip] KISMET_ORIGIN is http://localhost:3000: fine for loading unpacked, not for the store.
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+[ext:zip] wrote apps/extension/kismet-extension-0.1.0.zip
+## KISMET_ORIGIN=https://kismetodds.com pnpm ext:zip
+> kismet-extension@0.1.0 ext:zip /tmp/claude-0/-home-user-MarketEdge/2e8d356b-d1b5-5401-91e6-9f451833b42c/scratchpad/clean6/apps/extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+[ext:zip] wrote apps/extension/kismet-extension-0.1.0.zip
+-rw-r--r-- 1 root root 23154 Nov 20 07:11 kismet-extension-0.1.0.zip
+background.js content.js format.css format.js icons manifest.json popup.html popup.js sidepanel.html sidepanel.js types.js 
+{
+"manifest_version": 3,
+"name": "Kismet for Polymarket",
+"version": "0.1.0",
+"permissions": [
+"storage",
+"sidePanel"
+],
+"host_permissions": [
+"https://kismetodds.com/*",
+"https://external-api.demo.kalshi.co/*"
+],
+"content_security_policy": {
+"extension_pages": "script-src 'self'; object-src 'self'"
+},
+"externally_connectable": {
+"matches": [
+"https://kismetodds.com/*"
+]
+},
+"content_scripts": [
+{
+"matches": [
+"https://polymarket.com/event/*",
+"https://polymarket.com/sports/*"
+],
+"js": [
+"content.js"
+],
+"run_at": "document_idle"
+}
+],
+"background": {
+"service_worker": "background.js",
+"type": "module"
+},
+"minimum_chrome_version": null
+}
+disclaimer in popup.html: 1  sidepanel.html: 1
+remote code / eval: 
+banned words in zip text: 
+service worker: chrome-extension://noekmadakflejbeajgganefpciknlhmf/background.js
+popup.html: disclaimer=true text="Kismet Signed out Account Signed out Data Can't reach kismetodds.com Last scan — Paper trading Off Open Kismet Sign in Open side panel Open a Polymarket event page to see Kismet next to each market. M"
+sidepanel.html: disclaimer=true text="This page Paper trading Click a Kismet badge on a Polymarket page. Market analytics, not financial advice. Based on past results. 18+."
+page errors / console errors: 1 Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED

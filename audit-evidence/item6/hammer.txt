@@ -1,0 +1,8 @@
+# hammer, wired bd21cc6 prod (no Upstash: per-instance memory limiter; off Vercel all anonymous callers share key 'local')
+anon GET /api/markets?ps=5 x40: no 429 in 40 (status before: 401)
+anon GET /api/suggest?q=bit x130: no 429 in 130
+premium GET /api/markets?ps=5 x70: first 429 at request 60
+anon POST /api/mcp, no Authorization x130: no 429 in 130 (no Supabase call without a token, so not counted by mcp_bad_token by design)
+anon POST /api/auth/magic-link x8 (distinct emails): first 429 at request 6
+anon /api/suggest status: {"error":"Sign in to use this.","signin":"/login"} 401
+premium /api/markets x70 after a 61 s quiet period: first 429 at request 61

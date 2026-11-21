@@ -1,0 +1,9 @@
+
+ RUN  v5.1.0 /tmp/claude-0/-home-user-MarketEdge/2e8d356b-d1b5-5401-91e6-9f451833b42c/scratchpad/clean9/apps/web
+
+
+ Test Files  1 passed (1)
+      Tests  26 passed (26)
+   Start at  07:39:13
+   Duration  783ms (tests 55%, import 34%, transform 11%)
+

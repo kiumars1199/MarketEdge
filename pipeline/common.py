@@ -11,14 +11,20 @@ CLOB = "https://clob.polymarket.com"
 # Tag slugs we sample closed events from (Polymarket Gamma `tag_slug`).
 SAMPLE_TAGS = [
     "nba", "nfl", "mlb", "nhl", "cfb", "soccer", "tennis", "esports", "sports",
+    "ncaa-basketball", "ufc", "boxing", "golf", "f1", "formula1", "cricket",
     "politics", "elections", "geopolitics", "world",
-    "crypto", "finance", "tech", "pop-culture", "weather",
+    "crypto", "xrp", "finance", "economy", "tech", "pop-culture", "weather",
 ]
+
+# Live Polymarket tag slug -> our niche name, applied before classifying.
+TAG_ALIASES = {"cbb": "ncaab", "ncaa-basketball": "ncaab", "college-basketball": "ncaab",
+               "mma": "ufc", "formula1": "f1"}
 
 # tag slug -> top-level category, checked in this priority order.
 CATEGORY_PRIORITY = [
-    ("sports", {"sports", "nba", "nfl", "mlb", "nhl", "cfb", "soccer", "tennis", "esports", "games"}),
-    ("crypto", {"crypto", "crypto-prices", "bitcoin", "ethereum", "solana"}),
+    ("sports", {"sports", "nba", "nfl", "mlb", "nhl", "cfb", "soccer", "tennis", "esports", "games",
+                "ncaab", "ufc", "boxing", "golf", "f1", "cricket"}),
+    ("crypto", {"crypto", "crypto-prices", "bitcoin", "ethereum", "solana", "xrp"}),
     ("weather", {"weather"}),
     ("tech", {"tech", "ai"}),
     ("finance", {"finance", "stocks", "fed", "economy"}),
@@ -28,8 +34,9 @@ CATEGORY_PRIORITY = [
 ]
 
 # Niche = the most specific known tag, shown as a filter in the UI.
-NICHE_TAGS = ["nba", "nfl", "mlb", "nhl", "cfb", "soccer", "tennis", "esports",
-              "elections", "bitcoin", "ethereum", "solana", "weather", "fed"]
+NICHE_TAGS = ["nba", "nfl", "mlb", "nhl", "cfb", "ncaab", "soccer", "tennis", "ufc", "boxing",
+              "golf", "f1", "cricket", "esports", "elections", "bitcoin", "ethereum", "solana", "xrp",
+              "weather", "fed", "economy"]
 
 # Polymarket taker fee rate by category (docs.polymarket.com/trading/fees).
 # fee per share = rate * p * (1 - p). Makers pay 0.
@@ -47,7 +54,7 @@ def taker_fee(category, p):
 
 
 def classify(tag_slugs):
-    s = set(tag_slugs)
+    s = {TAG_ALIASES.get(t, t) for t in tag_slugs}
     cat = "other"
     for name, slugs in CATEGORY_PRIORITY:
         if s & slugs:

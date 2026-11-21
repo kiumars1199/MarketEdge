@@ -1,0 +1,4 @@
+overrides:
+  # picomatch <= 4.0.7: GHSA-fc5q-39xc-vjpf (high, ReDoS in repeated extglobs), no patched release. Vendored 4.0.7
+  # with a minimal fix; see docs/setup-notes/security.md.
+  "picomatch@4": file:../../vendor/picomatch

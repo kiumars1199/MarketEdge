@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Kismet</title>
+  <link rel="stylesheet" href="./src/ui.css" />
+</head>
+<body style="padding:14px">
+  <nav class="tabs" role="tablist" aria-label="Kismet">
+    <button role="tab" id="tab-page" aria-selected="true" aria-controls="root">This page</button>
+    <button role="tab" id="tab-trade" aria-selected="false" aria-controls="trade">Paper trading</button>
+  </nav>
+  <main id="root" class="stack" role="tabpanel" aria-labelledby="tab-page"><p class="muted">Click a Kismet badge on a Polymarket page.</p></main>
+  <main id="trade" class="stack" role="tabpanel" aria-labelledby="tab-trade" hidden></main>
+  <p class="disclaimer" style="margin-top:14px">Market analytics, not financial advice. Based on past results. 18+.</p>
+  <script type="module" src="./src/sidepanel.ts"></script>
+</body>
+</html>

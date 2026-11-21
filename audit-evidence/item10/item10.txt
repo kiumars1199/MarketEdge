@@ -1,0 +1,24 @@
+## legal pages (anon)
+/terms -> 200 disclaimer=2 18+=2 gambling-help=
+/privacy -> 200 disclaimer=2 18+=1 gambling-help=
+/refunds -> 200 disclaimer=2 18+=1 gambling-help=
+/disclaimer -> 200 disclaimer=2 18+=2 gambling-help=1-800-GAMBLER,Problem Gambling,ncpgambling,
+/contact -> 200 disclaimer=2 18+=1 gambling-help=
+
+## footer links on /
+href="/about" href="/contact" href="/disclaimer" href="/pricing" href="/privacy" href="/refunds" href="/status" href="/terms" 
+
+## 18+ gate in signup/onboarding
+very device. Password Email link Email Password Show At least 8 characters. I'm 18 or older and agree to the Terms and Privacy Policy . Create account Forgot pass
+luck, more math. Market analytics, not financial advice. Based on past results. 18+. © 2026 Kiumars Momtaz and Marc Yamin How it works Pricing Terms Privacy Refu
+6:export default async function Page({ searchParams }: { searchParams: Promise<{ next?: string | string[] }> }) {
+
+## email unsubscribe
+/home/user/wt-audit4/apps/web/lib/auth/public-paths.ts
+/home/user/wt-audit4/apps/web/lib/billing/stripe.ts
+/home/user/wt-audit4/apps/web/lib/repo/types.ts
+/home/user/wt-audit4/apps/web/lib/email/templates.ts
+/home/user/wt-audit4/apps/web/lib/email/index.ts
+/home/user/wt-audit4/apps/web/lib/alerts-server.ts
+/home/user/wt-audit4/apps/web/app/api/admin/route.ts
+/home/user/wt-audit4/apps/web/app/api/unsubscribe/route.ts

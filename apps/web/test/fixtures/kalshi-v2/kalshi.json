@@ -1,0 +1,18 @@
+{
+  "meta": {"source": "Kalshi", "attribution": "Market data from Kalshi (kalshi.com)", "fetched_at": 1795219100,
+           "complete_at": 1795219100, "api": "https://api.elections.kalshi.com/trade-api/v2", "n_markets": 1,
+           "n_markets_open": 1, "n_events": 1, "complete": true, "n_combos": 0, "n_settled": 1, "pages": 1,
+           "notes": [], "seconds": 3.2},
+  "markets": [
+    {"ticker": "KXE-1-0", "event_ticker": "KXE-1", "series_ticker": "KXE", "title": "Event 1", "subtitle": "m0",
+     "yes_bid_cents": 40, "yes_ask_cents": 42, "no_bid_cents": 58, "no_ask_cents": 60, "last_price_cents": 41,
+     "volume": 1200, "volume_24h": 90, "open_interest": 300, "status": "active",
+     "close_time": "2099-01-01T00:00:00Z", "url": "https://kalshi.com/markets/kxe", "source": "Kalshi"}
+  ],
+  "combos": [],
+  "settled": [
+    {"ticker": "KXG-1-A", "event_ticker": "KXG-1", "title": "Game 1", "subtitle": "A", "result": "no",
+     "status": "finalized", "close_time": "2026-11-20T03:00:00Z", "settled_seen_at": 1795219100,
+     "url": "https://kalshi.com/markets/kxg", "source": "Kalshi"}
+  ]
+}

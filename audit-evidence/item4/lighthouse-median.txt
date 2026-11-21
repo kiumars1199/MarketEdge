@@ -1,0 +1,20 @@
+Lighthouse mobile (default throttling), keyless prod build on :3161, TZ=America/New_York, 5 runs per page
+_1.json {'performance': 90, 'accessibility': 98, 'best-practices': 100, 'seo': 91} LCP 3347 TBT 155 CLS 0
+_2.json {'performance': 92, 'accessibility': 98, 'best-practices': 100, 'seo': 91} LCP 3082 TBT 168 CLS 0
+_3.json {'performance': 86, 'accessibility': 98, 'best-practices': 100, 'seo': 91} LCP 3432 TBT 275 CLS 0
+_4.json {'performance': 89, 'accessibility': 98, 'best-practices': 100, 'seo': 91} LCP 3382 TBT 200 CLS 0
+_5.json {'performance': 94, 'accessibility': 98, 'best-practices': 100, 'seo': 91} LCP 2757 TBT 159 CLS 0
+_about1.json {'performance': 96, 'accessibility': 100, 'best-practices': 100, 'seo': 91} LCP 2161 TBT 194 CLS 0
+_about2.json {'performance': 91, 'accessibility': 100, 'best-practices': 100, 'seo': 91} LCP 2888 TBT 222 CLS 0
+_about3.json {'performance': 86, 'accessibility': 100, 'best-practices': 100, 'seo': 91} LCP 2965 TBT 369 CLS 0
+_about4.json {'performance': 94, 'accessibility': 100, 'best-practices': 100, 'seo': 91} LCP 2804 TBT 158 CLS 0
+_about5.json {'performance': 97, 'accessibility': 100, 'best-practices': 100, 'seo': 91} LCP 2180 TBT 140 CLS 0
+_pricing1.json {'performance': 97, 'accessibility': 100, 'best-practices': 100, 'seo': 91} LCP 2156 TBT 149 CLS 0
+_pricing2.json {'performance': 93, 'accessibility': 100, 'best-practices': 100, 'seo': 91} LCP 2859 TBT 189 CLS 0
+_pricing3.json {'performance': 97, 'accessibility': 100, 'best-practices': 100, 'seo': 91} LCP 2322 TBT 126 CLS 0
+_pricing4.json {'performance': 97, 'accessibility': 100, 'best-practices': 100, 'seo': 91} LCP 2167 TBT 158 CLS 0
+_pricing5.json {'performance': 96, 'accessibility': 100, 'best-practices': 100, 'seo': 91} LCP 2171 TBT 186 CLS 0
+MEDIAN _ 5 runs {'performance': 90, 'accessibility': 98, 'best-practices': 100, 'seo': 91}
+MEDIAN _about 5 runs {'performance': 94, 'accessibility': 100, 'best-practices': 100, 'seo': 91}
+MEDIAN _pricing 5 runs {'performance': 97, 'accessibility': 100, 'best-practices': 100, 'seo': 91}
+SEO failing audits: ['meta-description']

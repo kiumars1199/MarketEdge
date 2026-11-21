@@ -3,7 +3,7 @@
 ## The problem (Q's point)
 The model learns from historical **mid** prices. A market order pays the **ask**, then walks deeper
 into the order book as size grows, then pays a fee. If the ask sits as far above the mid as the
-model's edge, the edge is gone and MarketEdge adds nothing. So every flag must answer:
+model's edge, the edge is gone and Kismet adds nothing. So every flag must answer:
 "after crossing the spread, at my stake size, is there still edge?"
 
 ## Definitions (per side, per market)

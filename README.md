@@ -1,4 +1,4 @@
-# MarketEdge
+# Kismet
 
 Flags prediction-market contracts whose **true win chance beats their price after fees**,
 learned from how hundreds of thousands of past markets actually resolved, weighted toward

@@ -1,0 +1,22 @@
+20 sampled flags (seed 4044, run 4): fee=taker_fee(cat,ask); edge=win_prob-(ask+fee); edge_low=win_prob_low-(ask+fee); roi=(win_prob-cost)/cost*100
+  6823615 sports    ask=0.68   fee 0.0109 vs 0.0109  edge 0.0215 vs 0.0215  edge_low -0.0489 vs -0.0490  roi 3.11 vs 3.11  OK
+  7106883 culture   ask=0.86   fee 0.0060 vs 0.0060  edge 0.0244 vs 0.0244  edge_low -0.0596 vs -0.0595  roi 2.82 vs 2.82  OK
+  6641723 sports    ask=0.75   fee 0.0094 vs 0.0094  edge 0.0382 vs 0.0381  edge_low -0.0622 vs -0.0622  roi 5.03 vs 5.02  OK
+  7003826 tech      ask=0.66   fee 0.0090 vs 0.0090  edge 0.0337 vs 0.0337  edge_low -0.0933 vs -0.0933  roi 5.04 vs 5.04  OK
+  6822677 sports    ask=0.87   fee 0.0057 vs 0.0057  edge 0.0249 vs 0.0249  edge_low -0.1276 vs -0.1276  roi 2.84 vs 2.85  OK
+  7105578 sports    ask=0.86   fee 0.0060 vs 0.0060  edge 0.0653 vs 0.0653  edge_low -0.0478 vs -0.0477  roi 7.54 vs 7.54  OK
+  6884677 sports    ask=0.58   fee 0.0122 vs 0.0122  edge 0.0672 vs 0.0672  edge_low -0.0388 vs -0.0388  roi 11.35 vs 11.35  OK
+  6757660 sports    ask=0.92   fee 0.0037 vs 0.0037  edge 0.0553 vs 0.0553  edge_low 0.0242 vs 0.0241  roi 5.99 vs 5.99  OK
+  6641569 sports    ask=0.78   fee 0.0086 vs 0.0086  edge 0.0472 vs 0.0472  edge_low -0.0586 vs -0.0586  roi 5.99 vs 5.99  OK
+  6823169 sports    ask=0.6    fee 0.0120 vs 0.0120  edge 0.0789 vs 0.0789  edge_low -0.0315 vs -0.0315  roi 12.9 vs 12.89  OK
+  7097646 sports    ask=0.81   fee 0.0077 vs 0.0077  edge 0.0415 vs 0.0415  edge_low -0.0305 vs -0.0305  roi 5.07 vs 5.08  OK
+  7105749 sports    ask=0.86   fee 0.0060 vs 0.0060  edge 0.0316 vs 0.0316  edge_low -0.0570 vs -0.0570  roi 3.65 vs 3.65  OK
+  6643614 sports    ask=0.64   fee 0.0115 vs 0.0115  edge 0.0549 vs 0.0550  edge_low -0.0390 vs -0.0390  roi 8.43 vs 8.44  OK
+  6834621 sports    ask=0.77   fee 0.0089 vs 0.0089  edge 0.0499 vs 0.0498  edge_low 0.0177 vs 0.0177  roi 6.41 vs 6.40  OK
+  6891270 sports    ask=0.93   fee 0.0033 vs 0.0033  edge 0.0531 vs 0.0530  edge_low 0.0124 vs 0.0124  roi 5.69 vs 5.68  OK
+  6891332 sports    ask=0.94   fee 0.0028 vs 0.0028  edge 0.0449 vs 0.0449  edge_low 0.0021 vs 0.0021  roi 4.76 vs 4.76  OK
+  6820482 sports    ask=0.64   fee 0.0115 vs 0.0115  edge 0.0288 vs 0.0288  edge_low -0.0420 vs -0.0420  roi 4.42 vs 4.42  OK
+  7105739 sports    ask=0.85   fee 0.0064 vs 0.0064  edge 0.0398 vs 0.0398  edge_low -0.0471 vs -0.0472  roi 4.65 vs 4.65  OK
+  6821790 sports    ask=0.63   fee 0.0117 vs 0.0117  edge 0.1037 vs 0.1036  edge_low 0.0399 vs 0.0399  roi 16.16 vs 16.15  OK
+  6884698 sports    ask=0.84   fee 0.0067 vs 0.0067  edge 0.0438 vs 0.0438  edge_low -0.0369 vs -0.0368  roi 5.17 vs 5.17  OK
+mismatches: 0

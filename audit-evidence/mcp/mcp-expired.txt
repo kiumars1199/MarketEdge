@@ -1,0 +1,3 @@
+seeded 32 real Premium users; valid token for user 32 before: 200
+31 expired-but-genuine tokens (31 different real users, exp 60 s ago): statuses 401 | Bearer error="invalid_token", error_description="Token has expired", resource_metadata="ht
+valid Premium token for a 32nd user right after: 429 {"error":"Too many requests. Slow down and try again shortly."}

@@ -33,7 +33,7 @@ Polymarket CLOB (books) ─┤  /api/book live depth (5 s)   │──► Supaba
 
 ## Data flow and caching
 1. The engine writes `markets.json` (~20 MB), `flags.json`, `model.json`, `backtest.json`, `spreads.json`.
-2. The web server fetches them from `https://api.github.com/repos/kiumars1199/marketedge/contents/<file>?ref=live`
+2. The web server fetches them from `https://api.github.com/repos/kiumars1199/kismet/contents/<file>?ref=live`
    (header `Accept: application/vnd.github.raw`, `Authorization: Bearer $GITHUB_DATA_TOKEN`),
    or from local `../../output/` when `DATA_SOURCE=local` (dev).
 3. `lib/data/store.ts` keeps one parsed copy in memory per server instance:
@@ -53,16 +53,20 @@ The scan is regenerated every 2 h and is read-only. An in-memory store is simple
 (15k markets). Move to Postgres only if scans run more often than every 10 min or rows exceed ~200k.
 
 ## API routes (web)
+T-276: signed out, every route below answers 401 JSON except the public list in `apps/web/lib/auth/public-paths.ts`
+(`PUBLIC_API`: health, meta, me, auth, Stripe webhook, unsubscribe, cron routes, extension token/telemetry,
+`events/by-slug` with its own session-or-token check, MCP). "public" in the table means "any signed-in tier".
+
 | Route | Method | Auth | Returns |
 |---|---|---|---|
 | `/api/meta` | GET | public | scan time, counts, facets (categories, niches, types with counts) |
 | `/api/markets` | GET | public (free tier trimmed) | filtered, sorted, paginated markets (`04-filters.md` params) |
-| `/api/markets/[id]` | GET | public (trimmed) | one market + its model curve + backtest record for its segment |
+| `/api/markets/[id]` | GET | public (trimmed) | one market + backtest record for its segment; its model curve only for Pro+ or a counted reveal (`curve: null` for Free / signed-out, RT3-01) |
 | `/api/flags` | GET | public (trimmed) | flags with the same filter params |
 | `/api/events/[id]` | GET | public | all markets in one event |
 | `/api/events/by-slug/[slug]` | GET | Premium (extension) | event markets + flags by Polymarket slug |
 | `/api/book` | GET `?token=` | Pro+ | live execution check for one token (`07-execution.md`) |
-| `/api/model/curve` | GET `?segment=&h=` | public | win-prob curve points for charts |
+| `/api/model/curve` | GET `?segment=&h=` | public (trimmed), rate-limited | win-prob curve points for charts. Pro+: any segment, exact. Free / signed-out: only `all` and `cat:<category>` (what `/track-record` charts), win chance rounded to 5 pp (the width of Free's band), other segments 403. Exact curve + the public mid = exact win chance (RT3-01) |
 | `/api/backtest` | GET | public | `backtest.json` summary |
 | `/api/presets` etc. | CRUD | user | see `05-features.md` |
 | `/api/alerts/run` | POST | cron secret | evaluates alert rules (Vercel Cron, every 5 min) |
@@ -70,9 +74,9 @@ The scan is regenerated every 2 h and is read-only. An in-memory store is simple
 
 ## Environment variables
 ```
-DATA_SOURCE=github|local
-GITHUB_DATA_TOKEN=            # fine-grained, read-only contents on kiumars1199/marketedge
-GITHUB_DATA_REPO=kiumars1199/marketedge
+DATA_SOURCE=supabase|github|local   # supabase: private bucket `scan` → `live` branch → last good copy (docs/14 §4)
+GITHUB_DATA_TOKEN=            # fine-grained, read-only contents on kiumars1199/kismet
+GITHUB_DATA_REPO=   # owner/name of this GitHub repo
 GITHUB_DATA_REF=live
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=

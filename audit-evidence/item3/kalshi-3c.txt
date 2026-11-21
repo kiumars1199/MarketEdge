@@ -1,0 +1,30 @@
+## 3-c: /kalshi, /api/kalshi, /combos per account (wired a6ebb65, no output/kalshi.json present: ls: cannot access '/tmp/claude-0/-home-user-MarketEdge/2e8d356b-d1b5-5401-91e6-9)
+beta /kalshi -> 200 text/html; charset=utf-8 <title>Kalshi markets · Kismet emptystate=1 
+beta /api/kalshi -> 404 application/json  emptystate=0 {"error":"Not available"} 
+beta /combos -> 200 text/html; charset=utf-8 <title>Combos · Kismet emptystate=0 
+free /kalshi -> 404 text/html; charset=utf-8 <title>Page not found · Kismet emptystate=0 
+free /api/kalshi -> 404 application/json  emptystate=0 {"error":"Not available"} 
+free /combos -> 404 text/html; charset=utf-8 <title>Page not found · Kismet emptystate=0 
+pro /kalshi -> 404 text/html; charset=utf-8 <title>Page not found · Kismet emptystate=0 
+pro /api/kalshi -> 404 application/json  emptystate=0 {"error":"Not available"} 
+pro /combos -> 404 text/html; charset=utf-8 <title>Page not found · Kismet emptystate=0 
+premium /kalshi -> 404 text/html; charset=utf-8 <title>Page not found · Kismet emptystate=0 
+premium /api/kalshi -> 404 application/json  emptystate=0 {"error":"Not available"} 
+premium /combos -> 404 text/html; charset=utf-8 <title>Page not found · Kismet emptystate=0 
+admin /kalshi -> 200 text/html; charset=utf-8 <title>Kalshi markets · Kismet emptystate=1 
+admin /api/kalshi -> 404 application/json  emptystate=0 {"error":"Not available"} 
+admin /combos -> 200 text/html; charset=utf-8 <title>Combos · Kismet emptystate=0 
+-- anon
+anon /kalshi -> 307 http://localhost:3161/signup?next=%2Fkalshi
+anon /api/kalshi -> 401 
+anon /combos -> 307 http://localhost:3161/signup?next=%2Fcombos
+beta @1440: visible /kalshi link=1 -> url=/kalshi h1="Kalshi markets" emptyState=1 consoleErrors=0
+beta @390: visible /kalshi link=0 -> direct /kalshi status=200 title="Kalshi markets · Kismet" consoleErrors=0
+free @1440: visible /kalshi link=0 -> direct /kalshi status=404 title="Kalshi markets · Kismet" consoleErrors=0
+free @390: visible /kalshi link=0 -> direct /kalshi status=404 title="Kalshi markets · Kismet" consoleErrors=0
+premium @1440: visible /kalshi link=0 -> direct /kalshi status=404 title="Kalshi markets · Kismet" consoleErrors=0
+premium @390: visible /kalshi link=0 -> direct /kalshi status=404 title="Page not found · Kismet" consoleErrors=0
+(the first 390 rows above used a wrong 'More' selector; the corrected 390 run:)
+beta @390: visible /kalshi link=1 -> url=/kalshi h1="Kalshi markets" emptyState=1 consoleErrors=0
+free @390: visible /kalshi link=0 -> direct /kalshi status=404 title="Kalshi markets · Kismet" consoleErrors=0
+premium @390: visible /kalshi link=0 -> direct /kalshi status=404 title="Kalshi markets · Kismet" consoleErrors=0

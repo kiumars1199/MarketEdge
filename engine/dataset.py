@@ -8,7 +8,7 @@ import os
 
 import numpy as np
 
-from pipeline.common import jl_read, FEE_RATE
+from pipeline.common import classify, jl_read, FEE_RATE
 
 HORIZONS = [1, 6, 24, 72, 168]
 
@@ -64,8 +64,10 @@ def load(cfg):
         if not m or key in seen:
             continue
         seen.add(key)
-        mt = market_type(m["category"], m.get("market_type"), m.get("neg_risk"))
-        c, n, t = enc("cat", m["category"]), enc("niche", m["niche"]), enc("mt", mt)
+        # re-classify from the stored tags so niche/category list changes apply on refit
+        cat, niche = classify(m["tags"]) if m.get("tags") else (m["category"], m["niche"])
+        mt = market_type(cat, m.get("market_type"), m.get("neg_risk"))
+        c, n, t = enc("cat", cat), enc("niche", niche), enc("mt", mt)
         e = ev_idx.setdefault(m["event_id"], len(ev_idx))
         for side in (0, 1):
             p = s["p"] if side == 0 else 1 - s["p"]

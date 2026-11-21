@@ -1,4 +1,4 @@
-# MarketEdge spec
+# Kismet spec
 
 | # | Doc | What it answers |
 |---|---|---|
@@ -14,8 +14,16 @@
 | 10 | [Tasks](10-tasks.md) | Ordered build backlog for agents, in parallel lanes |
 | 11 | [Research](11-research.md) | Competitors, feature parity, sources |
 | 12 | [Test plan](12-test-plan.md) | Unit, e2e smoke flows, data checks, launch checklist |
+| 13 | [Search & filters v2](13-search-and-filters-v2.md) | Smart search, live suggestions, simple filters, Best bets home |
+| 14 | [Launch](14-launch.md) | Accounts, Stripe placeholders, legal pages, hosting, ops, pre-launch audit |
+| 15 | [Security](15-security.md) | Threat model and the security checklist |
+| 18 | [Multipliers and combos](18-multipliers-and-combos.md) | Two tiers, Pays filter, clean counts, combos, longer backtest |
+| 19 | [Polish round](19-polish-round.md) | Landing, onboarding, free tier, clearer numbers, speed, UI, admin grants |
+| — | [Overnight run](OVERNIGHT.md) | The full final-product build + final audit prompt |
+| 16 | [Kalshi trading](16-trading.md) | Placing Kalshi trades: rules, design, paper-trading build behind a flag |
+| 17 | [UI polish](17-ui-polish.md) | Fixes from screenshots + all-day usefulness |
 | — | [Agent prompts](AGENT_PROMPTS.md) | Copy-paste prompts for Claude Code, one per lane |
 
 Engine docs: the repo `README.md` (model, backtest, outputs).
 
-Status as of Nov 16, 2026: engine done and producing live data; spec complete; app not started.
+Build status: see [STATUS.md](../STATUS.md).

@@ -1,0 +1,15 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 20 Nov 2026 17:22:19 GMT
+location: /signup?next=%2Fbets
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-vercel-id: iad1::fmz2d-1795195339344-92aecf56d6a6
+

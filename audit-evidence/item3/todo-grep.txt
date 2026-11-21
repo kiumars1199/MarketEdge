@@ -1,0 +1,6 @@
+# TODO/FIXME in shipped code (tests excluded)
+0
+# console.log in shipped code
+0
+# lorem
+0

@@ -1,0 +1,228 @@
+{
+ "markets": [
+  {
+   "id": "2509627",
+   "question": "How high will BTC get by 5:00PM ET on Fri, Nov 20?",
+   "slug": "cpc-btc-hit-h-w-2026-11-20-80000",
+   "endDate": "2026-11-20T22:30:00Z",
+   "category": "crypto",
+   "marketSides": [
+    {
+     "description": "Yes",
+     "long": true
+    },
+    {
+     "description": "No",
+     "long": false
+    }
+   ],
+   "outcomes": "[\"Yes\",\"No\"]",
+   "status": "MARKET_STATUS_OPEN",
+   "hidden": false,
+   "title": "Reaches $80,000",
+   "feeCoefficient": 0.095,
+   "bestBidQuote": {
+    "value": "0.0100",
+    "currency": "USD"
+   },
+   "bestAskQuote": {
+    "value": "0.0200",
+    "currency": "USD"
+   },
+   "gameStartTime": "2026-11-13T22:00:00Z",
+   "active": true,
+   "closed": false
+  },
+  {
+   "id": "2599341",
+   "question": "How Low Will US Gas Prices Get This Week?",
+   "slug": "aaagaspc-usgas-loww-2026-11-22-lt3pt6800",
+   "endDate": "2026-11-30T04:59:00Z",
+   "category": "macro",
+   "marketSides": [
+    {
+     "description": "Yes",
+     "long": true
+    },
+    {
+     "description": "No",
+     "long": false
+    }
+   ],
+   "outcomes": "[\"Yes\",\"No\"]",
+   "status": "MARKET_STATUS_OPEN",
+   "hidden": false,
+   "title": "Below $3.6800",
+   "feeCoefficient": 0.095,
+   "bestBidQuote": {
+    "value": "0.9500",
+    "currency": "USD"
+   },
+   "bestAskQuote": {
+    "value": "0.9900",
+    "currency": "USD"
+   },
+   "gameStartTime": "2026-11-16T10:00:00Z",
+   "active": true,
+   "closed": false
+  },
+  {
+   "id": "54798",
+   "question": "US Confirms That Aliens Exist By",
+   "slug": "usgcc-aliens-12-31-2026",
+   "endDate": "2027-01-15T04:00:00Z",
+   "category": "politics",
+   "marketSides": [
+    {
+     "description": "Yes",
+     "long": true
+    },
+    {
+     "description": "No",
+     "long": false
+    }
+   ],
+   "outcomes": "[\"No\",\"Yes\"]",
+   "status": "MARKET_STATUS_OPEN",
+   "hidden": false,
+   "title": "December 31, 2026",
+   "feeCoefficient": 0.095,
+   "bestBidQuote": {
+    "value": "0.0200",
+    "currency": "USD"
+   },
+   "bestAskQuote": {
+    "value": "0.0300",
+    "currency": "USD"
+   },
+   "gameStartTime": "2026-12-31T17:00:00Z",
+   "active": true,
+   "closed": false
+  },
+  {
+   "id": "166289",
+   "question": "Which Company Has #1 AI Model end of 2026?",
+   "slug": "aimrc-company1-2026-12-31-openai",
+   "endDate": "2027-01-15T04:00:00Z",
+   "category": "technology",
+   "marketSides": [
+    {
+     "description": "Yes",
+     "long": true
+    },
+    {
+     "description": "No",
+     "long": false
+    }
+   ],
+   "outcomes": "[\"No\",\"Yes\"]",
+   "status": "MARKET_STATUS_OPEN",
+   "hidden": false,
+   "title": "OpenAI",
+   "feeCoefficient": 0.095,
+   "bestBidQuote": {
+    "value": "0.0300",
+    "currency": "USD"
+   },
+   "bestAskQuote": {
+    "value": "0.0400",
+    "currency": "USD"
+   },
+   "gameStartTime": "2026-12-31T17:00:00Z",
+   "active": true,
+   "closed": false
+  },
+  {
+   "id": "2687447",
+   "question": "Gold Up or Down Daily",
+   "slug": "cpausp-gold-updown-1d-2026-11-19-2315z",
+   "endDate": "2026-11-20T22:30:00Z",
+   "category": "finance",
+   "marketSides": [
+    {
+     "description": "Yes",
+     "long": true
+    },
+    {
+     "description": "No",
+     "long": false
+    }
+   ],
+   "outcomes": "[\"Yes\",\"No\"]",
+   "status": "MARKET_STATUS_OPEN",
+   "hidden": false,
+   "title": "Gold Up or Down Daily",
+   "feeCoefficient": 0.095,
+   "bestBidQuote": null,
+   "bestAskQuote": {
+    "value": "0.1100",
+    "currency": "USD"
+   },
+   "gameStartTime": "2026-11-19T23:15:00Z",
+   "active": true,
+   "closed": false
+  }
+ ],
+ "events": [
+  {
+   "id": "266891",
+   "slug": "btc-hit-h-w-2026-11-20",
+   "title": "How high will BTC get by 5:00PM ET on Fri, Nov 20?",
+   "endDate": "2026-11-20T22:00:00Z",
+   "category": "crypto",
+   "markets": [
+    {
+     "slug": "cpc-btc-hit-h-w-2026-11-20-80000"
+    }
+   ]
+  },
+  {
+   "id": "286599",
+   "slug": "gold-updown-1d-2026-11-19-2315z",
+   "title": "Gold Up or Down Daily",
+   "endDate": "2026-11-20T22:00:00Z",
+   "category": "finance",
+   "markets": [
+    {
+     "slug": "cpausp-gold-updown-1d-2026-11-19-2315z"
+    }
+   ]
+  },
+  {
+   "id": "276282",
+   "slug": "usgas-loww-2026-11-22",
+   "title": "How Low Will US Gas Prices Get This Week?",
+   "endDate": "2026-11-22T05:00:00Z",
+   "category": "macro",
+   "markets": [
+    {
+     "slug": "aaagaspc-usgas-loww-2026-11-22-lt3pt6800"
+    }
+   ]
+  },
+  {
+   "id": "17708",
+   "slug": "aliens",
+   "title": "US Confirms That Aliens Exist?",
+   "endDate": "2027-01-01T04:59:00Z",
+   "category": "politics",
+   "markets": [
+    {
+     "slug": "usgcc-aliens-12-31-2026"
+    }
+   ]
+  },
+  {
+   "id": "44404",
+   "slug": "company1-2026-12-31",
+   "title": "Which Company Has #1 AI Model end of 2026?",
+   "endDate": "2027-01-01T04:59:00Z",
+   "category": "technology",
+   "markets": [
+    {
+     "slug": "aimrc-company1-2026-12-31-openai"
+    }
+   ]
+  }
+ ]
+}

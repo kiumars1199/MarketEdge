@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* Design tokens: docs/06-ui.md § Design system. Dark first; light mirrors with the same accent. */
+:root {
+  --background: #070a09;
+  --surface: #0c120f;
+  --raised: #101613;
+  --input: #0e1411;
+  --muted-bg: #141c18;
+  --border: #1a2520;
+  --text: #e6efe9;
+  --muted: #a9bab1;
+  --soft: #c2d1c9;
+  --accent: #10b981;
+  --accent-hover: #34d399;
+  --on-accent: #04140d;
+  --accent-bg: #0f2a1e;
+  --accent-border: #1d4a35;
+  --accent-soft: #d1fae5;
+  --accent-softer: #a7f3d0;
+  --nav-active: #10251c;
+  --market-bar: #4b5a53;
+  --positive: #22c55e;
+  --negative: #ef4444;
+  --warning: #f59e0b;
+  color-scheme: dark;
+}
+
+/* Lane D (display settings) toggles this attribute on <html>. */
+[data-theme="light"] {
+  --background: #f7faf8;
+  --surface: #ffffff;
+  --raised: #f1f5f3;
+  --input: #ffffff;
+  --muted-bg: #e6ede9;
+  --border: #d5e0da;
+  --text: #0a0f0d;
+  --muted: #4d6158;
+  --soft: #33443c;
+  --accent: #059669;
+  --accent-hover: #047857;
+  --accent-bg: #e3f6ee;
+  --accent-border: #a7dcc4;
+  --accent-soft: #065f46;
+  --accent-softer: #047857;
+  --nav-active: #e3f6ee;
+  --market-bar: #9aaba3;
+  color-scheme: light;
+}
+
+@theme inline {
+  /* docs/17: motion 150–200 ms ease-out for every transition-* utility */
+  --default-transition-duration: 180ms;
+  --default-transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-input: var(--input);
+  --color-muted-bg: var(--muted-bg);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-soft: var(--soft);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-accent-bg: var(--accent-bg);
+  --color-accent-border: var(--accent-border);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-softer: var(--accent-softer);
+  --color-nav-active: var(--nav-active);
+  --color-market-bar: var(--market-bar);
+  --color-positive: var(--positive);
+  --color-negative: var(--negative);
+  --color-warning: var(--warning);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --radius-card: 18px;
+  --radius-inner: 16px;
+  --radius-input: 12px;
+  --shadow-card: none;
+}
+
+@layer base {
+  html {
+    background: var(--background);
+    color: var(--text);
+  }
+  body {
+    @apply font-sans antialiased;
+  }
+  /* the header is sticky from lg up: anchors, j/k and the tour scroll clear it */
+  @media (min-width: 64rem) {
+    html { scroll-padding-top: 5rem; }
+  }
+  h1, h2, h3 {
+    @apply font-heading;
+  }
+  /* P7: tabular figures where numbers update or line up (tables, data-num, price/return spans use tabular-nums);
+     prose and headlines keep proportional figures, which read better ("1K bets" doesn't gap after the 1) */
+  table, [data-num], dd, kbd {
+    font-variant-numeric: tabular-nums;
+  }
+  /* Lane D2 display setting "Compact": everything sized in rem shrinks ~6%. */
+  html[data-density="compact"] {
+    font-size: 15px;
+  }
+  /* links inside running text are underlined, not told apart by color alone (WCAG 1.4.1) */
+  :where(p) a:not([role="button"]) {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  /* one style for keyboard focus: 2px ring, offset 2px; never on mouse click */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+  ::selection {
+    background: var(--accent-border);
+    color: var(--text);
+  }
+  html {
+    scrollbar-color: var(--muted-bg) transparent;
+    accent-color: var(--accent);
+    caret-color: var(--accent);
+  }
+}
+
+/* Live price pulse (docs/17): the number briefly highlights when a live refresh changes it. */
+@keyframes price-pulse {
+  from { background-color: color-mix(in srgb, var(--accent) 28%, transparent); }
+  to { background-color: transparent; }
+}
+.price-pulse {
+  animation: price-pulse 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* P7: one entrance for content that arrives after a fetch (drawer body, loaded cards): 160 ms fade + 4 px rise.
+   Turned off with everything else under prefers-reduced-motion. */
+@keyframes enter {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+.enter {
+  animation: enter 160ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,22 @@
+=== pip: pip install -q -r requirements.txt 07:00:28
+=== pip exit 0 07:00:29
+=== pytest: pytest -q 07:00:29
+=== pytest exit 0 07:00:31
+=== pnpm_i: pnpm i --frozen-lockfile 07:00:31
+=== pnpm_i exit 0 07:00:32
+=== typecheck: pnpm typecheck 07:00:32
+=== typecheck exit 0 07:00:42
+=== lint: pnpm lint 07:00:42
+=== lint exit 0 07:00:49
+=== unit: pnpm test 07:00:49
+=== unit exit 0 07:01:05
+=== ext_i: pnpm i --frozen-lockfile 07:01:05
+=== ext_i exit 0 07:01:05
+=== ext_tc: pnpm typecheck 07:01:05
+=== ext_tc exit 0 07:01:07
+=== ext_test: pnpm test 07:01:07
+=== ext_test exit 0 07:01:08
+=== e2e_demo: pnpm exec playwright test --reporter=list 07:01:08
+=== e2e_demo exit 0 07:02:49
+=== e2e_paid: pnpm exec playwright test -c playwright.paid.config.ts --reporter=list 07:02:49
+=== e2e_paid exit 0 07:06:56

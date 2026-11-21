@@ -1,0 +1,74 @@
+{
+ "/bets → /markets": {
+  "first_feedback_ms": 76,
+  "content_ms": 572,
+  "fb": [
+   76,
+   96,
+   75,
+   87,
+   76
+  ],
+  "full": [
+   552,
+   572,
+   596,
+   585,
+   530
+  ]
+ },
+ "/markets → /watchlist": {
+  "first_feedback_ms": 181,
+  "content_ms": 246,
+  "fb": [
+   90,
+   150,
+   200,
+   183,
+   181
+  ],
+  "full": [
+   134,
+   246,
+   259,
+   269,
+   238
+  ]
+ },
+ "/watchlist → /bets": {
+  "first_feedback_ms": 72,
+  "content_ms": 471,
+  "fb": [
+   74,
+   72,
+   86,
+   70,
+   72
+  ],
+  "full": [
+   467,
+   471,
+   503,
+   467,
+   513
+  ]
+ },
+ "/markets → /bets": {
+  "first_feedback_ms": 140,
+  "content_ms": 355,
+  "fb": [
+   95,
+   140,
+   194,
+   173,
+   89
+  ],
+  "full": [
+   486,
+   267,
+   355,
+   357,
+   330
+  ]
+ }
+}

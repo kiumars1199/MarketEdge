@@ -23,7 +23,7 @@
 7. Grouping by event and "closing soon"/"live" views.
 8. Portfolio/P&L page that people want to open (Oddpool).
 
-## Where MarketEdge is different
+## Where Kismet is different
 - Edge from **how markets like this actually resolved**, per niche, market type and time-to-close,
   instead of copying a sharp sportsbook (only works for sports) or showing raw odds.
 - **Execution-aware**: every flag says whether the edge survives the spread at your stake.

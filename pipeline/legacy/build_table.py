@@ -124,7 +124,7 @@ def main():
     def pick(gs, edge, tcol, tmin=2.0):
         return [g for g in gs if g["train"][edge] > 0 and g["train"][tcol] >= tmin]
 
-    lines = ["# MarketEdge backtest (Polymarket)", ""]
+    lines = ["# Kismet backtest (Polymarket)", ""]
     lines.append(f"Markets sampled: {len(markets):,} | snapshots: {len(snaps):,} | bets: {len(allb):,}")
     lines.append(f"Train: {len(train):,} bets resolved before cutoff | Test: {len(test):,} bets after")
     lines.append(f"Fees: Polymarket taker formula by category; slippage assumed {SLIPPAGE*100:.1f}c for takers")

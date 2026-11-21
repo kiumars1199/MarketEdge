@@ -1,0 +1,4 @@
+
+> kismet-extension@0.1.0 typecheck /tmp/claude-0/-home-user-MarketEdge/2e8d356b-d1b5-5401-91e6-9f451833b42c/scratchpad/clean6/apps/extension
+> tsc --noEmit
+

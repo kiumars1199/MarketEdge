@@ -1,0 +1,37 @@
+## d2 (Premium MCP vs site API, g=0)
+premium best_bets default: mcp 25 rows, /api/flags?ps=25&g=0 25 rows, same ids in same order: true; mcp total line: 1K bets match; showing 1–25 (page 1 of 43). | api total 1069
+premium best_bets tier all, sports: mcp 25 rows, /api/flags?ps=25&g=0&tier=all&c=sports 25 rows, same ids in same order: true; mcp total line: 2.2K bets match; showing 1–25 (page 1 of 92). | api total 2282
+premium search bitcoin: mcp 25 rows, /api/markets?q=bitcoin&ps=25&g=0 25 rows, same ids in same order: true; mcp total line: 166 markets match; showing 1–25 (page 1 of 7). | api total 166
+execution.best_ask 0.72 best.ask 0.7
+
+## d2 (Pro)
+pro best_bets default: mcp 25 rows, /api/flags?ps=25&g=0 25 rows, same ids in same order: true; mcp total line: 1K bets match; showing 1–25 (page 1 of 43). | api total 1069
+pro best_bets tier all, sports: mcp 25 rows, /api/flags?ps=25&g=0&tier=all&c=sports 25 rows, same ids in same order: true; mcp total line: 2.2K bets match; showing 1–25 (page 1 of 92). | api total 2282
+pro search bitcoin: mcp 25 rows, /api/markets?q=bitcoin&ps=25&g=0 25 rows, same ids in same order: true; mcp total line: 166 markets match; showing 1–25 (page 1 of 7). | api total 166
+execution.best_ask 0.72 best.ask 0.7
+
+## Pro get_market vs site
+Pro token, MCP get_market 6674492 (isError=false):
+Denmark vs. Norway: Both Teams to Score
+Event: Denmark vs. Norway - More Markets
+
+Bet Yes at 70¢ · pays 1.4x · win chance 93% (model) · +24% similar past bets returned
+Price check: worth it · Strong record · closes in 14h · sports
+Basis: Model: SOCCER · props · ~24 h · 721 eff. samples · 4.2K events (niche + type level)
+http://localhost:3161/m/6674492
+Other side: No at 31¢, win chance 8%
+
+Price check (cost of crossing the spread, after the fee):
+  Verdict: worth it (Edge looks too good: in testing, flags above 15c earned far less than predicted.)
+  Best ask 72¢ · best bid 71¢ · spread cost 0.5¢ · fee 1¢ a share
+  Edge after costs 19.5¢ a share · about $24,282 can be bought before the edge drops under the minimum
+
+Model level: niche + type · sample: 721 effective past bets, 4.2K events (Strong record)
+Backtest basis: Bets in sports: won 95% of the time, +20% return in testing · 7.5K bets tested
+Scan price from 2026-11-17T05:58:45.000Z.
+Bet on: Polymarket https://polymarket.com/event/unl-den-nor-2026-11-17-more-markets
+http://localhost:3161/m/6674492
+
+Market analytics, not financial advice. Based on past results. 18+.
+
+Pro cookie, /api/markets/6674492: {"ask":0.7,"fee":0.0105,"win_prob":0.9255,"win_prob_low":0.8946,"edge":0.215,"roi_pct":30.26,"model_neff":721.2,"model_level":"nmt","spread":0.01,"capacity":24282.16,"backtest":{"flags":7557,"pnl_cents":15.98,"t":52.03}}

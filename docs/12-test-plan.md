@@ -21,7 +21,7 @@
 Paid additions: S7 sign up → upgrade (Stripe test) → gated features unlock; S8 create alert → run evaluator → inbox shows one event, second run doesn't duplicate.
 
 ## Data checks (run in the refresh workflow before publishing)
-- `markets_scanned ≥ 1000`, `flags ≤ 5% of markets`, no NaN in any numeric field.
+- `markets_scanned ≥ 1000`, tier-"best" flags ≤ 10% of markets (was 5%; raised Nov 17 when the 2-year history validated more categories), no NaN in any numeric field.
 - Every flag: `edge ≥ min_edge`, `edge_low > 0`, `validated`, `execution` present.
 - `scanned_at` newer than the previous publish.
 Fail → keep the previous `live` data and open a GitHub issue.

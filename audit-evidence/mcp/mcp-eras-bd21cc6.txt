@@ -1,0 +1,73 @@
+seeded premium x3 + free (run 1795160709237)
+
+== legacy 2025 (initialize handshake)
+connected; server protocol=2025-11-25
+  best_bets {"limit":0} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: limit: Too small: expected number to be >=1
+  best_bets {"limit":25.5} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: limit: Invalid input: expected int, received number
+  best_bets {"limit":"50"} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: limit: Invalid input: expected number, received string
+  best_bets {"page":1001} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: page: Too big: expected number to be <=1000
+  best_bets {"tier":"bogus"} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: tier: Invalid option: expected one of "best"|"edge"|"all"
+  best_bets {"categories":["admin"]} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: categories.0: Invalid option: expected one of "sports"|"crypto"|"pol
+  best_bets {"pays_min":0} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: pays_min: Too small: expected number to be >=1
+  best_bets {"closing_within_hours":-1} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: closing_within_hours: Too small: expected number to be >0
+  best_bets {"pays_min":10,"pays_max":2} -> isError=false blocks=1 ends-with-disclaimer | Best bets on Kismet (same list as http://localhost:3161/bets, same for everyone):
+  best_bets {"limit":3} -> isError=false blocks=1 ends-with-disclaimer | Best bets on Kismet (same list as http://localhost:3161/bets, same for everyone):
+  search_markets {"query":""} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool search_markets: query: Too small: expected string to have >=1 characters
+  search_markets {"query":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool search_markets: query: Too big: expected string to have <=120 characters
+  search_markets {} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool search_markets: query: Invalid input: expected string, received undefined
+  search_markets {"query":42} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool search_markets: query: Invalid input: expected string, received number
+  get_market {} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool get_market: market_id: Invalid input: expected string, received undefined
+  get_market {"market_id":""} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool get_market: market_id: Too small: expected string to have >=1 characters
+  get_market {"market_id":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool get_market: market_id: Too big: expected string to have <=100 characters
+  get_market {"market_id":"does-not-exist"} -> isError=true blocks=1 ends-with-disclaimer | No market with id "does-not-exist". Use search_markets to find one.
+  track_record {"unexpected":true} -> isError=false blocks=1 ends-with-disclaimer | How Kismet's Best bets did in a walk-forward test (each week judged only on what came before):
+  my_list {"limit":-5} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool my_list: limit: Too small: expected number to be >=1
+  my_list {"page":0} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool my_list: page: Too small: expected number to be >=1
+  no_such_tool {} -> THROWN (protocol error, not a tool result): Tool no_such_tool not found
+
+== modern 2026-07-28 (pinned)
+connected; server protocol=2026-07-28
+  best_bets {"limit":0} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: limit: Too small: expected number to be >=1
+  best_bets {"limit":25.5} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: limit: Invalid input: expected int, received number
+  best_bets {"limit":"50"} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: limit: Invalid input: expected number, received string
+  best_bets {"page":1001} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: page: Too big: expected number to be <=1000
+  best_bets {"tier":"bogus"} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: tier: Invalid option: expected one of "best"|"edge"|"all"
+  best_bets {"categories":["admin"]} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: categories.0: Invalid option: expected one of "sports"|"crypto"|"pol
+  best_bets {"pays_min":0} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: pays_min: Too small: expected number to be >=1
+  best_bets {"closing_within_hours":-1} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: closing_within_hours: Too small: expected number to be >0
+  best_bets {"pays_min":10,"pays_max":2} -> isError=false blocks=1 ends-with-disclaimer | Best bets on Kismet (same list as http://localhost:3161/bets, same for everyone):
+  best_bets {"limit":3} -> isError=false blocks=1 ends-with-disclaimer | Best bets on Kismet (same list as http://localhost:3161/bets, same for everyone):
+  search_markets {"query":""} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool search_markets: query: Too small: expected string to have >=1 characters
+  search_markets {"query":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool search_markets: query: Too big: expected string to have <=120 characters
+  search_markets {} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool search_markets: query: Invalid input: expected string, received undefined
+  search_markets {"query":42} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool search_markets: query: Invalid input: expected string, received number
+  get_market {} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool get_market: market_id: Invalid input: expected string, received undefined
+  get_market {"market_id":""} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool get_market: market_id: Too small: expected string to have >=1 characters
+  get_market {"market_id":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool get_market: market_id: Too big: expected string to have <=100 characters
+  get_market {"market_id":"does-not-exist"} -> isError=true blocks=1 ends-with-disclaimer | No market with id "does-not-exist". Use search_markets to find one.
+  track_record {"unexpected":true} -> isError=false blocks=1 ends-with-disclaimer | How Kismet's Best bets did in a walk-forward test (each week judged only on what came before):
+  my_list {"limit":-5} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool my_list: limit: Too small: expected number to be >=1
+  my_list {"page":0} -> isError=true blocks=2 ends-with-disclaimer | Input validation error: Invalid arguments for tool my_list: page: Too small: expected number to be >=1
+  no_such_tool {} -> THROWN (protocol error, not a tool result): Tool no_such_tool not found
+
+== raw HTTP variants (2025-06-18 header), limit 0
+  Accept json+sse: http 200 text/event-stream ends-with-disclaimer
+  Accept text/event-stream only: http 406 application/json no tool result: {"jsonrpc":"2.0","error":{"code":-32000,"message":"Not Acceptable: Client must accept both application/json and text/event-stream"},"id":null}
+  Accept application/json only: http 406 application/json no tool result: {"jsonrpc":"2.0","error":{"code":-32000,"message":"Not Acceptable: Client must accept both application/json and text/event-stream"},"id":null}
+  batch [limit 0, limit 1]: http 200 text/event-stream event: message data: {"result":{"content":[{"type":"text","text":"Input validation error: Invalid arguments for tool best_bets: limit: Too small: expected number to be >=1"},{"type":"text","text":"Market analytics, not f
+  Free user, invalid input (limit 0): http 200 ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: limit: Too small: expected number to be >=1
+
+== MCP-b: Origin matrix (POST tools/list, valid Premium token)
+  no Origin: 200 cache-control=private, no-store event: message data: {"result":{"tools":[{"name":"best_bets","title":"Best bets","description":"Kismet's curre
+  own Origin http://localhost:3161: 200 cache-control=private, no-store event: message data: {"result":{"tools":[{"name":"best_bets","title":"Best bets","description":"Kismet's curre
+  own host, other port http://localhost:9999: 200 cache-control=private, no-store event: message data: {"result":{"tools":[{"name":"best_bets","title":"Best bets","description":"Kismet's curre
+  own host, https scheme: 200 cache-control=private, no-store event: message data: {"result":{"tools":[{"name":"best_bets","title":"Best bets","description":"Kismet's curre
+  foreign http://evil.example: 403 cache-control=private, no-store {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin: evil.example"},"id":null}
+  foreign https://kismetodds.com.evil.example: 403 cache-control=private, no-store {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin: kismetodds.com.evil.example"},"id":null}
+  foreign https://evil.example.localhost: 403 cache-control=private, no-store {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin: evil.localhost.evil.example"},"id":null}
+  Origin: null: 403 cache-control=private, no-store {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin header: null"},"id":null}
+  Origin: garbage: 403 cache-control=private, no-store {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin header: not a url"},"id":null}
+  127.0.0.1 (different hostname than localhost): 403 cache-control=private, no-store {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin: 127.0.0.1"},"id":null}
+  foreign Origin + spoofed Host evil.example (DNS-rebinding shape): 403 cache-control=private, no-store {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin: evil.example"},"id":null}
+  foreign Origin + X-Forwarded-Host evil.example: 403 cache-control=private, no-store {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin: evil.example"},"id":null}
+  foreign Origin, no token: 403 (403 before auth = Origin checked first) {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin: evil.example"},"id":null}

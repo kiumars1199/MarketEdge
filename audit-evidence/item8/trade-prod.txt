@@ -1,0 +1,15 @@
+## trade config/nonce on wired a6ebb65 (KALSHI_TRADING_ENV=demo, TRADING_ALLOWLIST=audit4-premium@, no NEXT_PUBLIC_EXTENSION_ID)
+premium /api/trade/config -> {"enabled":false,"env":"demo","extensionId":"","riskUrl":"https://kalshi.com/regulatory"}
+pro /api/trade/config -> {"enabled":false,"env":"demo","extensionId":"","riskUrl":"https://kalshi.com/regulatory"}
+free /api/trade/config -> {"enabled":false,"env":"demo","extensionId":"","riskUrl":"https://kalshi.com/regulatory"}
+premium POST /api/trade/nonce Origin=http://localhost:3161 -> 403 {"error":"Trading isn't enabled for this account."}
+premium POST /api/trade/nonce Origin=http://evil.example -> 403 {"error":"Bad origin."}
+premium POST /api/trade/nonce Origin=chrome-extension://abcdefghijklmnopabcdefghijklmnop -> 403 {"error":"Bad origin."}
+anon POST /api/trade/nonce -> 401 {"error":"Sign in to use this.","signin":"/login"}
+
+## MCP tools are read-only (tools/list annotations)
+  best_bets {'title': 'Best bets', 'readOnlyHint': True, 'destructiveHint': False, 'idempotentHint': True, 'openWorldHint': False} limit.max= 9007199254740991
+  search_markets {'title': 'Search markets', 'readOnlyHint': True, 'destructiveHint': False, 'idempotentHint': True, 'openWorldHint': False} limit.max= 9007199254740991
+  get_market {'title': 'Market details', 'readOnlyHint': True, 'destructiveHint': False, 'idempotentHint': True, 'openWorldHint': False} limit.max= None
+  track_record {'title': 'Track record', 'readOnlyHint': True, 'destructiveHint': False, 'idempotentHint': True, 'openWorldHint': False} limit.max= None
+  my_list {'title': 'My saved markets', 'readOnlyHint': True, 'destructiveHint': False, 'idempotentHint': True, 'openWorldHint': False} limit.max= 9007199254740991

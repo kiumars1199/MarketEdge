@@ -1,5 +1,18 @@
-data/
+/data/
 __pycache__/
 *.pyc
 .env
 node_modules/
+/data
+.claude/
+
+.env*
+!.env.example
+.DS_Store
+test-results/
+playwright-report/
+*.tsbuildinfo
+/data.pre-backfill
+
+# Free-tier delayed copy written by `engine scan` (never committed)
+output/*-prev.json

@@ -1,0 +1,16 @@
+const W="http://localhost:3161", SB="http://localhost:3160/e2e-mock/supabase";
+const b64u=(o)=>Buffer.from(JSON.stringify(o)).toString("base64url");
+const email=`audit4-progm-${Date.now()}@example.com`;
+await fetch(`${SB}/auth/v1/otp`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({email})});
+const {url}=await (await fetch(`${SB}/_inbox?email=${encodeURIComponent(email)}`)).json();
+const s=await (await fetch(`${SB}/auth/v1/token?grant_type=pkce`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({auth_code:new URL(url).searchParams.get("code")})})).json();
+const svc={apikey:"e2e-service",authorization:"Bearer e2e-service","content-type":"application/json"};
+await fetch(`${SB}/rest/v1/subscriptions?user_id=eq.${s.user.id}`,{method:"PATCH",headers:svc,body:JSON.stringify({tier:"pro",status:"active"})});
+const tok=`${b64u({alg:"none",typ:"JWT"})}.${b64u({sub:s.user.id,role:"authenticated",exp:Math.floor(Date.now()/1000)+3600,client_id:"c"})}.mock`;
+const cookie=`sb-localhost-auth-token=base64-${Buffer.from(JSON.stringify(s)).toString("base64url")}`;
+const r=await fetch(`${W}/api/mcp`,{method:"POST",headers:{authorization:`Bearer ${tok}`,"content-type":"application/json",accept:"application/json, text/event-stream"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:"tools/call",params:{name:"get_market",arguments:{market_id:"6674492"}}})});
+const t=await r.text(); const res=JSON.parse(t.split("\n").find(l=>l.startsWith("data:")).slice(5)).result;
+console.log("Pro token, MCP get_market 6674492 (isError="+!!res.isError+"):\n"+res.content[0].text);
+const api=(await (await fetch(`${W}/api/markets/6674492`,{headers:{cookie}})).json()).market;
+const s0=api.sides.find(x=>x.edge!=null)??api.sides[0];
+console.log("\nPro cookie, /api/markets/6674492:", JSON.stringify({ask:s0.ask,fee:s0.fee,win_prob:s0.win_prob,win_prob_low:s0.win_prob_low,edge:s0.edge,roi_pct:s0.roi_pct,model_neff:s0.model_neff,model_level:s0.model_level,verdict:s0.verdict,spread:api.spread,capacity:api.execution?.capacity_usd,backtest:api.backtest}));

@@ -1,12 +1,12 @@
 # 01 · Product
 
 ## One line
-MarketEdge is a screener for Polymarket (and later Kalshi) that shows which contracts are
+Kismet is a screener for Polymarket (and later Kalshi) that shows which contracts are
 priced **below their real win chance**, after fees and after the cost of buying at the ask,
 with the evidence behind every number.
 
 ## Who it's for
-| User | Wants | What MarketEdge gives them |
+| User | Wants | What Kismet gives them |
 |---|---|---|
 | Active sports bettor on Polymarket | Better prices on games they'd bet anyway | Niche filters (league, market type), edge on each side, stake table |
 | Weather / niche trader | Fast scan of daily markets | Weather filters (city, high/low, day), live flags 6–24 h out |
@@ -20,23 +20,24 @@ Not for: market makers, high-frequency bots, copy-trading/whale watchers (out of
 price says, after fees, and whether you can actually get that price right now."
 
 ## Tiers
-| | Free | Pro $19/mo | Premium $29/mo |
+| | Free | Pro $11.99/mo | Premium $19.99/mo |
 |---|---|---|---|
-| Market screener (all open markets) | Yes, 15-min delay, top 25 rows per view | Live, unlimited | Live, unlimited |
+| Market screener (all open markets) | Yes, 15-min delay, top 10 rows per view; Best bets: 10 a day, a random sample per user per day (docs/19 P3) | Live, unlimited | Live, unlimited |
 | Win chance + edge on each market | Edge shown as a range ("2–5¢") | Exact | Exact |
 | Flags (validated shortlist) | 3 per day revealed | All | All |
 | Filters | Category, niche, price | All (`04-filters.md`) | All |
 | Saved presets | 1 | 25 | Unlimited |
 | Dashboards (multi-panel) | — | 3 | Unlimited |
 | Watchlist / saved bets | 10 | Unlimited | Unlimited |
-| Alerts | — | Email + web push, 20 rules | + Telegram/Discord webhook, 100 rules |
+| Alerts | — | Email (server check once a day) + browser while the tab is open, 20 rules | Same as Pro, 100 rules. Telegram/Discord not sold: the editor can't store a webhook (#64, Nov 20) |
 | Execution check (order book, stake table, capacity) | First-share verdict only | Full | Full |
 | Bet journal + CLV + P&L | — | Yes | Yes |
 | Track record / calibration pages | Yes | Yes | Yes |
 | Chrome extension badges | — | — | Yes |
 | CSV export | — | Yes | Yes |
 
-7-day free trial on Pro and Premium. Annual = 2 months free.
+7-day free trial on Pro and Premium. Prices (owner, Nov 18): Pro $11.99/mo or $99.99/yr, Premium $19.99/mo or $169.99/yr
+(`config/site.json` → `prices_usd`).
 Prices are a starting point (`11-research.md` has competitor pricing).
 
 ## Demo scope (tonight): every user-facing feature, no paid plumbing

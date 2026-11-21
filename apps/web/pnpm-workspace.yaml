@@ -1,0 +1,13 @@
+allowBuilds:
+  core-js: false   # posthog-js dependency; its postinstall only prints a banner
+
+overrides:
+  # next 15.5 pins postcss 8.4.31 (GHSA high: sourceMappingURL file read); patched in >= 8.5.18
+  next>postcss: 8.5.29
+  # @sentry/bundler-plugins 11.9 takes glob 13 (GHSA-3g3m-2fjr-6pw4, moderate; patched >= 14.0.2). glob 14 brings
+  # minimatch ^11.0.5, which also clears GHSA-g3hv-75wg-m249 (moderate; patched >= 11.0.1). Sentry 11.14 itself moved to glob ^14.
+  "@sentry/bundler-plugins>glob": ^14.0.2
+  # picomatch <= 4.0.7: GHSA-fc5q-39xc-vjpf (high, ReDoS in repeated extglobs), no patched release. Vendored 4.0.7
+  # with a minimal fix; see docs/setup-notes/security.md. 2.x (eslint > fast-glob > micromatch, dev only) uses it too.
+  "picomatch@4": file:../../vendor/picomatch
+  "picomatch@2": file:../../vendor/picomatch

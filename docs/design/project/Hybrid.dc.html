@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kismet — chosen direction, desktop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#070a09}
+a{color:#34d399;text-decoration:none}a:hover{color:#6ee7b7}
+</style>
+</helmet>
+<div style="min-height: 1100px; background: #070a09; color: #e6efe9; font-family: Inter, system-ui, sans-serif; font-size: 14px; display: flex; flex-direction: column">
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; padding: 16px 32px; border-bottom: 1px solid #141c18">
+<div style="display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px">
+<span style="width: 30px; height: 30px; border-radius: 9px; background: {{accent}}; display: flex; align-items: center; justify-content: center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#04140d" stroke-width="2.6" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/></svg></span>
+Kismet
+</div>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px">
+<a href="#" style="padding: 8px 14px; border-radius: 10px; background: #10251c; color: #d1fae5">Best bets</a>
+<a href="#" style="padding: 8px 14px; border-radius: 10px; color: #a9bab1">All markets</a>
+<a href="#" style="padding: 8px 14px; border-radius: 10px; color: #a9bab1">My list</a>
+<a href="#" style="padding: 8px 14px; border-radius: 10px; color: #a9bab1">My bets</a>
+<a href="#" style="padding: 8px 14px; border-radius: 10px; color: #a9bab1">Results</a>
+</nav>
+<div style="flex: 1 1 260px; display: flex; justify-content: flex-end; align-items: center; gap: 12px">
+<label style="display: flex; align-items: center; gap: 10px; background: #0e1411; border: 1px solid #1a2520; border-radius: 12px; padding: 9px 14px; width: 300px; color: #a9bab1">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+<input aria-label="Search" placeholder="Search a team, city or topic" style="background: transparent; border: 0; outline: none; color: #e6efe9; font: inherit; width: 100%">
+</label>
+<span style="font-size: 12px; color: #a9bab1; display: flex; align-items: center; gap: 6px"><span style="width: 7px; height: 7px; border-radius: 50%; background: {{accent}}"></span>Updated 12 min ago</span>
+</div>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; flex: 1">
+<main style="flex: 999 1 640px; min-width: 0; padding: 30px 32px; display: flex; flex-direction: column; gap: 22px">
+
+<section style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="max-width: 560px">
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">470 bets where the odds lean your way</h1>
+<p style="margin: 10px 0 0; color: #a9bab1; font-size: 15px; line-height: 1.5">Each one is priced lower than how often bets like it have actually won, after Polymarket's fee and the price you'd really pay.</p>
+</div>
+<div style="display: flex; gap: 28px">
+<div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; color: {{accent}}">+9.6%</div><div style="font-size: 12px; color: #a9bab1">avg return in testing</div></div>
+<div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700">9,684</div><div style="font-size: 12px; color: #a9bab1">past bets tested</div></div>
+</div>
+</section>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="7">
+<button style="border-radius: 999px; padding: 8px 14px; font: inherit; font-size: 13px; border: 1px solid {{c.border}}; background: {{c.bg}}; color: {{c.color}}">{{c.label}}</button>
+</sc-for>
+<label style="margin-left: auto; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #a9bab1">Sort
+<select aria-label="Sort" style="background: #0e1411; color: #e6efe9; border: 1px solid #1a2520; border-radius: 10px; padding: 8px 10px; font: inherit">
+<option>Best expected return</option><option>Most likely to win</option><option>Closing soonest</option>
+</select>
+</label>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px">
+<sc-for list="{{cards}}" as="c" hint-placeholder-count="6">
+<article style="border-radius: 18px; padding: 18px; background: {{c.bg}}; border: 1px solid {{c.border}}; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #a9bab1">
+<span style="background: #141c18; padding: 3px 9px; border-radius: 999px">{{c.tag}}</span><span>Closes in {{c.closes}}</span>
+</div>
+<div style="font-weight: 600; font-size: 16px; line-height: 1.3; min-height: 42px">{{c.q}}</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div>
+<div style="font-size: 12px; color: #a9bab1">Expected return</div>
+<div style="font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; color: {{accent}}; letter-spacing: -0.02em; line-height: 1.1">{{c.ret}}</div>
+</div>
+<div style="text-align: right">
+<div style="font-size: 12px; color: #a9bab1">Bet</div>
+<div style="font-weight: 600">{{c.side}} · {{c.ask}}</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; align-items: center; gap: 8px; font-size: 12px"><span style="width: 74px; color: #a9bab1">Market says</span><div style="flex: 1; height: 8px; border-radius: 4px; background: #141c18"><div style="height: 8px; border-radius: 4px; width: {{c.mktw}}; background: #4b5a53"></div></div><span style="width: 34px; text-align: right">{{c.mkt}}</span></div>
+<div style="display: flex; align-items: center; gap: 8px; font-size: 12px"><span style="width: 74px; color: #a9bab1">Won before</span><div style="flex: 1; height: 8px; border-radius: 4px; background: #141c18"><div style="height: 8px; border-radius: 4px; width: {{c.winw}}; background: {{accent}}"></div></div><span style="width: 34px; text-align: right; color: #d1fae5">{{c.win}}</span></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid #1a2520; font-size: 13px">
+<span style="color: #a9bab1">$100 bet → <span style="color: #e6efe9">expect {{c.profit}}</span></span>
+<span style="color: {{c.riskColor}}">{{c.risk}}</span>
+</div>
+</article>
+</sc-for>
+</div>
+<footer style="margin-top: auto; color: #a9bab1; font-size: 12px">Market analytics, not financial advice. Based on past results. 18+.</footer>
+</main>
+
+<aside aria-label="Bet details" style="flex: 1 1 380px; max-width: 440px; background: #0c120f; border-left: 1px solid #1a2520; padding: 26px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px">
+<div>
+<div style="color: #a9bab1; font-size: 12px">Soccer · closes in 19h 48m</div>
+<h2 style="margin: 6px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; line-height: 1.25">Denmark vs. Norway: Both Teams to Score</h2>
+</div>
+<button aria-label="Close" style="background: #141c18; border: 0; color: #a9bab1; width: 44px; height: 44px; border-radius: 12px; flex: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+
+<div style="border-radius: 16px; padding: 18px; background: #0f2a1e; border: 1px solid #1d4a35">
+<div style="font-size: 13px; color: #a7f3d0">Bet YES at 68¢ · pays $1 if it hits</div>
+<div style="display: flex; align-items: baseline; gap: 10px; margin-top: 8px">
+<div style="font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; color: #ecfdf5">+33%</div>
+<div style="font-size: 13px; color: #d1fae5">expected return</div>
+</div>
+<div style="font-size: 13px; color: #d1fae5; margin-top: 4px">Similar past bets returned <strong>+24%</strong> on average.</div>
+</div>
+
+<div style="border-radius: 16px; padding: 16px; background: #101613; border: 1px solid #1a2520">
+<div style="font-weight: 600; margin-bottom: 12px">Why it's a good price</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px">
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 120px; color: #a9bab1">Market's odds</span><div style="flex: 1; height: 10px; border-radius: 5px; background: #141c18"><div style="height: 10px; border-radius: 5px; width: 68%; background: #4b5a53"></div></div><span style="width: 36px; text-align: right">68%</span></div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 120px; color: #a9bab1">How often similar bets won</span><div style="flex: 1; height: 10px; border-radius: 5px; background: #141c18"><div style="height: 10px; border-radius: 5px; width: 92%; background: {{accent}}"></div></div><span style="width: 36px; text-align: right; color: #d1fae5">92%</span></div>
+</div>
+<p style="margin: 12px 0 0; font-size: 13px; color: #c2d1c9; line-height: 1.5">Based on 1,313 past soccer games. This type of bet, a day before kickoff, has won more often than its price suggested.</p>
+</div>
+
+<div style="border-radius: 16px; padding: 16px; background: #101613; border: 1px solid #1a2520">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px">
+<div style="font-weight: 600">If you bet now</div>
+<span style="font-size: 12px; color: {{accent}}">Price check ✓ fair fill</span>
+</div>
+<table style="width: 100%; border-collapse: collapse; font-size: 14px">
+<thead><tr style="color: #a9bab1; font-size: 12px; text-align: left"><th style="font-weight: 500; padding: 4px 0">You bet</th><th style="font-weight: 500">You win if it hits</th><th style="font-weight: 500; text-align: right">Expected profit</th></tr></thead>
+<tbody>
+<tr><td style="padding: 7px 0">$25</td><td>$36</td><td style="text-align: right; color: {{accent}}">+$8</td></tr>
+<tr><td style="padding: 7px 0">$100</td><td>$145</td><td style="text-align: right; color: {{accent}}">+$33</td></tr>
+<tr><td style="padding: 7px 0">$500</td><td>$724</td><td style="text-align: right; color: {{accent}}">+$163</td></tr>
+</tbody>
+</table>
+<div style="font-size: 12px; color: #a9bab1; margin-top: 8px">The good price holds for bets up to about $18,800.</div>
+</div>
+
+<details style="border-radius: 16px; padding: 14px 16px; background: #101613; border: 1px solid #1a2520; font-size: 13px; color: #c2d1c9">
+<summary style="cursor: pointer; color: #e6efe9; font-weight: 600">Details for pros</summary>
+<p style="margin: 10px 0 0; line-height: 1.6">Ask 68¢ · mid 67.5¢ · spread 1¢ · fee 1.1¢ · edge +22.5¢ per share · 93% of edge kept after the spread · model: soccer props, ~24h, 1,313 events.</p>
+</details>
+
+<div style="display: flex; gap: 10px">
+<a href="#" style="flex: 1; text-align: center; background: {{accent}}; color: #04140d; font-weight: 600; padding: 13px; border-radius: 12px">Open on Polymarket ↗</a>
+<button style="flex: none; background: #141c18; color: #e6efe9; border: 1px solid #1a2520; padding: 13px 16px; border-radius: 12px; font: inherit">Save</button>
+<button style="flex: none; background: #141c18; color: #e6efe9; border: 1px solid #1a2520; padding: 13px 16px; border-radius: 12px; font: inherit">Alert me</button>
+</div>
+</aside>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#10b981","options":["#10b981","#22c55e","#34d399"]},"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#10b981';
+    const plain = { bg: '#0c120f', border: '#141c18' };
+    const likely = { risk: 'Likely to hit', riskColor: '#a7f3d0' };
+    const cards = [
+      { tag: 'Soccer', closes: '19h', q: 'Denmark vs. Norway: Both Teams to Score', ret: '+33%', side: 'Yes', ask: '68¢', mkt: '68%', mktw: '68%', win: '92%', winw: '92%', profit: '+$33', bg: '#0f1c16', border: '#1d4a35', ...likely },
+      { tag: 'Soccer', closes: '10h', q: 'Singapore vs. Brazil: Both Teams to Score', ret: '+28%', side: 'No', ask: '71¢', mkt: '71%', mktw: '71%', win: '92%', winw: '92%', profit: '+$28', ...plain, ...likely },
+      { tag: 'Soccer', closes: '19h', q: 'Spread: Portugal (-2.5)', ret: '+24%', side: 'Wales', ask: '76¢', mkt: '76%', mktw: '76%', win: '96%', winw: '96%', profit: '+$24', ...plain, ...likely },
+      { tag: 'Weather', closes: '36h', q: 'Highest temperature in Dallas: 70–71°F', ret: '+22%', side: 'No', ask: '70¢', mkt: '70%', mktw: '70%', win: '86%', winw: '86%', profit: '+$22', ...plain, ...likely },
+      { tag: 'Weather', closes: '36h', q: 'Highest temperature in Wellington: 18°C', ret: '+19%', side: 'No', ask: '71¢', mkt: '71%', mktw: '71%', win: '85%', winw: '85%', profit: '+$19', ...plain, ...likely },
+      { tag: 'NFL', closes: '3 days', q: 'Colts vs. Texans', ret: '+15%', side: 'Texans', ask: '85¢', mkt: '85%', mktw: '85%', win: '99%', winw: '99%', profit: '+$15', ...plain, ...likely }
+    ];
+    const on = { bg: '#0f2a1e', border: '#1d4a35', color: '#d1fae5' };
+    const off = { bg: '#0e1411', border: '#1a2520', color: '#c2d1c9' };
+    return {
+      accent, cards,
+      chips: [
+        { label: 'All topics', ...on }, { label: 'Weather 286', ...off }, { label: 'Soccer 197', ...off },
+        { label: 'College football 7', ...off }, { label: 'NFL 1', ...off }, { label: 'Closes today', ...off }, { label: '+ Save this view', ...off }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

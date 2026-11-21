@@ -1,0 +1,611 @@
+{
+ "link_market": [
+  {
+   "browser": "desktop-chromium",
+   "slug": "aec-nba-hou-den-2026-11-20",
+   "url": "https://polymarket.us/market/aec-nba-hou-den-2026-11-20",
+   "final_url": "https://polymarket.us/",
+   "status": 200,
+   "nav_chain": [
+    "307 https://polymarket.us/market/aec-nba-hou-den-2026-11-20",
+    "200 https://polymarket.us/"
+   ],
+   "title": "Polymarket US | Trade on sports, politics, and more | Polymarket",
+   "found_words": [],
+   "expected_words": [
+    "Rockets",
+    "Nuggets"
+   ],
+   "price_like": [
+    "56%",
+    "11%",
+    "11%",
+    "92%",
+    "6%"
+   ],
+   "not_found_text": false,
+   "screenshot": "desktop-chromium-aec-nba-hou-den-2026-11-20.png",
+   "error": null
+  },
+  {
+   "browser": "desktop-chromium",
+   "slug": "aimrc-company1-2026-12-31-openai",
+   "url": "https://polymarket.us/market/aimrc-company1-2026-12-31-openai",
+   "final_url": "https://polymarket.us/",
+   "status": 200,
+   "nav_chain": [
+    "307 https://polymarket.us/market/aimrc-company1-2026-12-31-openai",
+    "200 https://polymarket.us/"
+   ],
+   "title": "Polymarket US | Trade on sports, politics, and more | Polymarket",
+   "found_words": [],
+   "expected_words": [
+    "OpenAI",
+    "AI Model"
+   ],
+   "price_like": [
+    "56%",
+    "11%",
+    "11%",
+    "92%",
+    "6%"
+   ],
+   "not_found_text": false,
+   "screenshot": "desktop-chromium-aimrc-company1-2026-12-31-openai.png",
+   "error": null
+  },
+  {
+   "browser": "desktop-chromium",
+   "slug": "cpc-btc-hit-h-w-2026-11-20-80000",
+   "url": "https://polymarket.us/market/cpc-btc-hit-h-w-2026-11-20-80000",
+   "final_url": "https://polymarket.us/",
+   "status": 200,
+   "nav_chain": [
+    "307 https://polymarket.us/market/cpc-btc-hit-h-w-2026-11-20-80000",
+    "200 https://polymarket.us/"
+   ],
+   "title": "Polymarket US | Trade on sports, politics, and more | Polymarket",
+   "found_words": [],
+   "expected_words": [
+    "80,000",
+    "BTC",
+    "Bitcoin"
+   ],
+   "price_like": [
+    "56%",
+    "11%",
+    "11%",
+    "92%",
+    "6%"
+   ],
+   "not_found_text": false,
+   "screenshot": "desktop-chromium-cpc-btc-hit-h-w-2026-11-20-80000.png",
+   "error": null
+  },
+  {
+   "browser": "desktop-chromium",
+   "slug": "aec-nba-zzz-qqq-2026-11-20",
+   "url": "https://polymarket.us/market/aec-nba-zzz-qqq-2026-11-20",
+   "final_url": "https://polymarket.us/",
+   "status": 200,
+   "nav_chain": [
+    "307 https://polymarket.us/market/aec-nba-zzz-qqq-2026-11-20",
+    "200 https://polymarket.us/"
+   ],
+   "title": "Polymarket US | Trade on sports, politics, and more | Polymarket",
+   "found_words": [],
+   "expected_words": [],
+   "price_like": [
+    "56%",
+    "11%",
+    "11%",
+    "92%",
+    "6%"
+   ],
+   "not_found_text": false,
+   "screenshot": "desktop-chromium-aec-nba-zzz-qqq-2026-11-20.png",
+   "error": null
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "aec-nba-hou-den-2026-11-20",
+   "url": "https://polymarket.us/market/aec-nba-hou-den-2026-11-20",
+   "final_url": "about:blank",
+   "status": null,
+   "nav_chain": [
+    "307 https://polymarket.us/market/aec-nba-hou-den-2026-11-20",
+    "403 https://polymarket-app.onelink.me/S8ac/la3tbas0",
+    "403 https://polymarket-app.onelink.me/S8ac/la3tbas0"
+   ],
+   "title": "",
+   "found_words": [],
+   "expected_words": [
+    "Rockets",
+    "Nuggets"
+   ],
+   "price_like": [],
+   "not_found_text": false,
+   "screenshot": "iphone15-webkit-aec-nba-hou-den-2026-11-20.png",
+   "error": "Error: page.goto: Download is starting\nCall log:\n\u001b[2m  - navigating to \"https://polymarket.us/market/aec-nba-hou-den-2026-11-20\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "aimrc-company1-2026-12-31-openai",
+   "url": "https://polymarket.us/market/aimrc-company1-2026-12-31-openai",
+   "final_url": "about:blank",
+   "status": null,
+   "nav_chain": [
+    "307 https://polymarket.us/market/aimrc-company1-2026-12-31-openai",
+    "403 https://polymarket-app.onelink.me/S8ac/la3tbas0",
+    "403 https://polymarket-app.onelink.me/S8ac/la3tbas0"
+   ],
+   "title": "",
+   "found_words": [],
+   "expected_words": [
+    "OpenAI",
+    "AI Model"
+   ],
+   "price_like": [],
+   "not_found_text": false,
+   "screenshot": "iphone15-webkit-aimrc-company1-2026-12-31-openai.png",
+   "error": "Error: page.goto: Download is starting\nCall log:\n\u001b[2m  - navigating to \"https://polymarket.us/market/aimrc-company1-2026-12-31-openai\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "cpc-btc-hit-h-w-2026-11-20-80000",
+   "url": "https://polymarket.us/market/cpc-btc-hit-h-w-2026-11-20-80000",
+   "final_url": "about:blank",
+   "status": null,
+   "nav_chain": [
+    "307 https://polymarket.us/market/cpc-btc-hit-h-w-2026-11-20-80000",
+    "403 https://polymarket-app.onelink.me/S8ac/la3tbas0",
+    "403 https://polymarket-app.onelink.me/S8ac/la3tbas0"
+   ],
+   "title": "",
+   "found_words": [],
+   "expected_words": [
+    "80,000",
+    "BTC",
+    "Bitcoin"
+   ],
+   "price_like": [],
+   "not_found_text": false,
+   "screenshot": "iphone15-webkit-cpc-btc-hit-h-w-2026-11-20-80000.png",
+   "error": "Error: page.goto: Download is starting\nCall log:\n\u001b[2m  - navigating to \"https://polymarket.us/market/cpc-btc-hit-h-w-2026-11-20-80000\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "aec-nba-zzz-qqq-2026-11-20",
+   "url": "https://polymarket.us/market/aec-nba-zzz-qqq-2026-11-20",
+   "final_url": "about:blank",
+   "status": null,
+   "nav_chain": [
+    "307 https://polymarket.us/market/aec-nba-zzz-qqq-2026-11-20",
+    "403 https://polymarket-app.onelink.me/S8ac/la3tbas0",
+    "403 https://polymarket-app.onelink.me/S8ac/la3tbas0"
+   ],
+   "title": "",
+   "found_words": [],
+   "expected_words": [],
+   "price_like": [],
+   "not_found_text": false,
+   "screenshot": "iphone15-webkit-aec-nba-zzz-qqq-2026-11-20.png",
+   "error": "Error: page.goto: Download is starting\nCall log:\n\u001b[2m  - navigating to \"https://polymarket.us/market/aec-nba-zzz-qqq-2026-11-20\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  }
+ ],
+ "link_cand": [
+  {
+   "browser": "desktop-chromium",
+   "slug": "https://polymarket.us/sports/nba/nba-hou-den-2026-11-20",
+   "url": "https://polymarket.us/sports/nba/nba-hou-den-2026-11-20",
+   "final_url": "https://polymarket.us/sports/nba/nba-hou-den-2026-11-20",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/sports/nba/nba-hou-den-2026-11-20"
+   ],
+   "title": "HOU Rockets vs. DEN Nuggets | Polymarket",
+   "found_words": [
+    "Rockets",
+    "Nuggets"
+   ],
+   "expected_words": [
+    "Rockets",
+    "Nuggets"
+   ],
+   "price_like": [
+    "48%",
+    "48%",
+    "53%",
+    "53%",
+    "51%"
+   ],
+   "not_found_text": false,
+   "screenshot": "desktop-chromium-sports_nba_nba_hou_den_2026_11_20.png",
+   "error": null
+  },
+  {
+   "browser": "desktop-chromium",
+   "slug": "https://polymarket.us/event/nba-hou-den-2026-11-20",
+   "url": "https://polymarket.us/event/nba-hou-den-2026-11-20",
+   "final_url": "https://polymarket.us/sports/nba/nba-hou-den-2026-11-20",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/nba-hou-den-2026-11-20",
+    "200 https://polymarket.us/sports/nba/nba-hou-den-2026-11-20"
+   ],
+   "title": "HOU Rockets vs. DEN Nuggets | Polymarket",
+   "found_words": [
+    "Rockets",
+    "Nuggets"
+   ],
+   "expected_words": [
+    "Rockets",
+    "Nuggets"
+   ],
+   "price_like": [
+    "48%",
+    "48%",
+    "53%",
+    "53%",
+    "51%"
+   ],
+   "not_found_text": false,
+   "screenshot": "desktop-chromium-event_nba_hou_den_2026_11_20.png",
+   "error": null
+  },
+  {
+   "browser": "desktop-chromium",
+   "slug": "https://polymarket.us/event/company1-2026-12-31",
+   "url": "https://polymarket.us/event/company1-2026-12-31",
+   "final_url": "https://polymarket.us/event/company1-2026-12-31",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/company1-2026-12-31"
+   ],
+   "title": "Which Company Has #1 AI Model end of 2026? | Polymarket",
+   "found_words": [
+    "OpenAI",
+    "AI Model"
+   ],
+   "expected_words": [
+    "OpenAI",
+    "AI Model"
+   ],
+   "price_like": [
+    "85%",
+    "85%",
+    "16%",
+    "11%",
+    "11%"
+   ],
+   "not_found_text": false,
+   "screenshot": "desktop-chromium-event_company1_2026_12_31.png",
+   "error": null
+  },
+  {
+   "browser": "desktop-chromium",
+   "slug": "https://polymarket.us/event/btc-hit-h-w-2026-11-20",
+   "url": "https://polymarket.us/event/btc-hit-h-w-2026-11-20",
+   "final_url": "https://polymarket.us/event/btc-hit-h-w-2026-11-20",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/btc-hit-h-w-2026-11-20"
+   ],
+   "title": "How high will BTC get by 5:00PM ET on Fri, Nov 20? | Polymarket",
+   "found_words": [
+    "80,000",
+    "BTC",
+    "Bitcoin"
+   ],
+   "expected_words": [
+    "80,000",
+    "BTC",
+    "Bitcoin"
+   ],
+   "price_like": [
+    "$0.00",
+    "$0.20",
+    "$0.40",
+    "$0.60",
+    "$0.80"
+   ],
+   "not_found_text": false,
+   "screenshot": "desktop-chromium-event_btc_hit_h_w_2026_11_20.png",
+   "error": null
+  },
+  {
+   "browser": "desktop-chromium",
+   "slug": "https://polymarket.us/event/zzz-not-real-2026",
+   "url": "https://polymarket.us/event/zzz-not-real-2026",
+   "final_url": "https://polymarket.us/event/zzz-not-real-2026",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/zzz-not-real-2026"
+   ],
+   "title": "Page not found | Polymarket",
+   "found_words": [],
+   "expected_words": [],
+   "price_like": [],
+   "not_found_text": true,
+   "screenshot": "desktop-chromium-event_zzz_not_real_2026.png",
+   "error": null
+  },
+  {
+   "browser": "desktop-chromium",
+   "slug": "https://polymarket.us/sports/nba/nba-zzz-qqq-2026-11-20",
+   "url": "https://polymarket.us/sports/nba/nba-zzz-qqq-2026-11-20",
+   "final_url": "https://polymarket.us/sports/nba/nba-zzz-qqq-2026-11-20",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/sports/nba/nba-zzz-qqq-2026-11-20"
+   ],
+   "title": "Page not found | Polymarket",
+   "found_words": [],
+   "expected_words": [],
+   "price_like": [],
+   "not_found_text": true,
+   "screenshot": "desktop-chromium-sports_nba_nba_zzz_qqq_2026_11_20.png",
+   "error": null
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "https://polymarket.us/sports/nba/nba-hou-den-2026-11-20",
+   "url": "https://polymarket.us/sports/nba/nba-hou-den-2026-11-20",
+   "final_url": "https://polymarket.us/sports/nba/nba-hou-den-2026-11-20",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/sports/nba/nba-hou-den-2026-11-20"
+   ],
+   "title": "HOU Rockets vs. DEN Nuggets | Polymarket",
+   "found_words": [
+    "Rockets",
+    "Nuggets"
+   ],
+   "expected_words": [
+    "Rockets",
+    "Nuggets"
+   ],
+   "price_like": [
+    "48%",
+    "53%",
+    "51%",
+    "50%"
+   ],
+   "not_found_text": false,
+   "screenshot": "iphone15-webkit-sports_nba_nba_hou_den_2026_11_20.png",
+   "error": null
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "https://polymarket.us/event/nba-hou-den-2026-11-20",
+   "url": "https://polymarket.us/event/nba-hou-den-2026-11-20",
+   "final_url": "https://polymarket.us/sports/nba/nba-hou-den-2026-11-20",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/nba-hou-den-2026-11-20",
+    "200 https://polymarket.us/sports/nba/nba-hou-den-2026-11-20"
+   ],
+   "title": "HOU Rockets vs. DEN Nuggets | Polymarket",
+   "found_words": [
+    "Rockets",
+    "Nuggets"
+   ],
+   "expected_words": [
+    "Rockets",
+    "Nuggets"
+   ],
+   "price_like": [
+    "48%",
+    "53%",
+    "51%",
+    "50%"
+   ],
+   "not_found_text": false,
+   "screenshot": "iphone15-webkit-event_nba_hou_den_2026_11_20.png",
+   "error": null
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "https://polymarket.us/event/company1-2026-12-31",
+   "url": "https://polymarket.us/event/company1-2026-12-31",
+   "final_url": "https://polymarket.us/event/company1-2026-12-31",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/company1-2026-12-31"
+   ],
+   "title": "Which Company Has #1 AI Model end of 2026? | Polymarket",
+   "found_words": [
+    "OpenAI",
+    "AI Model"
+   ],
+   "expected_words": [
+    "OpenAI",
+    "AI Model"
+   ],
+   "price_like": [
+    "85%",
+    "97%",
+    "3%",
+    "2%",
+    "1%"
+   ],
+   "not_found_text": false,
+   "screenshot": "iphone15-webkit-event_company1_2026_12_31.png",
+   "error": null
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "https://polymarket.us/event/btc-hit-h-w-2026-11-20",
+   "url": "https://polymarket.us/event/btc-hit-h-w-2026-11-20",
+   "final_url": "https://polymarket.us/event/btc-hit-h-w-2026-11-20",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/btc-hit-h-w-2026-11-20"
+   ],
+   "title": "How high will BTC get by 5:00PM ET on Fri, Nov 20? | Polymarket",
+   "found_words": [
+    "BTC",
+    "Bitcoin"
+   ],
+   "expected_words": [
+    "80,000",
+    "BTC",
+    "Bitcoin"
+   ],
+   "price_like": [
+    "$0.00",
+    "$0.20",
+    "$0.40",
+    "$0.60",
+    "$0.80"
+   ],
+   "not_found_text": false,
+   "screenshot": "iphone15-webkit-event_btc_hit_h_w_2026_11_20.png",
+   "error": null
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "https://polymarket.us/event/zzz-not-real-2026",
+   "url": "https://polymarket.us/event/zzz-not-real-2026",
+   "final_url": "https://polymarket.us/event/zzz-not-real-2026",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/zzz-not-real-2026"
+   ],
+   "title": "Page not found | Polymarket",
+   "found_words": [],
+   "expected_words": [],
+   "price_like": [],
+   "not_found_text": true,
+   "screenshot": "iphone15-webkit-event_zzz_not_real_2026.png",
+   "error": null
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "https://polymarket.us/sports/nba/nba-zzz-qqq-2026-11-20",
+   "url": "https://polymarket.us/sports/nba/nba-zzz-qqq-2026-11-20",
+   "final_url": "https://polymarket.us/sports/nba/nba-zzz-qqq-2026-11-20",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/sports/nba/nba-zzz-qqq-2026-11-20"
+   ],
+   "title": "Page not found | Polymarket",
+   "found_words": [],
+   "expected_words": [],
+   "price_like": [],
+   "not_found_text": true,
+   "screenshot": "iphone15-webkit-sports_nba_nba_zzz_qqq_2026_11_20.png",
+   "error": null
+  }
+ ],
+ "link_final": [
+  {
+   "browser": "desktop-chromium",
+   "slug": "nfl-tb-det-2026-11-22",
+   "url": "https://polymarket.us/event/nfl-tb-det-2026-11-22",
+   "final_url": "https://polymarket.us/sports/nfl/nfl-tb-det-2026-11-22",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/nfl-tb-det-2026-11-22",
+    "200 https://polymarket.us/sports/nfl/nfl-tb-det-2026-11-22"
+   ],
+   "title": "TB Buccaneers vs. DET Lions | Polymarket",
+   "found_words": [
+    "Buccaneers",
+    "Lions"
+   ],
+   "expected_words": [
+    "Buccaneers",
+    "Lions"
+   ],
+   "price_like": [
+    "9%",
+    "92%",
+    "16%",
+    "85%",
+    "30%"
+   ],
+   "not_found_text": false,
+   "screenshot": "desktop-chromium-event_nfl_tb_det_2026_11_22.png",
+   "error": null
+  },
+  {
+   "browser": "desktop-chromium",
+   "slug": "usdsl-month-2026-11-30",
+   "url": "https://polymarket.us/event/usdsl-month-2026-11-30",
+   "final_url": "https://polymarket.us/event/usdsl-month-2026-11-30",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/usdsl-month-2026-11-30"
+   ],
+   "title": "US Diesel Prices This Month | Polymarket",
+   "found_words": [
+    "Diesel"
+   ],
+   "expected_words": [
+    "Diesel"
+   ],
+   "price_like": [
+    "98%",
+    "98%",
+    "3%",
+    "98%",
+    "98%"
+   ],
+   "not_found_text": false,
+   "screenshot": "desktop-chromium-event_usdsl_month_2026_11_30.png",
+   "error": null
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "nfl-tb-det-2026-11-22",
+   "url": "https://polymarket.us/event/nfl-tb-det-2026-11-22",
+   "final_url": "https://polymarket.us/sports/nfl/nfl-tb-det-2026-11-22",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/nfl-tb-det-2026-11-22",
+    "200 https://polymarket.us/sports/nfl/nfl-tb-det-2026-11-22"
+   ],
+   "title": "TB Buccaneers vs. DET Lions | Polymarket",
+   "found_words": [
+    "Buccaneers",
+    "Lions"
+   ],
+   "expected_words": [
+    "Buccaneers",
+    "Lions"
+   ],
+   "price_like": [
+    "30%",
+    "70%",
+    "52%",
+    "49%"
+   ],
+   "not_found_text": false,
+   "screenshot": "iphone15-webkit-event_nfl_tb_det_2026_11_22.png",
+   "error": null
+  },
+  {
+   "browser": "iphone15-webkit",
+   "slug": "usdsl-month-2026-11-30",
+   "url": "https://polymarket.us/event/usdsl-month-2026-11-30",
+   "final_url": "https://polymarket.us/event/usdsl-month-2026-11-30",
+   "status": 200,
+   "nav_chain": [
+    "200 https://polymarket.us/event/usdsl-month-2026-11-30"
+   ],
+   "title": "US Diesel Prices This Month | Polymarket",
+   "found_words": [],
+   "expected_words": [
+    "Diesel"
+   ],
+   "price_like": [
+    "98%",
+    "98%"
+   ],
+   "not_found_text": false,
+   "screenshot": "iphone15-webkit-event_usdsl_month_2026_11_30.png",
+   "error": null
+  }
+ ]
+}

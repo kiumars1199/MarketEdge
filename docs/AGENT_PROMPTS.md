@@ -1,6 +1,6 @@
 # Prompts to paste into Claude Code (one agent per lane)
 
-Start each agent in a fresh clone of `kiumars1199/marketedge` on its own branch.
+Start each agent in a fresh clone of `<owner>/<repo>` of this GitHub repo on its own branch.
 Lanes B → C → D share the web app: start B first; C and D can start once T-11, T-13, T-14 are merged
 (or have C/D mock the API with `apps/web/test/fixtures` until then).
 

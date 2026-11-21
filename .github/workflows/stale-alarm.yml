@@ -1,0 +1,65 @@
+# Stale-data alarm (docs/OVERHAUL.md §F2, T-298): every 15 min, read https://kismetodds.com/api/meta and email
+# kismetodds@gmail.com through Resend when the scan is older than 45 min or the site errors. One email per incident
+# plus one all-clear (ops/stale_alarm.mjs).
+#
+# Why GitHub Actions and not a Railway job: the Railway container IS the engine this alarm watches (railway.json runs
+# ops/scheduler.py). A check living there dies with it, which is exactly the overnight failure we missed.
+# Why the Actions cache for state: a run has no memory, and this needs one small JSON file between runs. The cache
+# needs no extra secret and no write access to the repo (a state branch would also start a Vercel preview build per
+# change), and the same unique-key + restore-keys pattern already keeps the engine history in refresh.yml. If the
+# entry is ever lost, the worst case is one repeated alert (or a missing all-clear), never a missed alert.
+#
+# Secrets: RESEND_API_KEY, ALARM_EMAIL_FROM (a verified Resend sender, e.g. "Kismet alarm <alarm@kismetodds.com>").
+# Optional repo variables: ALARM_EMAIL_TO (default kismetodds@gmail.com), SITE_URL (default https://kismetodds.com).
+# Scheduled runs use the DEFAULT branch's copy of this file; GitHub pauses schedules after 60 days without commits.
+name: stale-alarm
+
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"   # every 15 min, off the top of the hour (GitHub delays :00 runs the most)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write   # save the state cache entry
+
+concurrency:
+  group: stale-alarm
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: ops
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The key is unique per run, so the exact key never hits; restore-keys picks the newest saved state.
+      - name: Restore incident state
+        uses: actions/cache/restore@v4
+        with:
+          path: .stale-alarm
+          key: stale-alarm-${{ github.run_id }}
+          restore-keys: stale-alarm-
+
+      - name: Check /api/meta
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALARM_EMAIL_FROM: ${{ secrets.ALARM_EMAIL_FROM }}
+          ALARM_EMAIL_TO: ${{ vars.ALARM_EMAIL_TO }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: node ops/stale_alarm.mjs --state .stale-alarm/state.json
+
+      # always(): a failed send leaves the state file as it was, and saving it unchanged is harmless.
+      - name: Save incident state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .stale-alarm
+          key: stale-alarm-${{ github.run_id }}-${{ github.run_attempt }}

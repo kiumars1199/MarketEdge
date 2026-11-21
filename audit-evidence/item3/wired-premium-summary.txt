@@ -1,0 +1,104 @@
+STATE premium pages 76
+  390 /                      200 -> /  ok
+  390 /about                 200 -> /about  ok
+  390 /account               200 -> /account  ok
+  390 /admin                 404 -> /admin
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+  390 /admin/audit           404 -> /admin/audit
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+  390 /admin/grants          404 -> /admin/grants
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+  390 /admin/health          404 -> /admin/health
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+  390 /admin/settings        404 -> /admin/settings
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+  390 /admin/users           404 -> /admin/users
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+  390 /alerts                200 -> /alerts  ok
+  390 /bets                  200 -> /bets  ok
+  390 /combos                404 -> /combos
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+  390 /contact               200 -> /contact  ok
+  390 /dashboards            200 -> /dashboards  ok
+  390 /disclaimer            200 -> /disclaimer  ok
+  390 /ext/connect           200 -> /ext/connect  ok
+  390 /journal               200 -> /journal  ok
+  390 /kalshi                404 -> /kalshi
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+  390 /login                 200 -> /  ok
+  390 /maintenance           200 -> /maintenance  ok
+  390 /markets               200 -> /markets  ok
+  390 /onboarding            200 -> /onboarding  ok
+  390 /pricing               200 -> /pricing  ok
+  390 /privacy               200 -> /privacy  ok
+  390 /refunds               200 -> /refunds  ok
+  390 /reset-password        200 -> /reset-password  ok
+  390 /settings              200 -> /settings  ok
+  390 /signup                200 -> /  ok
+  390 /status                200 -> /status  ok
+  390 /terms                 200 -> /terms
+       banned ["guarantee :: The service is provided \u201cas is\u201d. Data can be late, missing or wrong, and past results don't promise future ones. We give no guarantee that any estimate is right"]
+  390 /tools                 200 -> /tools  ok
+  390 /track-record          200 -> /track-record  ok
+  390 /watchlist             200 -> /watchlist  ok
+  390 /oauth/consent         200 -> /oauth/consent  ok
+  390 /no-such-page          404 -> /no-such-page
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+  390 /a/b/c                 404 -> /a/b/c
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+  390 /m/6674492             200 -> /m/6674492
+       console ["error: Failed to load resource: the server responded with a status of 502 (Bad Gateway)", "error: Failed to load resource: the server responded with a status of 502 (Bad Gateway)", "error: Failed to load resource: the server responded with a status of 502 (Bad Gateway)"]
+       failed ["502 /api/book?token=51951712032514633464539510666513418314458551800388999970075452647744867619789&q=0.8946&cat=sports", "502 /api/book?token=51951712032514633464539510666513418314458551800388999970075452647744867619789&q=0.9255&cat=sports", "502 /api/book?token=51951712032514633464539510666513418314458551800388999970075452647744867619789&q=0.9255&cat=sports"]
+  390 /event/1313371         200 -> /event/1313371  ok
+ 1440 /                      200 -> /  ok
+ 1440 /about                 200 -> /about  ok
+ 1440 /account               200 -> /account  ok
+ 1440 /admin                 404 -> /admin
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+ 1440 /admin/audit           404 -> /admin/audit
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+ 1440 /admin/grants          404 -> /admin/grants
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+ 1440 /admin/health          404 -> /admin/health
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+ 1440 /admin/settings        404 -> /admin/settings
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+ 1440 /admin/users           404 -> /admin/users
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+ 1440 /alerts                200 -> /alerts  ok
+ 1440 /bets                  200 -> /bets  ok
+ 1440 /combos                404 -> /combos
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+ 1440 /contact               200 -> /contact  ok
+ 1440 /dashboards            200 -> /dashboards  ok
+ 1440 /disclaimer            200 -> /disclaimer  ok
+ 1440 /ext/connect           200 -> /ext/connect  ok
+ 1440 /journal               200 -> /journal  ok
+ 1440 /kalshi                404 -> /kalshi
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+ 1440 /login                 200 -> /  ok
+ 1440 /maintenance           200 -> /maintenance  ok
+ 1440 /markets               200 -> /markets  ok
+ 1440 /onboarding            200 -> /onboarding  ok
+ 1440 /pricing               200 -> /pricing  ok
+ 1440 /privacy               200 -> /privacy  ok
+ 1440 /refunds               200 -> /refunds  ok
+ 1440 /reset-password        200 -> /reset-password  ok
+ 1440 /settings              200 -> /settings  ok
+ 1440 /signup                200 -> /  ok
+ 1440 /status                200 -> /status  ok
+ 1440 /terms                 200 -> /terms
+       banned ["guarantee :: The service is provided \u201cas is\u201d. Data can be late, missing or wrong, and past results don't promise future ones. We give no guarantee that any estimate is right"]
+ 1440 /tools                 200 -> /tools  ok
+ 1440 /track-record          200 -> /track-record  ok
+ 1440 /watchlist             200 -> /watchlist  ok
+ 1440 /oauth/consent         200 -> /oauth/consent  ok
+ 1440 /no-such-page          404 -> /no-such-page
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+ 1440 /a/b/c                 404 -> /a/b/c
+       console ["error: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+ 1440 /m/6674492             200 -> /m/6674492
+       console ["error: Failed to load resource: the server responded with a status of 502 (Bad Gateway)", "error: Failed to load resource: the server responded with a status of 502 (Bad Gateway)", "error: Failed to load resource: the server responded with a status of 502 (Bad Gateway)"]
+       failed ["502 /api/book?token=51951712032514633464539510666513418314458551800388999970075452647744867619789&q=0.8946&cat=sports", "502 /api/book?token=51951712032514633464539510666513418314458551800388999970075452647744867619789&q=0.9255&cat=sports", "502 /api/book?token=51951712032514633464539510666513418314458551800388999970075452647744867619789&q=0.9255&cat=sports"]
+ 1440 /event/1313371         200 -> /event/1313371  ok
+links checked 274 broken 0

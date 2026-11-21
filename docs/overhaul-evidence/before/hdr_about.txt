@@ -1,0 +1,20 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+age: 0
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+content-security-policy: default-src 'self'; script-src 'self' 'nonce-NDc2YTYzMzYtOTBhOS00OTk4LTk0ODMtMDY5YzlkNjdjM2Vh' 'strict-dynamic' https://js.stripe.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; connect-src 'self' https://nvyoyqfizghbxzwoycac.supabase.co wss://nvyoyqfizghbxzwoycac.supabase.co https://us.i.posthog.com https://*.posthog.com https://*.ingest.sentry.io https://*.ingest.us.sentry.io https://api.stripe.com https://vitals.vercel-insights.com; frame-src https://js.stripe.com https://checkout.stripe.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'
+content-type: text/html; charset=utf-8
+date: Fri, 20 Nov 2026 17:22:19 GMT
+link: </_next/static/media/36966cca54120369-s.p.woff2>; rel=preload; as="font"; crossorigin=""; nonce="NDc2YTYzMzYtOTBhOS00OTk4LTk0ODMtMDY5YzlkNjdjM2Vh"; type="font/woff2", </_next/static/media/e4af272ccee01ff0-s.p.woff2>; rel=preload; as="font"; crossorigin=""; nonce="NDc2YTYzMzYtOTBhOS00OTk4LTk0ODMtMDY5YzlkNjdjM2Vh"; type="font/woff2"
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-matched-path: /about
+x-vercel-cache: MISS
+x-vercel-id: iad1::iad1::csgcr-1795195339500-62d782f0109f
+

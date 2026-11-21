@@ -1,0 +1,21 @@
+{"meta": {"source": "Kalshi", "attribution": "Market data from Kalshi (kalshi.com)", "fetched_at": 1795111601, "api": "https://api.elections.kalshi.com/trade-api/v2", "n_markets": 2, "n_combos": 2},
+ "markets": [
+  {"ticker": "KXELONMARS-99", "event_ticker": "KXELONMARS-99", "series_ticker": "KXELONMARS", "title": "Will Elon Musk visit Mars in his lifetime?", "subtitle": "Mars", "yes_bid_cents": 10, "yes_ask_cents": 12, "volume": 127577, "close_time": "2099-08-01T04:59:00Z", "url": "https://kalshi.com/markets/kxelonmars", "source": "Kalshi"},
+  {"ticker": "KXNBAGAME-26NOV19LACSAS-SAS", "event_ticker": "KXNBAGAME-26NOV19LACSAS", "series_ticker": "KXNBAGAME", "title": "Clippers at Spurs", "subtitle": "San Antonio", "yes_bid_cents": 61, "yes_ask_cents": 63, "volume": 500000, "close_time": "2026-11-20T03:00:00Z", "url": "https://kalshi.com/markets/kxnbagame", "source": "Kalshi"}
+ ],
+ "combos": [
+  {"ticker": "KXMVE-S1", "event_ticker": "KXMVECROSSCATEGORY-S1", "collection_ticker": "KXMVECROSSCATEGORY-R", "title": "yes San Antonio,no Zverev",
+   "legs": [
+    {"market_ticker": "KXNBAGAME-26NOV19LACSAS-SAS", "event_ticker": "KXNBAGAME-26NOV19LACSAS", "side": "yes", "title": "San Antonio", "ask_cents": 63, "url": "https://kalshi.com/markets/kxnbagame"},
+    {"market_ticker": "KXATPMATCH-26NOV17ZVEFIL-ZVE", "event_ticker": "KXATPMATCH-26NOV17ZVEFIL", "side": "no", "title": "Zverev vs Fils", "ask_cents": 30, "url": "https://kalshi.com/markets/kxatpmatch"}
+   ],
+   "same_event": false, "kalshi_yes_bid_cents": null, "kalshi_yes_ask_cents": null, "legs_product_cents": 18.9, "price_basis": "legs_product",
+   "volume": 0, "close_time": "2026-12-03T23:00:00Z", "url": "https://kalshi.com/markets/kxmvecrosscategory", "source": "Kalshi"},
+  {"ticker": "KXMVE-S2", "event_ticker": "KXMVECROSSCATEGORY-S2", "collection_ticker": "KXMVECROSSCATEGORY-R", "title": "two legs one game",
+   "legs": [
+    {"market_ticker": "KXNBAGAME-26NOV19LACSAS-SAS", "event_ticker": "KXNBAGAME-26NOV19LACSAS", "side": "yes", "title": "San Antonio", "ask_cents": 63, "url": "https://kalshi.com/markets/kxnbagame"},
+    {"market_ticker": "KXNBAGAME-26NOV19LACSAS-LAC", "event_ticker": "KXNBAGAME-26NOV19LACSAS", "side": "no", "title": "Los Angeles C", "ask_cents": null, "url": "https://kalshi.com/markets/kxnbagame"}
+   ],
+   "same_event": true, "kalshi_yes_bid_cents": 20, "kalshi_yes_ask_cents": 24, "legs_product_cents": null, "price_basis": "kalshi_quote",
+   "volume": 12, "close_time": "2026-12-03T23:00:00Z", "url": "https://kalshi.com/markets/kxmvecrosscategory", "source": "Kalshi"}
+ ]}

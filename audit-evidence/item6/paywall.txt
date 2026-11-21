@@ -1,0 +1,64 @@
+## anon
+/api/flags?ps=1000 → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/flags?pg=2 → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/markets?ps=1000 → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/markets?pg=2 → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/markets?pg=99999 → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/markets/6674492 → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/events/1306312 → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/model/curve?id=6674492 → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/kalshi → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/combos → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/account/export → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/admin/export → 404 {"error":"Not found"}
+/api/data/watchlist → 401 {"error":"Sign in to use this.","signin":"/login"}
+/api/backtest → 200 {"test_days":7,"folds":52,"folds_run":52,"results":{"21":{"half_life_days":21,"taker":{"fl
+theta/covariance in /api/markets/6674492: false
+## free
+/api/flags?ps=1000 → 200 rows 10 page 1 page_size 50 pages 1 first 6673648
+/api/flags?pg=2 → 200 rows 10 page 1 page_size 50 pages 1 first 6673648
+/api/markets?ps=1000 → 200 rows 10 page 1 page_size 50 pages 1 first 6654466
+/api/markets?pg=2 → 200 rows 10 page 1 page_size 50 pages 1 first 6654466
+/api/markets?pg=99999 → 200 rows 10 page 1 page_size 50 pages 1 first 6654466
+/api/markets/6674492 → 200 side0 ask 0.7 win_prob 0.9 edge 0.2 ranges {"roi_pct":[20,50],"edge":[0.2,null]} stake - capacity -; market keys: 28
+/api/events/1313371 → 200 {"event_id":"1313371","event":"Denmark vs. Norway - More Markets","slug":"unl-den-nor-2026
+/api/model/curve?id=6674492 → 400 {"error":"bad query"}
+/api/kalshi → 404 {"error":"Not available"}
+/api/combos → 200 {"groups":[]}
+/api/account/export → 200 { "exported_at": "2026-11-20T07:34:20.553Z", "account": { "id": "1dba657d-d278-4612-b1e8-3
+/api/admin/export → 404 {"error":"Not found"}
+/api/data/watchlist → 405 
+/api/backtest → 200 {"test_days":7,"folds":52,"folds_run":52,"results":{"21":{"half_life_days":21,"taker":{"fl
+theta/covariance in /api/markets/6674492: false
+## pro
+/api/flags?ps=1000 → 200 rows 151 page 1 page_size 50 pages 6 first 6674492
+/api/flags?pg=2 → 200 rows 143 page 2 page_size 50 pages 6 first 7058213
+/api/markets?ps=1000 → 200 rows 168 page 1 page_size 50 pages 44 first 6674492
+/api/markets?pg=2 → 200 rows 189 page 2 page_size 50 pages 44 first 7085804
+/api/markets?pg=99999 → 400 {"error":"page is past the last page"}
+/api/markets/6674492 → 200 side0 ask 0.7 win_prob 0.9255 edge 0.215 ranges null stake - capacity 24282.16; market keys: 28
+/api/events/1313371 → 200 {"event_id":"1313371","event":"Denmark vs. Norway - More Markets","slug":"unl-den-nor-2026
+/api/model/curve?id=6674492 → 400 {"error":"bad query"}
+/api/kalshi → 404 {"error":"Not available"}
+/api/combos → 200 {"groups":[]}
+/api/account/export → 200 { "exported_at": "2026-11-20T07:34:34.883Z", "account": { "id": "1396cd1c-e5d2-414b-844f-f
+/api/admin/export → 404 {"error":"Not found"}
+/api/data/watchlist → 405 
+/api/backtest → 200 {"test_days":7,"folds":52,"folds_run":52,"results":{"21":{"half_life_days":21,"taker":{"fl
+theta/covariance in /api/markets/6674492: false
+## premium
+/api/flags?ps=1000 → 200 rows 151 page 1 page_size 50 pages 6 first 6674492
+/api/flags?pg=2 → 200 rows 143 page 2 page_size 50 pages 6 first 7058213
+/api/markets?ps=1000 → 200 rows 168 page 1 page_size 50 pages 44 first 6674492
+/api/markets?pg=2 → 200 rows 189 page 2 page_size 50 pages 44 first 7085804
+/api/markets?pg=99999 → 400 {"error":"page is past the last page"}
+/api/markets/6674492 → 200 side0 ask 0.7 win_prob 0.9255 edge 0.215 ranges null stake - capacity 24282.16; market keys: 28
+/api/events/1313371 → 200 {"event_id":"1313371","event":"Denmark vs. Norway - More Markets","slug":"unl-den-nor-2026
+/api/model/curve?id=6674492 → 400 {"error":"bad query"}
+/api/kalshi → 404 {"error":"Not available"}
+/api/combos → 200 {"groups":[]}
+/api/account/export → 200 { "exported_at": "2026-11-20T07:34:48.281Z", "account": { "id": "b8ce1141-0314-4d03-96cd-2
+/api/admin/export → 404 {"error":"Not found"}
+/api/data/watchlist → 405 
+/api/backtest → 200 {"test_days":7,"folds":52,"folds_run":52,"results":{"21":{"half_life_days":21,"taker":{"fl
+theta/covariance in /api/markets/6674492: false

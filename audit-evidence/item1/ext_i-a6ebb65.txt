@@ -1,0 +1,14 @@
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +42
+++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 42, reused 42, downloaded 0, added 42, done
+
+devDependencies:
++ @types/chrome 0.1.43
++ @types/node 26.6.6
++ typescript 5.9.3
++ vite 8.3.8
++ vitest 5.1.0
+
+Done in 377ms using pnpm v10.28.0

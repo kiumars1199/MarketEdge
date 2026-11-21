@@ -5,7 +5,7 @@ Tier tags: **[F]** free, **[P]** Pro, **[PR]** Premium, **[D]** in tonight's dem
 
 ---
 ## F-01 Screener table [F][D]
-All open markets with MarketEdge numbers, one row per market (or per event group).
+All open markets with Kismet numbers, one row per market (or per event group).
 
 Default view = cards (Best bets) or rows (All markets), using the plain-language numbers in
 `06-ui.md` § Display language: Expected return % · Bet {outcome} at {price} · Market says vs Won
@@ -126,19 +126,19 @@ for rule of activeRules():
         send(rule.channels, render(c))            // email via Resend, push via web-push, webhook POST
   update rule.last_fired_at
 ```
-Message: "MarketEdge · NFL · Jaguars vs Giants · Jaguars 72¢ · win chance 79% (76–82) · edge +5.1¢ ·
+Message: "Kismet · NFL · Jaguars vs Giants · Jaguars 72¢ · win chance 79% (76–82) · edge +5.1¢ ·
 worth it up to ~$2,400 · closes Sun 1:00 PM" + link to drawer. Never says "bet this".
 Accept: no duplicate sends within cooldown; disabled rule never fires; unsubscribe link in every email.
 
 ## F-12 Bet journal + CLV + P&L [P]
 Manual log of bets the user placed (no wallet connection in v1).
-- "Log this bet" in the drawer pre-fills market, side, price (current ask), MarketEdge win chance/edge;
+- "Log this bet" in the drawer pre-fills market, side, price (current ask), Kismet win chance/edge;
   user enters shares or $ and can edit price.
 - Settlement job (daily, server): for each open journal row whose market resolved, fetch result from
   Gamma (`/markets/{id}` outcomePrices) → set result, pnl = shares × (1 − price − fee) or −shares × (price + fee).
 - **Closing line value (CLV)**: closing_price = the side's last price before close (prices-history);
   CLV = closing_price − entry price. Positive CLV over many bets is the best early sign of skill.
-- Journal page: table + summary tiles (bets, staked, P&L, ROI, win rate, avg CLV, avg MarketEdge edge at
+- Journal page: table + summary tiles (bets, staked, P&L, ROI, win rate, avg CLV, avg Kismet edge at
   entry) + charts (cumulative P&L, P&L by category/topic, edge at entry vs realized), CSV import/export.
 Accept: P&L math unit-tested; voids return stake; timezone-correct dates.
 
@@ -193,7 +193,7 @@ flags now, track record tiles), 2 screenshots, FAQ (what is edge, is this advice
 tested, which venues), pricing table (`01`), footer disclaimer. Pricing page with monthly/annual toggle.
 
 ## F-21 Auth & account [P]
-Supabase magic link + Google. Settings: profile, display (F-17), bankroll & Kelly (F-13), favorite
+Supabase Google, email + password, magic link. Settings: profile, display (F-17), bankroll & Kelly (F-13), favorite
 topics, notifications (channels, quiet hours, digest), connected webhooks, data export/delete account.
 
 ## F-22 Billing & gates [P]

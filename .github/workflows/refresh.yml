@@ -1,14 +1,26 @@
-# Keeps MarketEdge current: pulls newly resolved markets, refits the model,
-# rescans open markets, and publishes output/*.json to the `live` branch.
+# Keeps Kismet current. Every 30 min: rescan open markets with the last fitted model, publish output/*.json to the
+# `live` branch and upload it to the Supabase bucket `scan` (ops/upload.py). Every 2 hours (the :17 run) and on manual
+# runs: also pull newly resolved markets and refit the model first. A full run takes 15-20 min, so it can't run every
+# 30 min. Secrets: SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY (upload is skipped until both are set).
+# Fallback data path: the engine container (engine/Dockerfile, docs/setup-notes/ops.md) is primary
+# and uploads to Supabase Storage every 10 min; the web app falls back to this branch.
 name: refresh
 
 on:
   schedule:
-    - cron: "17 */2 * * *"   # every 2 hours (fits the free Actions minutes for a private repo)
-  workflow_dispatch: {}
+    - cron: "17 */2 * * *"   # full: update + fit + scan (public repo: Actions minutes are free)
+    - cron: "*/30 * * * *"   # scan only, with the model the last full run published
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "full = update + refit + scan; scan = scan only (what the :00/:30 cron runs); backfill = extend history to 730 days (resumable, rerun to continue), then refit + backtest"
+        type: choice
+        options: [full, scan, backfill]
+        default: full
 
 permissions:
   contents: write
+  issues: write   # a failed refresh or data check opens an issue (docs/12)
 
 concurrency:
   group: refresh
@@ -17,7 +29,11 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: ${{ inputs.mode == 'backfill' && 340 || 150 }}
+    env:
+      # Cron runs come from the DEFAULT branch's copy of this file: a fix here reaches the schedule only once it is on main.
+      FULL: ${{ (github.event_name == 'workflow_dispatch' && inputs.mode != 'scan') || github.event.schedule == '17 */2 * * *' }}
+      BACKFILL: ${{ inputs.mode == 'backfill' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -27,14 +43,17 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      # The key is unique per run, so the exact key never hits; restore-keys picks the newest history.
       - name: Restore market history
+        if: env.FULL == 'true'
         uses: actions/cache/restore@v4
         with:
           path: data
-          key: marketedge-data-${{ github.run_id }}
-          restore-keys: marketedge-data-
+          key: kismet-data-${{ github.run_id }}
+          restore-keys: kismet-data-
 
       - name: Bootstrap history (first run only, ~1 hour)
+        if: env.FULL == 'true'
         run: |
           if [ ! -f data/sample.jsonl ]; then
             python pipeline/fetch_closed.py
@@ -42,49 +61,110 @@ jobs:
             rm -f data/markets.jsonl
           fi
 
-      - name: Pull newly resolved markets
-        run: python -m engine update
-
-      - name: Daily walk-forward test (re-tunes how fast old data fades)
+      # docs/19 P5 / T-278: 2 years of history, sampled evenly per 30-day window (up to 1,000 events per tag per window,
+      # ~24,000 per tag; it was 200). Resumable: finished (window, tag) pairs are checkpointed in data/ with their cap,
+      # so this run tops up windows an earlier run fetched at 200; the cache is saved even if the run times out.
+      - name: Backfill history to 730 days (mode=backfill)
+        if: env.BACKFILL == 'true'
+        id: backfill
         run: |
-          if [ "$(date -u +%H)" = "06" ] || [ ! -f output/backtest.json ]; then
-            python -m engine backtest
-          fi
+          python pipeline/fetch_closed.py --days 730 --window-days 30 --per-window 1000
+          python pipeline/fetch_prices.py --extend --threads 8
+          rm -f data/markets.jsonl
+          python -c "import json; print('history:', sum(1 for _ in open('data/sample.jsonl')), 'markets')"
 
-      - name: Refit model and scan open markets
-        run: |
-          python -m engine fit
-          python -m engine scan
-
-      - name: Engine tests
-        run: python -m pytest -q engine/tests
-
-      - name: Data checks (keep previous live data if these fail)
-        run: |
-          python - <<'PY'
-          import json, math
-          m = json.load(open("output/markets.json")); f = json.load(open("output/flags.json"))
-          assert m["meta"]["markets_scanned"] >= 1000, "too few markets scanned"
-          assert len(f["flags"]) <= 0.05 * max(1, m["meta"]["markets_scanned"]), "too many flags"
-          for r in f["flags"]:
-              b = r["best"]
-              assert b["edge"] >= 0.02 and b["edge_low"] > 0 and r["validated"] and "execution" in r
-              assert all(not (isinstance(v, float) and math.isnan(v)) for v in b.values())
-          print("data checks ok")
-          PY
-
-      - name: Save market history
+      - name: Save backfill progress
+        if: always() && env.BACKFILL == 'true'
         uses: actions/cache/save@v4
         with:
           path: data
-          key: marketedge-data-${{ github.run_id }}
+          key: kismet-data-${{ github.run_id }}-backfill
+
+      - name: Pull newly resolved markets
+        if: env.FULL == 'true'
+        id: update
+        run: python -m engine update
+
+      # Saved even when a later step fails, so the next run doesn't re-download history.
+      - name: Save market history
+        if: always() && steps.update.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: data
+          key: kismet-data-${{ github.run_id }}
+
+      - name: Daily walk-forward test (re-tunes how fast old data fades)
+        if: env.FULL == 'true'
+        run: |
+          if [ "$(date -u +%H)" = "06" ] || [ ! -f output/backtest.json ] || [ "$BACKFILL" = "true" ]; then
+            python -m engine backtest
+          fi
+
+      # The flag ledger is append-only: continue from the published copy, not the one in main.
+      - name: Load the published scan (ledger + scanned_at)
+        run: |
+          if git fetch -q --depth 1 origin live; then
+            git show FETCH_HEAD:ledger.jsonl > output/ledger.jsonl 2>/dev/null || git checkout -- output/ledger.jsonl
+            prev=$(git show FETCH_HEAD:flags.json | python -c 'import json,sys; print(json.load(sys.stdin)["meta"]["scanned_at"])' || true)
+            echo "PREV_SCANNED_AT=$prev" >> "$GITHUB_ENV"
+            # scan-only runs reuse the model and backtest the last full run published
+            if [ "$FULL" != "true" ]; then
+              for f in model backtest; do git show "FETCH_HEAD:$f.json" > "output/$f.json" 2>/dev/null || git checkout -- "output/$f.json"; done
+            fi
+          fi
+
+      - name: Refit model, scan open markets, grade the ledger
+        run: |
+          if [ "$FULL" = "true" ]; then python -m engine fit; fi
+          python -m engine scan
+          python -m engine grade
+
+      - name: Engine and ops tests
+        run: python -m pytest -q engine/tests ops/tests
+
+      - name: Data checks (keep previous live data if these fail)
+        run: python ops/checks.py output ${PREV_SCANNED_AT:+--prev-scanned-at "$PREV_SCANNED_AT"}
 
       - name: Publish outputs to the live branch
         run: |
-          mkdir -p /tmp/pub && cp output/*.json /tmp/pub/
+          mkdir -p /tmp/pub && cp output/*.json output/*.jsonl /tmp/pub/
+          # Free tier is at least 15 min behind (docs/15): publish the scan being replaced as *-prev.json and the one
+          # before it as *-prev2.json, so a cold web instance can serve the newest one old enough (RT3-03: at a
+          # 10-minute cadence the replaced scan is only ~10 min old). Same shift as engine scan_keeping_prev and
+          # ops/upload.py. FETCH_HEAD = the live branch fetched above; first publishes have none.
+          for f in markets flags top counts; do   # T-295: top.json / counts.json (engine/precompute.py) shift too
+            git show "FETCH_HEAD:$f-prev.json" > "/tmp/pub/$f-prev2.json" 2>/dev/null || rm -f "/tmp/pub/$f-prev2.json"
+            git show "FETCH_HEAD:$f.json" > "/tmp/pub/$f-prev.json" 2>/dev/null || rm -f "/tmp/pub/$f-prev.json"
+          done
           cd /tmp/pub
           git init -q -b live
-          git config user.name "marketedge-bot"
+          git config user.name "kismet-bot"
           git config user.email "actions@users.noreply.github.com"
           git add . && git commit -qm "live data $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" live
+
+      # The web app reads the bucket first and falls back to the live branch (lib/data/store.ts).
+      - name: Upload outputs to the Supabase bucket `scan`
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # T-295: after the upload, regenerate the prerendered pages (POST /api/revalidate); optional, log-only
+          SITE_URL: ${{ vars.SITE_URL }}
+          REVALIDATE_URL: ${{ vars.REVALIDATE_URL }}
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_SERVICE_ROLE_KEY" ]; then
+            echo "::warning::SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY not set: skipped the Supabase upload"
+            python ops/upload.py --revalidate-only   # the live branch was just published
+          else
+            python ops/upload.py output
+          fi
+
+      - name: Open an issue when the refresh fails
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create --repo "${{ github.repository }}" \
+            --title "Data refresh failed $(date -u +%Y-%m-%dT%H:%MZ)" \
+            --body "The live branch was not updated; the previous scan stays published. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

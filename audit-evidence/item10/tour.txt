@@ -1,0 +1,5 @@
+step 1: 1 of 5 A best bet Each card is a bet priced below how often bets like it have won. It shows the price, what it pays and the past record behind it. Tap a card for the details. Any single bet can lose. Skip tour Next
+step 2: 2 of 5 Choose how much it pays Pays 2x+ or 5x+ narrows the list to bigger payouts. Bigger payouts win less often. Skip tour Back Next
+step 3: 3 of 5 Search any market Find a team, an election or a ticker and see whether it's priced well today. Skip tour Back Next
+step 4: 4 of 5 Save and get alerts Star a market to follow it on My list. Alerts tell you when a saved market's price moves. Skip tour Back Next
+step 5: 5 of 5 Check the results Results shows how past flagged bets actually did, wins and losses, so you can judge the numbers yourself. Skip tour Back Done

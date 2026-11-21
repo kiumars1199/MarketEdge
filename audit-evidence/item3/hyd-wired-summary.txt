@@ -1,0 +1,4 @@
+out/hyd-wired-beta-nosuch.txt: 20 runs, 0 hydration msgs | other:      20 [console.error] Failed to load resource: the server responded with a status of 404 (Not Found);
+out/hyd-wired-free-abc.txt: 20 runs, 0 hydration msgs | other:      20 [console.error] Failed to load resource: the server responded with a status of 404 (Not Found);
+out/hyd-wired-premium-abc.txt: 60 runs, 0 hydration msgs | other:      60 [console.error] Failed to load resource: the server responded with a status of 404 (Not Found);
+out/hyd-wired-premium-nosuch.txt: 60 runs, 0 hydration msgs | other:      60 [console.error] Failed to load resource: the server responded with a status of 404 (Not Found);

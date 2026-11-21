@@ -1,0 +1,27 @@
+{
+ "entries": 704,
+ "graded": 0,
+ "wins": 0,
+ "losses": 0,
+ "avg_pnl": null,
+ "avg_clv": null,
+ "by_category": {
+  "sports": {
+   "entries": 343,
+   "graded": 0,
+   "wins": 0,
+   "losses": 0,
+   "avg_pnl": null,
+   "avg_clv": null
+  },
+  "weather": {
+   "entries": 361,
+   "graded": 0,
+   "wins": 0,
+   "losses": 0,
+   "avg_pnl": null,
+   "avg_clv": null
+  }
+ },
+ "updated_at": 1794877967
+}

@@ -1,0 +1,32 @@
+## clean7 client bundle (157 files, 5.1M)
+  SUPABASE_SERVICE_ROLE: 0 files
+  STRIPE_SECRET: 0 files
+  STRIPE_WEBHOOK_SECRET: 0 files
+  sk_test_: 0 files
+  sk_live_: 0 files
+  whsec_: 0 files
+  e2e-service: 0 files
+  service_role: 0 files
+  RESEND_API: 0 files
+  UPSTASH_REDIS_REST_TOKEN: 0 files
+  KISMET_ADMIN: 0 files
+  CRON_SECRET: 0 files
+  MCP_ALLOWED_ORIGINS: 0 files
+  e2e-mock: 1 files
+  BEGIN PRIVATE KEY: 0 files
+## clean8 client bundle (157 files, 5.1M)
+  SUPABASE_SERVICE_ROLE: 0 files
+  STRIPE_SECRET: 0 files
+  STRIPE_WEBHOOK_SECRET: 0 files
+  sk_test_: 0 files
+  sk_live_: 0 files
+  whsec_: 0 files
+  e2e-service: 0 files
+  service_role: 0 files
+  RESEND_API: 0 files
+  UPSTASH_REDIS_REST_TOKEN: 0 files
+  KISMET_ADMIN: 0 files
+  CRON_SECRET: 0 files
+  MCP_ALLOWED_ORIGINS: 0 files
+  e2e-mock: 1 files
+  BEGIN PRIVATE KEY: 0 files

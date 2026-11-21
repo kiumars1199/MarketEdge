@@ -1,0 +1,14 @@
+build-ok
+
+✓ built in 28ms
+[ext:zip] wrote apps/extension/kismet-extension-0.1.0.zip
+-rw-r--r-- 1 root root 23159 Nov 20 07:11 kismet-extension-0.1.0.zip
+
+dist:
+total 76
+drwxr-xr-x  3 root root  4096 Nov 20 07:11 .
+drwxr-xr-x 10 root root  4096 Nov 20 07:11 ..
+-rw-r--r--  1 root root 13196 Nov 20 07:11 background.js
+-rw-r--r--  1 root root  5436 Nov 20 07:11 content.js
+-rw-r--r--  1 root root  3883 Nov 20 07:11 format.css
+-rw-r--r--  1 root root  1377 Nov 20 07:11 format.js

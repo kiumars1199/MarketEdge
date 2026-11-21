@@ -1,0 +1,16 @@
+<claude-code-hint v="1" type="plugin" value="stripe@claude-plugins-official" />
+A0 before checkout: free
+A1 after mock checkout + signed webhooks: tier pro status trialing period_end 2026-11-27T07:36:16.000Z
+   subscriptions row: {"user_id":"148f565d-475a-424d-a315-6eb690f9b70f","tier":"pro","stripe_customer_id":"cus_286c6e23","stripe_subscription_id":"sub_7cc635d7","status":"trialing","current_period_end":"2026-11-27T07:36:16.000Z","cancel_at_period_end":false,"trialed_at":"2026-11-20T07:36:16.000Z","updated_at":"2026-11-20T07:36:18.538Z"}
+B1 forged (wrong secret) subscription.updated → premium: 400 {"error":"Bad signature"} tier now pro
+B2 unsigned: 400 {"error":"Not configured or unsigned"} tier now pro
+B3 garbage signature: 400 {"error":"Bad signature"} tier now pro
+B4 valid HMAC, timestamp 10 min old: 400 {"error":"Bad signature"} tier now pro
+B5 valid signature but event body claims premium (tier re-read from Stripe, not the event): 200 {"received":true} tier now pro
+C1 first delivery: 200 {"received":true}
+C2 replay same event id: 200 {"received":true,"duplicate":true} tier pro
+D1 subscription.updated cancel_at_period_end=true: 200 {"received":true} tier pro (mock Stripe keeps status active; period end 2026-11-27T07:36:16.000Z )
+D2 period ends: Stripe status canceled → subscription.deleted: 200 {"received":true} tier free status canceled
+E1 Payment Link checkout with RAW user id as client_reference_id (unsigned): 502 {"error":"webhook customer.subscription.created → 500"} tier free
+E2 Payment Link checkout with signed client_reference_id: 303  tier pro
+F1 DELETE /api/account: 200 {"deleted":true} → Stripe sub sub_09b091cb status canceled canceled_at 1795160207 ; /api/me user null

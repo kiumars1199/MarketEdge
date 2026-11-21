@@ -1,0 +1,196 @@
+$ vitest run && pnpm test:ops
+
+ RUN  v5.1.0 /tmp/claude-0/-home-user-MarketEdge/2e8d356b-d1b5-5401-91e6-9f451833b42c/scratchpad/clean9/apps/web
+
+<claude-code-hint v="1" type="plugin" value="stripe@claude-plugins-official" />
+<claude-code-hint v="1" type="plugin" value="stripe@claude-plugins-official" />
+<claude-code-hint v="1" type="plugin" value="stripe@claude-plugins-official" />
+<claude-code-hint v="1" type="plugin" value="stripe@claude-plugins-official" />
+<claude-code-hint v="1" type="plugin" value="stripe@claude-plugins-official" />
+<claude-code-hint v="1" type="plugin" value="stripe@claude-plugins-official" />
+
+ Test Files  82 passed (82)
+      Tests  549 passed (549)
+   Start at  07:38:56
+   Duration  16.27s (tests 50%, import 26%, environment 13%, transform 10%, worker 1%)
+
+     Import  276 modules were evaluated 594 times · 10.23s total, 26% of tracked time
+             ~1.02s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+             learn more: https://vitest.dev/guide/improving-performance#test-isolation
+
+$ node --test "../../ops/tests/*.test.mjs"
+TAP version 13
+# Subtest: a complete production env has no problems
+ok 1 - a complete production env has no problems
+  ---
+  duration_ms: 2.031541
+  type: 'test'
+  ...
+# Subtest: dangerous production combinations are blockers
+ok 2 - dangerous production combinations are blockers
+  ---
+  duration_ms: 1.165562
+  type: 'test'
+  ...
+# Subtest: formats are checked
+ok 3 - formats are checked
+  ---
+  duration_ms: 1.196403
+  type: 'test'
+  ...
+# Subtest: missing required values block; missing optional ones warn
+ok 4 - missing required values block; missing optional ones warn
+  ---
+  duration_ms: 0.168111
+  type: 'test'
+  ...
+# Subtest: Payment Links mode needs the 4 links instead of price ids
+ok 5 - Payment Links mode needs the 4 links instead of price ids
+  ---
+  duration_ms: 0.325347
+  type: 'test'
+  ...
+# Subtest: site.json: the repo's own copy has its legal fields flagged, never invented
+ok 6 - site.json: the repo's own copy has its legal fields flagged, never invented
+  ---
+  duration_ms: 0.293008
+  type: 'test'
+  ...
+# Subtest: SECRET_ENV covers every secret the bundle check guards
+ok 7 - SECRET_ENV covers every secret the bundle check guards
+  ---
+  duration_ms: 0.370268
+  type: 'test'
+  ...
+# Subtest: setIfEmpty fills empty lines, appends missing keys, never overwrites
+ok 8 - setIfEmpty fills empty lines, appends missing keys, never overwrites
+  ---
+  duration_ms: 0.234164
+  type: 'test'
+  ...
+# Subtest: CLI: exit 1 with blockers, 0 when clean, grouped output
+ok 9 - CLI: exit 1 with blockers, 0 when clean, grouped output
+  ---
+  duration_ms: 34.940284
+  type: 'test'
+  ...
+# Subtest: plan: new file from the example, production defaults, all secrets 32+ chars
+ok 10 - plan: new file from the example, production defaults, all secrets 32+ chars
+  ---
+  duration_ms: 1.260555
+  type: 'test'
+  ...
+# Subtest: plan: never overwrites, second run is a no-op
+ok 11 - plan: never overwrites, second run is a no-op
+  ---
+  duration_ms: 0.665607
+  type: 'test'
+  ...
+# Subtest: CLI: dry run writes nothing; --yes writes mode 600; refuses tracked paths
+ok 12 - CLI: dry run writes nothing; --yes writes mode 600; refuses tracked paths
+  ---
+  duration_ms: 189.98918
+  type: 'test'
+  ...
+# Subtest: apply: sets known leaves, stamps last_updated, rejects unknown keys and wrong types
+ok 13 - apply: sets known leaves, stamps last_updated, rejects unknown keys and wrong types
+  ---
+  duration_ms: 12.31133
+  type: 'test'
+  ...
+# Subtest: CLI: dry run by default, --yes writes, invalid values refused, second run is a no-op
+ok 14 - CLI: dry run by default, --yes writes, invalid values refused, second run is a no-op
+  ---
+  duration_ms: 199.459391
+  type: 'test'
+  ...
+# Subtest: healthy site: every check passes, health details checked with CRON_SECRET
+ok 15 - healthy site: every check passes, health details checked with CRON_SECRET
+  ---
+  duration_ms: 369.56657
+  type: 'test'
+  ...
+# Subtest: a missing control fails the run
+ok 16 - a missing control fails the run
+  ---
+  duration_ms: 372.001747
+  type: 'test'
+  ...
+# <claude-code-hint v="1" type="plugin" value="stripe@claude-plugins-official" />
+# Subtest: events come from the webhook handler
+ok 17 - events come from the webhook handler
+  ---
+  duration_ms: 4.930619
+  type: 'test'
+  ...
+# Subtest: dry run reads only; --yes creates everything once; a second --yes changes nothing
+ok 18 - dry run reads only; --yes creates everything once; a second --yes changes nothing
+  ---
+  duration_ms: 386.987164
+  type: 'test'
+  ...
+# Subtest: a live key needs --live
+ok 19 - a live key needs --live
+  ---
+  duration_ms: 75.351865
+  type: 'test'
+  ...
+# Subtest: the webhook secret is never printed; the env file ends up 0600
+ok 20 - the webhook secret is never printed; the env file ends up 0600
+  ---
+  duration_ms: 187.48753
+  type: 'test'
+  ...
+# NEXT_PUBLIC_SUPABASE_URL (https://abcdefghijklmnopqrst.supabase.co) is not project zzzzzzzzzzzzzzzzzzzz.
+# Subtest: dry run prints the plan and the dashboard checklist, runs nothing
+ok 21 - dry run prints the plan and the dashboard checklist, runs nothing
+  ---
+  duration_ms: 33.462497
+  type: 'test'
+  ...
+# Subtest: --yes: link, push, test, bucket create + private check; re-run treats an existing bucket as fine
+ok 22 - --yes: link, push, test, bucket create + private check; re-run treats an existing bucket as fine
+  ---
+  duration_ms: 183.9557
+  type: 'test'
+  ...
+# Subtest: rejects a bad ref and a URL for another project
+ok 23 - rejects a bad ref and a URL for another project
+  ---
+  duration_ms: 77.40674
+  type: 'test'
+  ...
+# Refusing to push while preflight has blockers.
+# Subtest: commands: production + preview, secrets sensitive, test-only vars skipped
+ok 24 - commands: production + preview, secrets sensitive, test-only vars skipped
+  ---
+  duration_ms: 1.158336
+  type: 'test'
+  ...
+# Subtest: CLI --yes: refuses with preflight blockers, else feeds values on stdin
+ok 25 - CLI --yes: refuses with preflight blockers, else feeds values on stdin
+  ---
+  duration_ms: 260.855045
+  type: 'test'
+  ...
+# Subtest: commands: only keys listed in apps/web/.env.example
+ok 26 - commands: only keys listed in apps/web/.env.example
+  ---
+  duration_ms: 0.18791
+  type: 'test'
+  ...
+# Subtest: CLI: refuses (exit 2) with no env file instead of reading the shell environment
+ok 27 - CLI: refuses (exit 2) with no env file instead of reading the shell environment
+  ---
+  duration_ms: 30.76582
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1002.890209

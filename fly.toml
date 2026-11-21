@@ -1,0 +1,20 @@
+# Engine on Fly.io (alternative to Railway; see docs/setup-notes/ops.md). One always-on machine runs
+# ops/scheduler.py. No public ports. Deploy from the repo root: fly deploy --config fly.toml
+app = "kismet-engine"
+primary_region = "iad"
+
+[build]
+  dockerfile = "engine/Dockerfile"
+
+[processes]
+  engine = "python ops/scheduler.py"
+
+[[mounts]]
+  source = "engine_data"
+  destination = "/app/data"
+  processes = ["engine"]
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "1gb"
+  processes = ["engine"]

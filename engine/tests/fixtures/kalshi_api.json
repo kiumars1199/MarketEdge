@@ -1,0 +1,30 @@
+{
+  "events": {"cursor": "", "events": [
+    {"event_ticker": "KXELONMARS-99", "series_ticker": "KXELONMARS", "title": "Will Elon Musk visit Mars before Aug 1, 2099?",
+     "markets": [{"ticker": "KXELONMARS-99", "event_ticker": "KXELONMARS-99", "yes_sub_title": "Mars", "yes_bid_dollars": "0.1000", "yes_ask_dollars": "0.1200", "no_ask_dollars": "0.9000", "volume_fp": "127577.67", "close_time": "2099-08-01T04:59:00Z"}]},
+    {"event_ticker": "KXNBAGAME-26NOV19LACSAS", "series_ticker": "KXNBAGAME", "title": "Clippers at Spurs",
+     "markets": [
+       {"ticker": "KXNBAGAME-26NOV19LACSAS-SAS", "event_ticker": "KXNBAGAME-26NOV19LACSAS", "yes_sub_title": "San Antonio", "yes_bid_dollars": "0.6100", "yes_ask_dollars": "0.6300", "no_ask_dollars": "0.3900", "volume_fp": "5000.00", "close_time": "2026-11-20T03:00:00Z"},
+       {"ticker": "KXNBAGAME-26NOV19LACSAS-LAC", "event_ticker": "KXNBAGAME-26NOV19LACSAS", "yes_sub_title": "Los Angeles C", "yes_bid_dollars": "0.0000", "yes_ask_dollars": "1.0000", "volume_fp": "0.00", "close_time": "2026-11-20T03:00:00Z"}]}
+  ]},
+  "combos": {"cursor": "x", "markets": [
+    {"ticker": "KXMVE-S1", "event_ticker": "KXMVECROSSCATEGORY-S1", "mve_collection_ticker": "KXMVECROSSCATEGORY-R", "yes_sub_title": "yes San Antonio,no Zverev",
+     "yes_bid_dollars": "0.0000", "yes_ask_dollars": "0.0000", "volume_fp": "0.00", "close_time": "2026-12-03T23:00:00Z",
+     "mve_selected_legs": [{"event_ticker": "KXNBAGAME-26NOV19LACSAS", "market_ticker": "KXNBAGAME-26NOV19LACSAS-SAS", "side": "yes"},
+                           {"event_ticker": "KXATPMATCH-26NOV17ZVEFIL", "market_ticker": "KXATPMATCH-26NOV17ZVEFIL-ZVE", "side": "no"}]},
+    {"ticker": "KXMVE-S2", "event_ticker": "KXMVECROSSCATEGORY-S2", "mve_collection_ticker": "KXMVECROSSCATEGORY-R", "yes_sub_title": "two legs one game",
+     "yes_bid_dollars": "0.2000", "yes_ask_dollars": "0.2400", "volume_fp": "12.00", "close_time": "2026-12-03T23:00:00Z",
+     "mve_selected_legs": [{"event_ticker": "KXNBAGAME-26NOV19LACSAS", "market_ticker": "KXNBAGAME-26NOV19LACSAS-SAS", "side": "yes"},
+                           {"event_ticker": "KXNBAGAME-26NOV19LACSAS", "market_ticker": "KXNBAGAME-26NOV19LACSAS-LAC", "side": "no"}]},
+    {"ticker": "KXMVE-BIG", "event_ticker": "KXMVECROSSCATEGORY-S3", "yes_ask_dollars": "0.0500",
+     "mve_selected_legs": [{"event_ticker": "A", "market_ticker": "A-1", "side": "yes"}, {"event_ticker": "B", "market_ticker": "B-1", "side": "yes"},
+       {"event_ticker": "C", "market_ticker": "C-1", "side": "yes"}, {"event_ticker": "D", "market_ticker": "D-1", "side": "yes"},
+       {"event_ticker": "E", "market_ticker": "E-1", "side": "yes"}, {"event_ticker": "F", "market_ticker": "F-1", "side": "yes"},
+       {"event_ticker": "G", "market_ticker": "G-1", "side": "yes"}]},
+    {"ticker": "KXMVE-NOQUOTE", "event_ticker": "KXMVECROSSCATEGORY-S4",
+     "mve_selected_legs": [{"event_ticker": "KXX-1", "market_ticker": "KXX-1-A", "side": "yes"}, {"event_ticker": "KXY-1", "market_ticker": "KXY-1-B", "side": "yes"}]}
+  ]},
+  "legs": {"cursor": "", "markets": [
+    {"ticker": "KXATPMATCH-26NOV17ZVEFIL-ZVE", "event_ticker": "KXATPMATCH-26NOV17ZVEFIL", "title": "Zverev vs Fils", "yes_bid_dollars": "0.7000", "yes_ask_dollars": "0.7200", "no_ask_dollars": "0.3000"}
+  ]}
+}

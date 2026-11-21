@@ -1,0 +1,77 @@
+# 10-b static grep at bd21cc6: user-facing source (apps/web app components lib, supabase/templates, apps/extension/src, public/llms) excluding tests
+# pattern: \b(picks?|picked|picking|un?lock(s|ed|ing)?|lock of the|guarantee[ds]?|sure[- ]thing|can.?t lose|cannot lose|risk[- ]free|free money)\b, case-insensitive
+apps/web/app/error.tsx:2:// 500 (T-76): an error in a page keeps the shell. Lane O's Sentry picks errors up from here.
+apps/web/app/refunds/page.tsx:1:// Refund and cancellation policy (docs/14 §3, T-49). The owner picks the policy in config/site.json legal.refund_policy.
+apps/web/app/terms/page.tsx:103:        future ones. We give no guarantee that any estimate is right or that the site will always be available. Read the
+apps/web/components/UpgradeGate.tsx:22:          Upgrade to unlock
+apps/web/components/auth/LoginForm.tsx:90:  const pick = (t: Tab) => { setTab(t); setError(""); setNote(""); };
+apps/web/components/auth/LoginForm.tsx:97:    pick(to.value);
+apps/web/components/auth/LoginForm.tsx:183:                onClick={() => pick(t.value)} onKeyDown={onTabKey}
+apps/web/components/search/SearchCombobox.tsx:5:// aborted). ↑/↓ move, Enter picks (or searches), Esc closes, Tab completes the highlighted team. Under 768 px it
+apps/web/components/search/SearchCombobox.tsx:198:  const pick = (it: Item) => {
+apps/web/components/search/SearchCombobox.tsx:228:      if (open && it) pick(it);
+apps/web/components/search/SearchCombobox.tsx:337:                        onClick={() => pick(it)}
+apps/web/components/search/FilterPills.tsx:183:  // P5: each 2x+ band's tested return, under the choices (the user sees a long shot's record before picking it)
+apps/web/components/trade/TradeButton.tsx:9:export function venueOf(m: Pick<Market, "url" | "kalshi_ticker">): { name: "Kalshi" | "Polymarket"; href: string } {
+apps/web/components/trade/TradeButton.tsx:13:export function VenueLink({ m, className = "" }: { m: Pick<Market, "url" | "kalshi_ticker">; className?: string }) {
+apps/web/components/trade/TradeButton.tsx:23:export function VenueIconLink({ m, className = "" }: { m: Pick<Market, "url" | "kalshi_ticker">; className?: string }) {
+apps/web/components/screener/MarketTable.tsx:242:  const pick = cols.filter((c) => c.id !== "market" && c.id !== "star");
+apps/web/components/screener/MarketTable.tsx:252:          {pick.filter((c) => !c.pro).map((c) => <Check key={c.id} {...c} />)}
+apps/web/components/screener/MarketTable.tsx:256:          {pick.filter((c) => c.pro).map((c) => <Check key={c.id} {...c} />)}
+apps/web/components/screener/LockedBets.tsx:2:// docs/19 P3: on the Free plan the rest of Best bets shows as blurred locked cards with one "Unlock all N bets" link
+apps/web/components/screener/LockedBets.tsx:56:          <Link href="/pricing" onClick={() => track("upgrade_clicked", { source: "locked_bets" })} data-testid="unlock-all"
+apps/web/components/screener/LockedBets.tsx:58:            Unlock all {formatCount(total)} bets
+apps/web/components/screener/DayStrip.tsx:4:// 20 bets have settled) and TodayCard (signed-in: the user's own saved bets, alerts and My bets P&L, never picks).
+apps/web/components/pricing/Plans.tsx:3:// Pro $11.99/mo or $99.99/yr, Premium $19.99/mo or $169.99/yr; 7-day trial on both). In demo mode every button opens Best bets, since everything is already unlocked.
+apps/web/components/pricing/Plans.tsx:69:      {demo && <p className="text-xs text-muted">Demo: every feature is unlocked. No account or card needed.</p>}
+apps/web/components/market/TierNote.tsx:22:function useBandLine(s: Pick<Side, "ask">, tier: FlagTier): { text: string; lost: boolean } | null {
+apps/web/components/market/TierNote.tsx:42:export function TierNote({ s, className = "" }: { s: Pick<Side, "ask" | "model_events">; className?: string }) {
+apps/web/components/market/labels.ts:17:export function topicCrumb(m: Pick<Market, "category" | "niche" | "tags" | "market_type">): { label: string; href: string } {
+apps/web/components/market/labels.ts:27:export function topicLabel(m: Pick<Market, "category" | "niche" | "tags" | "market_type">): string {
+apps/web/components/market/labels.ts:65:export const priceVerdict = (s: Pick<Side, "edge" | "ranges">) =>
+apps/web/lib/auth/server.ts:22:/** What /login and /account say while accounts are off. "Everything is unlocked" is true only in demo mode;
+apps/web/lib/auth/server.ts:26:    ? "Accounts aren't switched on here. Everything is unlocked and saved in this browser."
+apps/web/lib/search/index.ts:4:// "barcelna" finds Barcelona while exact searches ("texans") never pick up look-alikes ("texas").
+apps/web/lib/search/parse.ts:250:export const describe = (p: Pick<ParsedQuery, "chips">) => p.chips.map((c) => c.label).join(" · ");
+apps/web/lib/format.ts:42:export function sideRet(s: Pick<Side, "roi_pct" | "ranges">): string {
+apps/web/lib/format.ts:46:export function sideEdge(s: Pick<Side, "edge" | "ranges">): string {
+apps/web/lib/format.ts:50:export function sideProfit(s: Pick<Side, "roi_pct" | "ranges">): string {
+apps/web/lib/format.ts:84:export function payoutIfWins(stake: number | null | undefined, s: Pick<Side, "ask" | "fee">): number | null {
+apps/web/lib/format.ts:101:export function betLine(s: Pick<Side, "outcome" | "ask">): string {
+apps/web/lib/format.ts:105:export function realisticReturn(s: Pick<Side, "realistic_edge" | "ask" | "fee">): number | null {
+apps/web/lib/format.ts:141:export function basis(m: { niche: string; market_type: string; horizon_h: number }, s: Pick<Side, "model_neff" | "model_events" | "model_level">): string {
+apps/web/lib/format.ts:168:export function sidePts(s: Pick<Side, "edge" | "ranges">): string {
+apps/web/lib/format.ts:192:export function cardReturn(s: Pick<Side, "roi_pct" | "ranges" | "realistic_edge" | "ask" | "fee">): { roi: number | null; text: string; profit: string; realistic: boolean } {
+apps/web/lib/combos.ts:21:export const legOf = (m: Pick<StoreMarket, "id" | "question" | "event_id" | "event" | "url" | "kalshi_ticker">, s: Side): Leg => ({
+apps/web/lib/combos.ts:39:export function combo(legs: Pick<Leg, "ask" | "fee" | "q" | "q_low" | "event_id" | "event">[]): Combo {
+apps/web/lib/combos.ts:58:export const comboLabel = (c: Pick<Combo, "legs" | "pays">, wins: string) =>
+apps/web/lib/filters/apply.ts:43:export const paysBand = (s: Pick<Side, "ask">) => (s.ask > 0 ? (band(PAYS_BANDS, 1 / s.ask) as PaysBand | undefined) : undefined);
+apps/web/lib/filters/apply.ts:60:export const nowFor = (store: Pick<Store, "meta">): number =>
+apps/web/lib/filters/apply.ts:100:export const paysOf = (s: Pick<Side, "ask">) => (s.ask > 0 ? 1 / s.ask : null);
+apps/web/lib/filters/apply.ts:176:  // Tier is a facet bit, not a source filter: Pays band counts include both tiers, because picking a band
+apps/web/lib/filters/apply.ts:238:    // Picking a 2x+ band lifts the long-shot floor, so those bands are counted the way they would show.
+apps/web/lib/filters/state.ts:57:export const tierOf = (f: Pick<FilterState, "tier" | "pays_min" | "pays_max" | "sort">): FilterState["tier"] =>
+apps/web/lib/billing/stripe.ts:2:// Two modes, picked by config: Checkout (keys + price ids in env) or Payment Links (config/site.json).
+apps/web/lib/repo/index.ts:43:/** Resolves once AuthBoot has picked the store (account or guest). Never resolves in demo mode: race it with a timeout. */
+apps/web/lib/repo/types.ts:86:export type Insert<T> = Omit<T, Extract<keyof T, Defaulted>> & Partial<Pick<T, Extract<keyof T, Defaulted>>>;
+apps/web/lib/alerts.ts:20:export const dedupeKey = (r: Pick<AlertRule, "id" | "cooldown_minutes">, marketId: string, side: 0 | 1 | null, now: Date) =>
+apps/web/lib/alerts.ts:23:export function inQuietHours(r: Pick<AlertRule, "quiet_hours">, now: Date, timeZone: string): boolean {
+apps/web/lib/data/respond.ts:192:/** Free Best bets: every match is counted (`total` is the real N for "Unlock all N bets"), but only the day's sample
+apps/web/lib/data/store.ts:284:  const pick = () => newestBy(cutoff, s, state.prev, state.prev2);
+apps/web/lib/data/store.ts:285:  const hit = pick();
+apps/web/lib/data/store.ts:305:  const late = pick();
+apps/web/lib/trade/fills.ts:47:export async function recordFills(repo: Pick<Repo, "journal">, t: TrackedOrder, v: OrderView): Promise<boolean> {
+apps/web/lib/alerts-server.ts:13:export type Source = Pick<Deps, "fetchMarkets" | "fetchMarket" | "fetchBook">;
+apps/web/lib/reprice.ts:88:export function predictAt(ctx: RepriceCtx, m: Pick<StoreMarket, "niche" | "market_type" | "category" | "horizon_h">, s: Side, p: number): { q: number; lo: number } | null {
+apps/web/lib/reprice.ts:111:export function sideAt(s: Side, q: Pick<Quote, "ask" | "bid">, m: Pick<StoreMarket, "category" | "niche" | "market_type" | "horizon_h">, ctx?: RepriceCtx): Side {
+apps/web/lib/mcp/server.ts:4:// No personalized picks (CLAUDE.md rule 4): every verdict is the public one; my_list is the user's own saved order.
+apps/web/lib/mcp/server.ts:94:const marketUrl = (m: Pick<StoreMarket, "id">) => `${siteUrl()}/m/${encodeURIComponent(m.id)}`;
+apps/web/lib/mcp/server.ts:225: *  Never re-ranked by return, edge or anything else: no personalized picks (CLAUDE.md rule 4). */
+apps/web/lib/journal.ts:10:type Bet = Pick<JournalEntry, "price" | "shares" | "fee">;
+apps/web/lib/journal.ts:20:export const clv = (b: Pick<JournalEntry, "price" | "closing_price">): number | null =>
+apps/web/lib/journal.ts:24:export const entryReturn = (b: Pick<JournalEntry, "price" | "fee" | "model_edge">): number | null =>
+apps/extension/src/kalshi/trade.ts:46:export const maxCostCents = (o: Pick<OrderIntent, "count" | "price_cents">) => o.count * o.price_cents + feeCents(o.count, o.price_cents);
+apps/extension/src/match.ts:17:function labels(m: Pick<Market, "question" | "market_type">): string[] {
+apps/extension/src/match.ts:46:  const pick = (ms?: Market[]) =>
+apps/extension/src/match.ts:48:  const s = pick(idx.specific.get(k));
+apps/extension/src/match.ts:50:  const h = pick(idx.heading.get(k));

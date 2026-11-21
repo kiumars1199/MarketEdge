@@ -78,6 +78,8 @@ class Model:
         for h in np.unique(b.h):
             H = b.h == h
             self._fit(("all", int(h)), H, X, b, w, PERFECT, lam)
+            if ("all", int(h)) not in self.nodes:  # too few bets at this horizon (early folds)
+                continue
             root = self.nodes[("all", int(h))]["theta"]
             for c in np.unique(b.cat[H]):
                 self._fit(("cat", int(h), int(c)), H & (b.cat == c), X, b, w, root, lam)

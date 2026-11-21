@@ -1,0 +1,14 @@
+## /api/oauth/decision (bd21cc6 wired)
+Origin=[http://evil.example]: {"error":"Bad origin"} HTTP 403
+Origin=[]: {"error":"Bad origin"} HTTP 403
+Origin=[http://localhost:3161]: {"error":"Invalid request"} HTTP 400
+same-origin bad decision: {"error":"Invalid request"} HTTP 400
+same-origin signed out: {"error":"Sign in to use this.","signin":"/login"} HTTP 401
+
+## /oauth/consent
+anon: 307 http://localhost:3161/login?next=%2Foauth%2Fconsent%3Fauthorization_id%3Dx
+premium: 200
+ Connect an app · Kismet Skip to content Kismet Best bets All markets My list My bets Results Search markets / Connect an app This request has expired or was already used. Start again from the app you're connecting. Kismet. Less luck, more math. Market analytics, not financial advice. Based on past results. 18+. © 2026 Kiumars Momtaz and Marc Yamin How it works Pricing Terms Privacy Refunds Disclaimer Contact Status Best bets All markets My list More More My bets Results Tools Alerts Dashboards Settings Status How it works 
+
+## cookie flags: POST /api/auth/magic-link
+HTTP/1.1 400 Bad Request

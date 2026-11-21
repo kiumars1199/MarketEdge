@@ -1,0 +1,16 @@
+
+> kismet-extension@0.1.0 test /tmp/claude-0/-home-user-MarketEdge/2e8d356b-d1b5-5401-91e6-9f451833b42c/scratchpad/clean6/apps/extension
+> vitest run
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./manifest.config" without a file extension (vite.config.ts:6:26). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.1.0 /tmp/claude-0/-home-user-MarketEdge/2e8d356b-d1b5-5401-91e6-9f451833b42c/scratchpad/clean6/apps/extension
+
+
+ Test Files  6 passed (6)
+      Tests  42 passed (42)
+   Start at  07:01:07
+   Duration  364ms (transform 45%, import 27%, tests 24%, worker 4%)
+

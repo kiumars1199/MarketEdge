@@ -1,10 +1,10 @@
 # 04 · Filters, search, sort, grouping
 
-Goal: everything a trader can filter on Kalshi or Polymarket, plus the filters only MarketEdge
+Goal: everything a trader can filter on Kalshi or Polymarket, plus the filters only Kismet
 can offer (edge, win chance, confidence, execution). Sources in `11-research.md`.
 
 ## Parity checklist
-| Filter / sort | Kalshi | Polymarket | Others | MarketEdge field / status |
+| Filter / sort | Kalshi | Polymarket | Others | Kismet field / status |
 |---|---|---|---|---|
 | Category chips, multi-select | ✓ | ✓ | ✓ | `category` + taxonomy tree (§ Topic) |
 | Sub-category / league / topic | ✓ (tags per category) | ✓ (sub-pages) | ✓ | `niche`, `tags`, derived (`03` §2) |

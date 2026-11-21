@@ -1,0 +1,5 @@
+## curl: Host header spoof (DNS-rebinding shape), valid Premium app token, POST tools/list
+-- Host: evil.example / Origin: http://evil.example -> 403 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin: evil.example"},"id":null}
+-- Host: evil.example:3161 / Origin: http://evil.example:3161 -> 403 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin: evil.example"},"id":null}
+-- X-Forwarded-Host: evil.example / Origin: http://evil.example -> 403 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Invalid Origin: evil.example"},"id":null}
+-- Host: localhost:3161 / Origin: http://localhost:3161 -> 200 event: message data: {"result":{"tools":[{"name":"best_bets","title":"Best bets","description":"Kismet's current Best be

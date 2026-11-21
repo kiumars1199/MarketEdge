@@ -1,0 +1,4 @@
+batch of 3 (best_bets limit 0, best_bets limit 1, track_record): http 200 text/event-stream, 3 responses
+  id 1: isError=true ends-with-disclaimer | Input validation error: Invalid arguments for tool best_bets: limit: Too small: expected number to b
+  id 2: isError=false ends-with-disclaimer | Best bets on Kismet (same list as http://localhost:3161/bets, same for everyone):
+  id 3: isError=false ends-with-disclaimer | How Kismet's Best bets did in a walk-forward test (each week judged only on what came before):

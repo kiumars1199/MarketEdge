@@ -1207,7 +1207,105 @@
      "roi_pct": 7.68,
      "t_stat": 10.71
     }
-   ]
+   ],
+   "by_pays": {
+    "best": {
+     "<1.5x": {
+      "flags": 13565,
+      "events": 2577,
+      "win_rate": 0.9186,
+      "avg_price": 0.7887,
+      "pnl_cents_per_share": 10.15,
+      "roi_pct": 12.42,
+      "t_stat": 29.2,
+      "predicted_win_rate": 0.89
+     },
+     "1.5-2x": {
+      "flags": 3331,
+      "events": 1392,
+      "win_rate": 0.8043,
+      "avg_price": 0.6355,
+      "pnl_cents_per_share": 14.04,
+      "roi_pct": 21.16,
+      "t_stat": 18.95,
+      "predicted_win_rate": 0.7392
+     },
+     "2-3x": {
+      "flags": 0
+     },
+     "3-5x": {
+      "flags": 0
+     },
+     "5-10x": {
+      "flags": 0
+     },
+     "10x+": {
+      "flags": 0
+     }
+    },
+    "edge": {
+     "<1.5x": {
+      "flags": 39722,
+      "events": 9412,
+      "win_rate": 0.868,
+      "avg_price": 0.7987,
+      "pnl_cents_per_share": 4.32,
+      "roi_pct": 5.23,
+      "t_stat": 15.77,
+      "predicted_win_rate": 0.8666
+     },
+     "1.5-2x": {
+      "flags": 7529,
+      "events": 3088,
+      "win_rate": 0.753,
+      "avg_price": 0.6166,
+      "pnl_cents_per_share": 10.69,
+      "roi_pct": 16.54,
+      "t_stat": 12.56,
+      "predicted_win_rate": 0.6891
+     },
+     "2-3x": {
+      "flags": 267,
+      "events": 166,
+      "win_rate": 0.3596,
+      "avg_price": 0.3563,
+      "pnl_cents_per_share": -0.94,
+      "roi_pct": -2.54,
+      "t_stat": -0.29,
+      "predicted_win_rate": 0.3972
+     },
+     "3-5x": {
+      "flags": 1186,
+      "events": 598,
+      "win_rate": 0.2892,
+      "avg_price": 0.2682,
+      "pnl_cents_per_share": 0.82,
+      "roi_pct": 2.91,
+      "t_stat": 0.48,
+      "predicted_win_rate": 0.3128
+     },
+     "5-10x": {
+      "flags": 605,
+      "events": 353,
+      "win_rate": 0.1636,
+      "avg_price": 0.154,
+      "pnl_cents_per_share": -0.13,
+      "roi_pct": -0.79,
+      "t_stat": -0.07,
+      "predicted_win_rate": 0.1939
+     },
+     "10x+": {
+      "flags": 111,
+      "events": 84,
+      "win_rate": 0.0541,
+      "avg_price": 0.0833,
+      "pnl_cents_per_share": -3.89,
+      "roi_pct": -41.85,
+      "t_stat": -1.7,
+      "predicted_win_rate": 0.1173
+     }
+    }
+   }
   }
  },
  "chosen_half_life_days": null,
@@ -1226,5 +1324,23 @@
    "finance": 8356
   }
  },
- "ran_at": 1794873430
+ "ran_at": 1794873430,
+ "combos": {
+  "2": {
+   "combos": 2156,
+   "win_rate": 0.7505,
+   "predicted_win_rate": 0.7555,
+   "avg_pays": 1.62,
+   "roi_pct": 16.87,
+   "t_stat": 5.42
+  },
+  "3": {
+   "combos": 2001,
+   "win_rate": 0.6502,
+   "predicted_win_rate": 0.6605,
+   "avg_pays": 2.1,
+   "roi_pct": 25.71,
+   "t_stat": 4.59
+  }
+ }
 }

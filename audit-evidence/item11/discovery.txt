@@ -1,0 +1,119 @@
+## robots.txt (wired)
+User-Agent: GPTBot
+User-Agent: OAI-SearchBot
+User-Agent: ClaudeBot
+User-Agent: Claude-Web
+User-Agent: Claude-SearchBot
+User-Agent: anthropic-ai
+User-Agent: CCBot
+User-Agent: PerplexityBot
+User-Agent: Google-Extended
+User-Agent: GoogleOther
+User-Agent: Applebot-Extended
+User-Agent: Bytespider
+User-Agent: Amazonbot
+User-Agent: meta-externalagent
+User-Agent: meta-externalfetcher
+User-Agent: FacebookBot
+User-Agent: cohere-ai
+User-Agent: cohere-training-data-crawler
+User-Agent: Diffbot
+User-Agent: ImagesiftBot
+User-Agent: Omgilibot
+User-Agent: Omgili
+User-Agent: Timpibot
+User-Agent: YouBot
+User-Agent: AI2Bot
+User-Agent: Ai2Bot-Dolma
+User-Agent: DuckAssistBot
+User-Agent: MistralAI-User
+User-Agent: Scrapy
+User-Agent: img2dataset
+User-Agent: Kangaroo Bot
+User-Agent: PanguBot
+User-Agent: SemrushBot-OCOB
+User-Agent: Webzio-Extended
+Disallow: /
+
+User-Agent: ChatGPT-User
+User-Agent: Claude-User
+User-Agent: Perplexity-User
+Allow: /$
+Allow: /pricing
+Allow: /about
+Allow: /track-record
+Allow: /terms
+Allow: /privacy
+Allow: /refunds
+Allow: /disclaimer
+Allow: /contact
+Allow: /llms.txt
+Disallow: /
+
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login
+Disallow: /reset-password
+Disallow: /onboarding
+Disallow: /account
+Disallow: /settings
+Disallow: /watchlist
+Disallow: /journal
+Disallow: /alerts
+Disallow: /dashboards
+Disallow: /admin
+Disallow: /kalshi
+Disallow: /bets
+Disallow: /markets
+Disallow: /combos
+Disallow: /tools
+Disallow: /ext/
+Disallow: /oauth
+
+Sitemap: http://localhost:3161/sitemap.xml
+
+## llms.txt headers + body
+HTTP/1.1 200 OK
+cache-control: public, max-age=3600
+content-type: text/markdown; charset=utf-8
+# Kismet
+
+> Kismet shows prediction-market traders which contracts are priced below their estimated win chance, after the
+> fee and after the cost of crossing the spread. Every number comes with its basis: sample size, model level and the
+> walk-forward backtest record. Flags are the same for everyone; Kismet gives no personal advice and places no bets.
+
+Market analytics, not financial advice. Based on past results. 18+.
+
+## Public pages
+
+- [How it works](http://localhost:3161/about): the model, the price check and what the numbers mean
+- [Track record](http://localhost:3161/track-record): walk-forward backtest, calibration and the live settled-bet record
+- [Pricing](http://localhost:3161/pricing): Free, Pro and Premium
+- [Terms](http://localhost:3161/terms), [Privacy](http://localhost:3161/privacy), [Refunds](http://localhost:3161/refunds), [Disclaimer](http://localhost:3161/disclaimer), [Contact](http://localhost:3161/contact)
+
+## Use Kismet in an AI assistant (MCP)
+
+- Server URL: http://localhost:3161/api/mcp (streamable HTTP, OAuth 2.1 sign-in with your Kismet account)
+- Read-only tools: best_bets, search_markets, get_market, track_record, my_list
+- Plans: Premium (up to 60 calls a minute); Pro includes 3 calls a day; not on Free
+- Setup steps for Claude, ChatGPT and Cursor: http://localhost:3161/account (signed in)
+
+## For crawlers
+
+Market data, Best bets and account pages need a signed-in account and aren't for automated reading. Training
+crawlers are not allowed anywhere (see http://localhost:3161/robots.txt).
+
+## sitemap.xml
+http://localhost:3161
+http://localhost:3161/about
+http://localhost:3161/pricing
+http://localhost:3161/track-record
+http://localhost:3161/status
+http://localhost:3161/terms
+http://localhost:3161/privacy
+http://localhost:3161/refunds
+http://localhost:3161/disclaimer
+http://localhost:3161/contact
+http://localhost:3161/signup

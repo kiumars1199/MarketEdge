@@ -1,0 +1,8 @@
+## UA vs MCP/OAuth endpoints (valid Premium app token on /api/mcp)
+Claude-User/1.0                                                mcp=200 /.well-known/oauth-protected-resource/api/mcp=200 /.well-known/oauth-protected-resource=200 /robots.txt=200 /oauth/consent=403
+Mozilla/5.0 (compatible; ChatGPT-User/1.0; +https://openai.com/bot) mcp=200 /.well-known/oauth-protected-resource/api/mcp=200 /.well-known/oauth-protected-resource=200 /robots.txt=200 /oauth/consent=403
+Perplexity-User/1.0                                            mcp=200 /.well-known/oauth-protected-resource/api/mcp=200 /.well-known/oauth-protected-resource=200 /robots.txt=200 /oauth/consent=403
+GPTBot/1.2                                                     mcp=200 /.well-known/oauth-protected-resource/api/mcp=200 /.well-known/oauth-protected-resource=200 /robots.txt=200 /oauth/consent=403
+ClaudeBot/1.0                                                  mcp=200 /.well-known/oauth-protected-resource/api/mcp=200 /.well-known/oauth-protected-resource=200 /robots.txt=200 /oauth/consent=403
+node                                                           mcp=200 /.well-known/oauth-protected-resource/api/mcp=200 /.well-known/oauth-protected-resource=200 /robots.txt=200 /oauth/consent=307
+python-httpx/0.28                                              mcp=200 /.well-known/oauth-protected-resource/api/mcp=200 /.well-known/oauth-protected-resource=200 /robots.txt=200 /oauth/consent=307

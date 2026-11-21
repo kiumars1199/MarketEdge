@@ -1,0 +1,14 @@
+# 2026-11-20T08:02:39Z mock next-server pid=29841
+0. valid token, mock up: 200 0.167955s | www= | event: message
+data: {"result":{"tools":[{"name":"best_bets","title":"Best bets","description":"Kismet's current Best be
+1a. after 31 junk tokens, mock up: 429 0.003933s | www= | {"error":"Too many requests. Slow down and try again shortly."}
+1b. mock SIGSTOPped, junk token while blocked: 429 0.004384s | www= | {"error":"Too many requests. Slow down and try again shortly."}
+1c. mock SIGSTOPped, valid token while blocked: 429 0.004411s | www= | {"error":"Too many requests. Slow down and try again shortly."}
+2. block lapsed, mock still SIGSTOPped (hung Supabase), valid token, curl -m 25: 500 0.015948s | www= | {"error":"server_error","error_description":"Sign-in service unavailable"}
+sc/mcp-outage.sh: line 21: kill: (29841) - No such process
+2b. mock resumed, valid token: 500 0.012064s | www= | {"error":"server_error","error_description":"Sign-in service unavailable"}
+3a. mock killed (connection refused), 35 valid-token requests:      35 500 
+3b. one more, full answer: 500 0.004822s | www= | {"error":"server_error","error_description":"Sign-in service unavailable"}
+3c. junk token during outage: 500 0.007950s | www= | {"error":"server_error","error_description":"Sign-in service unavailable"}
+4. mock restarted (state wiped); reseeding one Premium user
+4. fresh Premium user after the outage: 200 (200 = the 35+ outage answers did not count against the failed-token budget)

@@ -1,0 +1,232 @@
+# http://localhost:3161 2026-11-20T07:24:45.504Z signed in (cookie)
+method path -> status | content-type | cache-control | robots
+GET  / -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST / -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /.well-known/oauth-authorization-server -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /.well-known/oauth-authorization-server -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /.well-known/oauth-authorization-server/api/mcp -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /.well-known/oauth-authorization-server/api/mcp -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /.well-known/oauth-protected-resource -> 200 | application/json | public, max-age=300 | 
+POST /.well-known/oauth-protected-resource -> 405 |  |  | 
+GET  /.well-known/oauth-protected-resource/api/mcp -> 200 | application/json | public, max-age=300 | 
+POST /.well-known/oauth-protected-resource/api/mcp -> 405 |  |  | 
+GET  /.well-known/openid-configuration -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /.well-known/openid-configuration -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /.well-known/security.txt -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /.well-known/security.txt -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/a-4-a/c.js -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/a-4-a/c.js -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /_next/static/chunks/nope.js -> 404 | text/plain | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /_next/static/chunks/nope.js -> 404 | text/plain | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /_next/static/nope.js -> 404 | text/plain | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /_next/static/nope.js -> 404 | text/plain | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /_not-found -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /_not-found -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /a/b/c -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /a/b/c -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /about -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /about -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /account -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /account -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /admin -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /admin -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /admin/audit -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /admin/audit -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /admin/grants -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /admin/grants -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /admin/health -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /admin/health -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /admin/nope -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /admin/nope -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /admin/settings -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /admin/settings -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /admin/users -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /admin/users -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /admin/users/00000000-0000-0000-0000-000000000000 -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /admin/users/00000000-0000-0000-0000-000000000000 -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /alerts -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /alerts -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /api/account -> 405 |  |  | 
+GET  /api/account/export -> 200 | application/json | no-store | 
+POST /api/account/export -> 405 |  |  | 
+GET  /api/admin -> 404 | application/json | private, no-store | 
+POST /api/admin -> 404 | application/json | private, no-store | 
+GET  /api/admin/export -> 404 | application/json | private, no-store | 
+POST /api/admin/export -> 404 | application/json | private, no-store | 
+GET  /api/alerts/run -> 401 | application/json |  | 
+POST /api/alerts/run -> 401 | application/json |  | 
+GET  /api/auth/google -> 405 |  |  | 
+POST /api/auth/google -> 303 loc=/login?error=google |  |  | 
+GET  /api/auth/magic-link -> 405 |  |  | 
+POST /api/auth/magic-link -> 400 | application/json |  | 
+GET  /api/auth/password -> 405 |  |  | 
+POST /api/auth/password -> 429 | application/json |  | 
+GET  /api/auth/password/update -> 405 |  |  | 
+POST /api/auth/password/update -> 401 | application/json |  | 
+GET  /api/auth/reset -> 405 |  |  | 
+POST /api/auth/reset -> 429 | application/json |  | 
+GET  /api/auth/signout -> 405 |  |  | 
+GET  /api/backtest -> 200 | application/json | private, no-store | 
+POST /api/backtest -> 405 |  |  | 
+GET  /api/book -> 400 | application/json | private, no-store | 
+POST /api/book -> 405 |  |  | 
+GET  /api/combos -> 200 | application/json | private, no-store | 
+POST /api/combos -> 405 |  |  | 
+GET  /api/combos/kalshi -> 200 | application/json | no-store | 
+POST /api/combos/kalshi -> 404 | application/json |  | 
+GET  /api/data -> 200 | application/json | no-store | 
+POST /api/data -> 400 | application/json |  | 
+GET  /api/data/watchlist -> 405 |  |  | 
+POST /api/data/watchlist -> 400 | application/json |  | 
+GET  /api/data/watchlist/x -> 405 |  |  | 
+POST /api/data/watchlist/x -> 405 |  |  | 
+GET  /api/events/1309855 -> 200 | application/json | private, no-store | 
+POST /api/events/1309855 -> 405 |  |  | 
+GET  /api/events/by-slug/x -> 404 | application/json | private, no-store | 
+POST /api/events/by-slug/x -> 405 |  |  | 
+GET  /api/ext/telemetry -> 405 |  |  | 
+POST /api/ext/telemetry -> 400 |  |  | 
+GET  /api/ext/token -> 405 |  |  | 
+POST /api/ext/token -> 503 | application/json |  | 
+GET  /api/ext/token/refresh -> 405 |  |  | 
+POST /api/ext/token/refresh -> 401 | application/json |  | 
+GET  /api/flags -> 200 | application/json | private, no-store | 
+POST /api/flags -> 405 |  |  | 
+GET  /api/health -> 503 | application/json | no-store | 
+POST /api/health -> 405 |  |  | 
+GET  /api/kalshi -> 404 | application/json | no-store | 
+POST /api/kalshi -> 405 |  |  | 
+GET  /api/markets -> 200 | application/json | private, no-store | 
+POST /api/markets -> 405 |  |  | 
+GET  /api/markets/6654466 -> 200 | application/json | private, no-store | 
+POST /api/markets/6654466 -> 405 |  |  | 
+GET  /api/mcp -> 401 | application/json | private, no-store | 
+POST /api/mcp -> 401 | application/json | private, no-store | 
+GET  /api/mcp/extra -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /api/mcp/extra -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /api/me -> 200 | application/json | private, no-store | 
+POST /api/me -> 405 |  |  | 
+GET  /api/meta -> 200 | application/json | private, no-store | 
+POST /api/meta -> 405 |  |  | 
+GET  /api/model/curve -> 200 | application/json | private, no-store | 
+POST /api/model/curve -> 405 |  |  | 
+GET  /api/no-such-route -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /api/no-such-route -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /api/oauth/decision -> 405 |  |  | 
+POST /api/oauth/decision -> 400 | application/json | no-store | 
+GET  /api/settle -> 405 |  |  | 
+POST /api/settle -> 400 | application/json |  | 
+GET  /api/settle/run -> 401 | application/json |  | 
+POST /api/settle/run -> 401 | application/json |  | 
+GET  /api/stripe/checkout -> 405 |  |  | 
+POST /api/stripe/checkout -> 400 | application/json |  | 
+GET  /api/stripe/portal -> 405 |  |  | 
+POST /api/stripe/portal -> 404 | application/json |  | 
+GET  /api/stripe/webhook -> 405 |  |  | 
+GET  /api/suggest -> 200 | application/json | private, no-store | 
+POST /api/suggest -> 405 |  |  | 
+GET  /api/trade/config -> 200 | application/json | no-store | 
+POST /api/trade/config -> 405 |  |  | 
+GET  /api/trade/nonce -> 405 |  |  | 
+POST /api/trade/nonce -> 403 | application/json |  | 
+GET  /api/trade/nonce/verify -> 405 |  |  | 
+POST /api/trade/nonce/verify -> 400 | application/json |  | 
+GET  /api/unsubscribe -> 400 | text/html | no-store | noindex
+POST /api/unsubscribe -> 400 | text/html | no-store | noindex
+GET  /apple-icon.png -> 200 | image/png | public, immutable, no-transform, max-age=31536000 | 
+POST /apple-icon.png -> 405 |  |  | 
+GET  /auth/callback -> 303 loc=/login?error=link |  |  | 
+POST /auth/callback -> 405 |  |  | 
+GET  /bets -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /bets -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /combos -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /combos -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /contact -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /contact -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /dashboards -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /dashboards -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /dashboards/x -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /dashboards/x -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /disclaimer -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /disclaimer -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /e2e-mock/x -> 404 | text/plain |  | 
+POST /e2e-mock/x -> 404 | text/plain |  | 
+GET  /event/1309855 -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /event/1309855 -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /ext/connect -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /ext/connect -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /favicon.ico -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /favicon.ico -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /flags -> 308 loc=/ |  |  | 
+POST /flags -> 308 loc=/ |  |  | 
+GET  /flags?x=1 -> 308 loc=/?x=1 |  |  | 
+POST /flags?x=1 -> 308 loc=/?x=1 |  |  | 
+GET  /icon.svg -> 200 | image/svg+xml | public, immutable, no-transform, max-age=31536000 | 
+POST /icon.svg -> 405 |  |  | 
+GET  /journal -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /journal -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /kalshi -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /kalshi -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /llms.txt -> 200 | text/markdown | public, max-age=3600 | 
+POST /llms.txt -> 405 |  |  | 
+GET  /login -> 307 loc=/ | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /login -> 307 loc=/ | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /m/6654466 -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /m/6654466 -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /m/6654466/extra -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /m/6654466/extra -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /m/6654466/opengraph-image -> 200 | image/png | public, immutable, no-transform, max-age=31536000 | 
+POST /m/6654466/opengraph-image -> 405 |  |  | 
+GET  /m/6654466/twitter-image -> 200 | image/png | public, immutable, no-transform, max-age=31536000 | 
+POST /m/6654466/twitter-image -> 405 |  |  | 
+GET  /maintenance -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /maintenance -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /manifest.webmanifest -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /manifest.webmanifest -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /markets -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /markets -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /no-such-page -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /no-such-page -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /oauth/consent -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /oauth/consent -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /onboarding -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /onboarding -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /opengraph-image -> 200 | image/png | public, immutable, no-transform, max-age=31536000 | 
+POST /opengraph-image -> 405 |  |  | 
+GET  /pricing -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /pricing -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /privacy -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /privacy -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /refunds -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /refunds -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /reset-password -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /reset-password -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /robots.txt -> 200 | text/plain | public, max-age=0, must-revalidate | 
+POST /robots.txt -> 405 |  |  | 
+GET  /settings -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /settings -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /signup -> 307 loc=/ | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /signup -> 307 loc=/ | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /sitemap.xml -> 200 | application/xml | public, max-age=0, must-revalidate | 
+POST /sitemap.xml -> 405 |  |  | 
+GET  /status -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /status -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /terms -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /terms -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /tools -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /tools -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /track-record -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+POST /track-record -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | 
+GET  /twitter-image -> 200 | image/png | public, immutable, no-transform, max-age=31536000 | 
+POST /twitter-image -> 405 |  |  | 
+GET  /v1/customers -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /v1/customers -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /watchlist -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+POST /watchlist -> 200 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex
+GET  /zz-missing -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+POST /zz-missing -> 404 | text/html | private, no-cache, no-store, max-age=0, must-revalidate | noindex [404 page]
+GET  /no-such-page (RSC: 1) -> 404 | text/x-component | private, no-cache, no-store, max-age=0, must-revalidate
+GET  /no-such-page (Next-Router-Prefetch) -> 404 | text/x-component | private, no-cache, no-store, max-age=0, must-revalidate
+PUT /api/no-such-route -> 404 | text/html; charset=utf-8
+DELETE /api/no-such-route -> 404 | text/html; charset=utf-8
+PATCH /api/no-such-route -> 404 | text/html; charset=utf-8

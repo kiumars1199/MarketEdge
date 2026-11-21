@@ -14,7 +14,7 @@ For every flagged market this module reads the live order book and answers:
   verdict        = "worth it" | "thin" | "not worth it"
 
 So a market is only "worth it" when crossing the spread doesn't eat the edge:
-if the ask sits as far above mid as the model's edge, MarketEdge adds nothing.
+if the ask sits as far above mid as the model's edge, Kismet adds nothing.
 """
 import json
 
@@ -119,9 +119,14 @@ def enrich(cfg, rows, fee_rates, log=print):
         tok = (r.get("tokens") or [None, None])[r["best"]["side_index"]]
         b = bk.get(tok)
         if not b:
-            r["execution"] = dict(verdict="no book", book_ok=False)
+            r["execution"] = dict(verdict="no book", book_ok=False, ask_size=None, bid_size=None)
             continue
         r["execution"] = check(r["best"]["win_prob"], b, fee_rates.get(r["category"], 0.05),
                                cfg.flag_min_edge)
+        # size (shares) at the best ask / best bid of the best side's book; kept out of
+        # check() so its output stays the TS-port contract (fixtures/book_expected.json)
+        for side, key in (("asks", "ask_size"), ("bids", "bid_size")):
+            lv = _levels(b, side)
+            r["execution"][key] = lv[0][1] if lv else None
     log(f"order books checked: {len(bk)}")
     return rows

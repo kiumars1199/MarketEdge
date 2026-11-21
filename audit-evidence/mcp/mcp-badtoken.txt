@@ -1,0 +1,13 @@
+# http://localhost:3161 2026-11-20T07:42:18.977Z (off Vercel: clientKey = "ip:local" for every caller)
+1. 40 valid Premium tokens: 200x40
+2. 5 with no Authorization: 401x5 www=Bearer error="invalid_token", error_description="Missing Authorization header", resource_metadata="http://localhost:3161/.well-known/oauth-protected-resource/api/mcp"
+3. 30 rejected tokens: 401x30 | first: {"error":"invalid_token","error_description":"Invalid or expired token"} | www=Bearer error="invalid_token", error_description="Invalid or expired token", resource_metadata="http://localhost:3161/.we
+4. 31st rejected token: 401 {"error":"invalid_token","error_description":"Invalid or expired token"}
+5. 32nd rejected token: 429 retry-after=60 cache-control=private, no-store 6ms {"error":"Too many requests. Slow down and try again shortly."}
+6. VALID Premium token while the client key is blocked: 429 retry-after=60 {"error":"Too many requests. Slow down and try again shortly."}
+7. no token while blocked: 429 {"error":"Too many requests. Slow down and try again shortly."}
+8. valid token + spoofed X-Forwarded-For/X-Real-IP while blocked: 429
+   waiting 62s for the block to lapse
+9. valid token after Retry-After: 200
+10. one more rejected token after lapse: 401 (limiter window is a fixed/sliding 1 m; this shows whether the block re-trips at once)
+11. valid token after that: 200

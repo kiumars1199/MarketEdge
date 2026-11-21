@@ -1,0 +1,20 @@
+# docs/15 "Secrets and supply chain": Dependabot on for every lockfile.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /apps/web
+    schedule: { interval: weekly }
+    open-pull-requests-limit: 5
+  - package-ecosystem: npm
+    directory: /apps/extension
+    schedule: { interval: weekly }
+    open-pull-requests-limit: 5
+  - package-ecosystem: pip
+    directory: /
+    schedule: { interval: weekly }
+  - package-ecosystem: docker
+    directory: /engine
+    schedule: { interval: weekly }
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly }

@@ -1,15 +1,15 @@
 # 09 · Chrome extension (Premium)
 
 ## What it does
-On a Polymarket market or event page, it shows a small MarketEdge badge next to each outcome:
+On a Polymarket market or event page, it shows a small Kismet badge next to each outcome:
 "Win chance 79% · Edge +5.1¢ · Worth it". Clicking opens a side panel with the drawer content
-(both sides, verdict, stake table, curve, "Open in MarketEdge"). Kalshi pages: later, only after
+(both sides, verdict, stake table, curve, "Open in Kismet"). Kalshi pages: later, only after
 Kalshi grants permission (their site terms ban scripts on kalshi.com without it).
 
 ## Why it reads the page lightly
-It does **not** scrape prices from the page DOM. It reads only the page URL slug, asks the MarketEdge
+It does **not** scrape prices from the page DOM. It reads only the page URL slug, asks the Kismet
 API for that event's markets, and anchors badges next to outcome labels it can match by text. All
-numbers come from MarketEdge's API (which uses Polymarket's public API).
+numbers come from Kismet's API (which uses Polymarket's public API).
 
 ## Structure (Manifest V3)
 ```
@@ -19,7 +19,7 @@ apps/extension/
   content.ts         reads location.pathname → slug; MutationObserver for SPA navigation;
                      finds outcome rows; injects <me-badge> (shadow DOM, no style leaks)
   sidepanel.html/ts  drawer view (shared React components built from apps/web/ui)
-  popup.html/ts      sign-in state, tier, "Open MarketEdge", disclaimer
+  popup.html/ts      sign-in state, tier, "Open Kismet", disclaimer
 ```
 ```ts
 // content.ts
@@ -34,7 +34,7 @@ onUrlChange(async () => {
 })
 ```
 Signals that markup changed (no rows found on a page that has markets) are reported to `/api/ext/telemetry`
-so selectors can be fixed fast. Fallback: a floating "MarketEdge: 3 flagged markets on this page" pill.
+so selectors can be fixed fast. Fallback: a floating "Kismet: 3 flagged markets on this page" pill.
 
 ## Auth
 "Sign in" opens the web app's `/ext/connect` page, which posts a short-lived token to the extension via
@@ -46,5 +46,5 @@ Use `chrome.storage` for state, not page globals. Service workers have no `windo
 Arc may override shortcuts; give every action a click target. Keep the badge in a shadow root.
 
 ## Store listing
-Name "MarketEdge for Polymarket", category Productivity, single purpose: "Shows MarketEdge analytics next
+Name "Kismet for Polymarket", category Productivity, single purpose: "Shows Kismet analytics next
 to Polymarket outcomes." Disclose: no data sold, reads only the current URL on polymarket.com.

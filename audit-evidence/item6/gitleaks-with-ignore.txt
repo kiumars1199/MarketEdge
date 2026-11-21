@@ -1,0 +1,12 @@
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m7:10AM[0m [32mINF[0m [1mUnknown SCM platform. Use --platform to include links in findings.[0m [36mhost=[0m
+[90m7:10AM[0m [32mINF[0m [1m339 commits scanned.[0m
+[90m7:10AM[0m [32mINF[0m [1mscanned ~162950141 bytes (162.95 MB) in 5.72s[0m
+[90m7:10AM[0m [32mINF[0m [1mno leaks found[0m
+exit 0

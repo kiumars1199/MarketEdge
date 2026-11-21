@@ -1,0 +1,8 @@
+## keyless prod (no keys, DEMO_MODE off)
+-- /pricing: Coming soon x6; dev/demo banner: 
+-- /about: Coming soon x2; dev/demo banner: 
+-- /: Coming soon x2; dev/demo banner: 
+-- /api/mcp POST: {"error":"invalid_token","error_description":"Sign-in is not configured"} 401
+-- /.well-known/oauth-protected-resource: 404 
+-- /.well-known/oauth-protected-resource/api/mcp: 404 
+-- /api/health: {"ok":false} 503

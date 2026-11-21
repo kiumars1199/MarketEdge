@@ -1,0 +1,36 @@
+## UA matrix (server-side responses; robots.txt is advisory)
+Mozilla/5.0 (compatible; GPTBot/1.2; +https://openai.com/gptbot)       /=403 /pricing=403 /about=403 /bets=403 /llms.txt=403 /api/flags=403
+Mozilla/5.0 (compatible; ClaudeBot/1.0)                                /=403 /pricing=403 /about=403 /bets=403 /llms.txt=403 /api/flags=403
+CCBot/2.0                                                              /=403 /pricing=403 /about=403 /bets=403 /llms.txt=403 /api/flags=403
+Google-Extended                                                        /=403 /pricing=403 /about=403 /bets=403 /llms.txt=403 /api/flags=403
+Mozilla/5.0 (compatible; ChatGPT-User/1.0)                             /=200 /pricing=200 /about=200 /bets=403 /llms.txt=200 /api/flags=403
+Claude-User/1.0                                                        /=200 /pricing=200 /about=200 /bets=403 /llms.txt=200 /api/flags=403
+Perplexity-User/1.0                                                    /=200 /pricing=200 /about=200 /bets=403 /llms.txt=200 /api/flags=403
+
+## grep for UA handling in middleware/lib
+/home/user/wt-audit4/apps/web/middleware.ts:43:  if (!agentAllowed(req.headers.get("user-agent"), req.nextUrl.pathname)) return new NextResponse("Automated access is not allowed.", { status: 403 });
+/home/user/wt-audit4/apps/web/lib/bots.ts:14:  "GPTBot", "OAI-SearchBot", "ClaudeBot", "Claude-Web", "Claude-SearchBot", "anthropic-ai",
+
+## response headers: /, /pricing (anon), /bets (premium), /api/mcp OPTIONS
+-- /
+HTTP/1.1 200 OK
+Strict-Transport-Security: max-age=63072000; includeSubDomains
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: DENY
+Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+content-security-policy: default-src 'self'; script-src 'self' 'nonce-…' 'strict-dynamic' https://js.stripe.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; connect-src 'self' http://loc
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+-- /pricing
+HTTP/1.1 200 OK
+Strict-Transport-Security: max-age=63072000; includeSubDomains
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: DENY
+Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+content-security-policy: default-src 'self'; script-src 'self' 'nonce-…' 'strict-dynamic' https://js.stripe.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; connect-src 'self' http://loc
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+-- /bets premium
+HTTP/1.1 200 OK
+X-Frame-Options: DENY
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate

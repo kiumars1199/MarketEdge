@@ -1,0 +1,9 @@
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+test-results/
+playwright-report/
+.env*.local
+# repo root ignores data/; this one is source
+!lib/data/
